@@ -3680,7 +3680,7 @@
   position: absolute;
 }
 .jui .slider.horizontal {
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100%;
   height: 30px;
 }

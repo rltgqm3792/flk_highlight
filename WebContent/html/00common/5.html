@@ -1,0 +1,435 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>hightlight</title>
+		<link rel="stylesheet" href="../../js/lib/jui/css/ui.css"/>
+		<link id="ui_theme" rel="stylesheet" href="../../js/lib/jui/css/ui-jennifer.css"/>
+		<script src="../../js/lib/jquery/jquery.min.js"></script>
+		<script src="../../js/lib/jui/js/core.min.js"></script>
+		<script src="../../js/lib/jui/js/ui.min.js"></script>
+		<!--video-js-->
+		<link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+		<script src="https://vjs.zencdn.net/7.8.3/video.js"></script>
+		<!-- slider -->
+		<link rel="stylesheet" href="../../js/slick.css" />
+		<link rel="stylesheet" href="../../js/slick-theme.css" />
+		<script src="../../js/slick.js"></script>
+		<!-- default -->
+		<link rel="stylesheet" href="../../css/default.css">
+		<script type="text/javascript" src="../../js/ui.js"></script> 
+		<script type="text/javascript" src="../../js/moment.js"></script> 
+	</head>
+
+	<body class="jui">
+		
+		<!--s: header -->
+		<div class="header_container">
+			<div class="header_inner">
+				<div class="header_top cboth">
+					<div class="center">
+						<h1 class="logo"><a href="#"><img src="../../images/logo.png" alt="media content summarization"></a></h1>
+					</div>
+				</div>
+				
+			<div class="gnb_wrap">
+				<ul class="menu_wrap">
+					<li><a href="/home" class="tit_gnb" id="home">홈</a></li>
+					<li><a href="/workManagement" class="tit_gnb" id="workManagement">작업관리</a>
+						<ul>
+							<li><a href="/workManagement/editHighlight/20200826HHNC0_29_213122" class="tit_gnb" id="editeHighlight">하이라이트편 편집(영상 PLAY)</a></li>
+							<li><a href="/workManagement/editHighlightByList" class="tit_gnb" id="editHighlgihtByList">하이라이트 편집(목록)</a></li>
+							<li><a href="/workManagement/detection" class="tit_gnb" id="detection">디텍션 판정</a></li>
+							<li><a href="/workManagement/batchManagement/batchList" class="tit_gnb" id="batchManagement">배치관리</a>
+								<ul>
+									<li><a href="/workManagement/batchManagement/batchList" class="tit_gnb" id="batchList">배치 목록</a></li>
+									<li><a href="/workManagement/batchManagement/createBatch" class="tit_gnb" id="creatBatch">배치 생성</a></li>					
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><span class="tit_gnb">모니터링</span>
+						<ul>
+							<li><a href="/monitoring/gameResults" class="tit_gnb" id="gameResults">경기 결과</a></li>
+							<li><a href="/monitoring/progressStatus" class="tit_gnb" id="progressStatus">진행 상태</a></li>						
+						</ul>
+					</li>
+					<li><span class="tit_gnb">환경설정</span>
+						<ul>
+							<li><a href="/setting/userList" class="tit_gnb" id="userList">사용자 목록</a></li>
+							<li><a href="/setting/createUser" class="tit_gnb" id="createUser">사용자 정보 등록</a></li>					
+						</ul>							
+					</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+		<!--e: header -->
+
+		<!-- s: body_contents-->
+		<div class="body_container" id="today_container">
+			<div class="body_inner">
+				<!-- s: main_contents-->	
+				<div class="main_contents">
+					<div class="container_wrap">
+                        <!--s: LNB -->
+                        <div class="lnb_wrap">
+                            <h2>Today’s<br> Highlight</h2>
+                            <p class="today_date"><strong>June, 23</strong> Tuesday</p>
+                        </div>
+                        <!--e: LNB -->
+						<div class="search_area">
+							<div class="search_wrap">
+								<div class="input_wrap">
+									<input type="text" class="input w07">
+									<div class="btn_wrap03">
+										<span class="btn"><img src="../../images/icon_search01.png" alt="검색"></span>
+									</div>
+								</div>
+							</div>
+                        </div>
+ 
+
+                        <!-- s: contents-->
+                        <div class="contents_wrap">
+                            <div class="topicHighlight_wrap">
+                                <div class="item">
+                                    <div class="hd">
+                                        <span class="score"><span class="team1">SK <strong class="win">6</strong></span> : <span class="team2">NC <strong class="lose">3</strong></span></span>
+                                        <span class="date"><sub>pm</sub>06:30:00</span>
+                                    </div>
+                                    <div class="video">
+                                        <video id="vid1" class="video-js vjs-default-skin" controls preload="none" width="230" height="130" poster="" data-setup=''>
+                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                        </video>
+                                    </div>
+                                    <!-- div class="ctrolPannel">
+                                        <button class="btn_play">play</button>
+                                        <div class="bar"><span></span></div>
+                                        <span class="time">00:00:00</span>
+                                        <span class="endTime">00:03:37</span>
+                                    </div -->
+                                    <div class="btn_align">
+                                        <a href="#" class="btn_summary">Competition Summary</a>
+                                        <a href="#" class="btn_view">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="item on">
+                                    <div class="hd">
+                                        <span class="score"><span class="team1">SK <strong class="win">6</strong></span> : <span class="team2">NC <strong class="lose">3</strong></span></span>
+                                        <span class="date"><sub>pm</sub>06:30:00</span>
+                                    </div>
+                                    <div class="video">
+                                        <video id="vid1" class="video-js vjs-default-skin" controls preload="none" width="230" height="130" poster="" data-setup=''>
+                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                        </video>
+                                    </div>
+                                    <!-- div class="ctrolPannel">
+                                        <button class="btn_play">play</button>
+                                        <div class="bar"><span></span></div>
+                                        <span class="time">00:00:00</span>
+                                        <span class="endTime">00:03:37</span>
+                                    </div -->
+                                    <div class="btn_align">
+                                        <a href="#" class="btn_summary">Competition Summary</a>
+                                        <a href="#" class="btn_view">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="hd">
+                                        <span class="score"><span class="team1">SK <strong class="win">6</strong></span> : <span class="team2">NC <strong class="lose">3</strong></span></span>
+                                        <span class="date"><sub>pm</sub>06:30:00</span>
+                                    </div>
+                                    <div class="video">
+                                        <video id="vid1" class="video-js vjs-default-skin" controls preload="none" width="230" height="130" poster="" data-setup=''>
+                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                        </video>
+                                    </div>
+                                    <div class="ctrolPannel">
+                                        <button class="btn_play">play</button>
+                                        <div class="bar"><span></span></div>
+                                        <span class="time">00:00:00</span>
+                                        <span class="endTime">00:03:37</span>
+                                    </div>
+                                    <div class="btn_align">
+                                        <a href="#" class="btn_summary">Competition Summary</a>
+                                        <a href="#" class="btn_view">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="hd">
+                                        <span class="score"><span class="team1">SK <strong class="win">6</strong></span> : <span class="team2">NC <strong class="lose">3</strong></span></span>
+                                        <span class="date"><sub>pm</sub>06:30:00</span>
+                                    </div>
+                                    <div class="video">
+                                        <video id="vid1" class="video-js vjs-default-skin" controls preload="none" width="230" height="130" poster="" data-setup=''>
+                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                        </video>
+                                    </div>
+                                    <div class="ctrolPannel">
+                                        <button class="btn_play">play</button>
+                                        <div class="bar"><span></span></div>
+                                        <span class="time">00:00:00</span>
+                                        <span class="endTime">00:03:37</span>
+                                    </div>
+                                    <div class="btn_align">
+                                        <a href="#" class="btn_summary">Competition Summary</a>
+                                        <a href="#" class="btn_view">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="hd">
+                                        <span class="score"><span class="team1">SK <strong class="win">6</strong></span> : <span class="team2">NC <strong class="lose">3</strong></span></span>
+                                        <span class="date"><sub>pm</sub>06:30:00</span>
+                                    </div>
+                                    <div class="video">
+                                        <video id="vid1" class="video-js vjs-default-skin" controls preload="none" width="230" height="130" poster="" data-setup=''>
+                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                        </video>
+                                    </div>
+                                    <div class="ctrolPannel">
+                                        <button class="btn_play">play</button>
+                                        <div class="bar"><span></span></div>
+                                        <span class="time">00:00:00</span>
+                                        <span class="endTime">00:03:37</span>
+                                    </div>
+                                    <div class="btn_align">
+                                        <a href="#" class="btn_summary">Competition Summary</a>
+                                        <a href="#" class="btn_view">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+							<!-- s: bbs_list -->
+                            <div class="bbs_list02">
+                                <table class="table">
+                                    <colgroup>
+                                        <col style="width:30px;" />
+                                        <col style="width:60px;" />
+                                        <col style="width:190px;" /> 
+                                        <col style="width:160px;" />
+                                        <col style="width:130px;" />
+                                        <col style="width:400px;" />
+                                        <col style="width:auto;" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="row" class="first"><span class="hidden">no</span></th>
+                                            <th scope="row"><span class="hidden">no</span></th>
+                                            <th scope="row"><span>sequence</span></th>
+                                            <th scope="row"><span>id</span></th>
+                                            <th scope="row"><span>user</span></th>
+                                            <th scope="row"><span>last login</span></th>
+                                            <th scope="row" class="last"><span>information</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="check"><input type="checkbox" name="" id=""></td>
+                                            <td class="emph">1</td>
+                                            <td class="emph left">Fielder’s choice</td>
+                                            <td class="emph">13:30 - 23:55</td>
+                                            <td class="emph">All that Jazz</td>
+                                            <td>Various Artists</td>
+                                            <td>
+                                                <button class="btn_like">like</button>
+                                                <span><img src="../../images/temp.png" width="80" height="45" alt=""></span>
+                                                <span class="option">
+                                                    <button class="btn_option">setting</button>
+                                                    <button class="btn_video">video</button>
+                                                    <span class="label_btn_02">
+                                                        <input type="checkbox" id="select01">
+                                                        <label for="select01"><span>select</span></label>
+                                                    </span>
+                                                    <button class="btn_delete">delete</button>
+                                                </span>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check"><input type="checkbox" name="" id=""></td>
+                                            <td class="emph">1</td>
+                                            <td class="emph left">Fielder’s choice</td>
+                                            <td class="emph">13:30 - 23:55</td>
+                                            <td class="emph">All that Jazz</td>
+                                            <td>Various Artists</td>
+                                            <td>
+                                                <button class="btn_like">like</button>
+                                                <span><img src="../../images/temp.png" width="80" height="45" alt=""></span>
+                                                <span class="option">
+                                                    <button class="btn_option">setting</button>
+                                                    <button class="btn_video">video</button>
+                                                    <span class="label_btn_02">
+                                                        <input type="checkbox" id="select02">
+                                                        <label for="select02"><span>select</span></label>
+                                                    </span>
+                                                    <button class="btn_delete">delete</button>
+                                                </span>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check"><input type="checkbox" name="" id=""></td>
+                                            <td class="emph">1</td>
+                                            <td class="emph left">Fielder’s choice</td>
+                                            <td class="emph">13:30 - 23:55</td>
+                                            <td class="emph">All that Jazz</td>
+                                            <td>Various Artists</td>
+                                            <td>
+                                                <button class="btn_like">like</button>
+                                                <span><img src="../../images/temp.png" width="80" height="45" alt=""></span>
+                                                <span class="option">
+                                                    <button class="btn_option">setting</button>
+                                                    <button class="btn_video">video</button>
+                                                    <span class="label_btn_02">
+                                                        <input type="checkbox" id="select03">
+                                                        <label for="select03"><span>select</span></label>
+                                                    </span>
+                                                    <button class="btn_delete">delete</button>
+                                                </span>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check"><input type="checkbox" name="" id=""></td>
+                                            <td class="emph">1</td>
+                                            <td class="emph left">Fielder’s choice</td>
+                                            <td class="emph">13:30 - 23:55</td>
+                                            <td class="emph">All that Jazz</td>
+                                            <td>Various Artists</td>
+                                            <td>
+                                                <button class="btn_like">like</button>
+                                                <span><img src="../../images/temp.png" width="80" height="45" alt=""></span>
+                                                <span class="option">
+                                                    <button class="btn_option">setting</button>
+                                                    <button class="btn_video">video</button>
+                                                    <span class="label_btn_02">
+                                                        <input type="checkbox" id="select04">
+                                                        <label for="select04"><span>select</span></label>
+                                                    </span>
+                                                    <button class="btn_delete">delete</button>
+                                                </span>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check"><input type="checkbox" name="" id=""></td>
+                                            <td class="emph">1</td>
+                                            <td class="emph left">Fielder’s choice</td>
+                                            <td class="emph">13:30 - 23:55</td>
+                                            <td class="emph">All that Jazz</td>
+                                            <td>Various Artists</td>
+                                            <td>
+                                                <button class="btn_like">like</button>
+                                                <span><img src="../../images/temp.png" width="80" height="45" alt=""></span>
+                                                <span class="option">
+                                                    <button class="btn_option">setting</button>
+                                                    <button class="btn_video">video</button>
+                                                    <span class="label_btn_02">
+                                                        <input type="checkbox" id="select05">
+                                                        <label for="select05"><span>select</span></label>
+                                                    </span>
+                                                    <button class="btn_delete">delete</button>
+                                                </span>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check"><input type="checkbox" name="" id=""></td>
+                                            <td class="emph">1</td>
+                                            <td class="emph left">Fielder’s choice</td>
+                                            <td class="emph">13:30 - 23:55</td>
+                                            <td class="emph">All that Jazz</td>
+                                            <td>Various Artists</td>
+                                            <td>
+                                                <button class="btn_like">like</button>
+                                                <span><img src="../../images/temp.png" width="80" height="45" alt=""></span>
+                                                <span class="option">
+                                                    <button class="btn_option">setting</button>
+                                                    <button class="btn_video">video</button>
+                                                    <span class="label_btn_02">
+                                                        <input type="checkbox" id="select06">
+                                                        <label for="select06"><span>select</span></label>
+                                                    </span>
+                                                    <button class="btn_delete">delete</button>
+                                                </span>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check"><input type="checkbox" name="" id=""></td>
+                                            <td class="emph">1</td>
+                                            <td class="emph left">Fielder’s choice</td>
+                                            <td class="emph">13:30 - 23:55</td>
+                                            <td class="emph">All that Jazz</td>
+                                            <td>Various Artists</td>
+                                            <td>
+                                                <button class="btn_like">like</button>
+                                                <span><img src="../../images/temp.png" width="80" height="45" alt=""></span>
+                                                <span class="option">
+                                                    <button class="btn_option">setting</button>
+                                                    <button class="btn_video">video</button>
+                                                    <span class="label_btn_02">
+                                                        <input type="checkbox" id="select07">
+                                                        <label for="select07"><span>select</span></label>
+                                                    </span>
+                                                    <button class="btn_delete">delete</button>
+                                                </span>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+							<!-- e: bbs_list -->
+                            <!-- s: btn -->
+                            <div class="btn_footer">
+                                <a href="#" class="btn_delete">delete</a>
+                                <a href="#" class="btn_saveChanges">save changes</a>
+                            </div>
+							<!-- e: btn -->
+
+                            <!-- s: bbs_page -->
+                            <div class="bbs_page">
+                                <a href="#" class="now">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                                <a href="#">8</a>
+                                <a href="#">9</a>
+                                <a href="#">10</a>
+                            </div> 
+							<!-- e: bbs_page -->
+                        </div>
+						<!-- e: contents-->
+					</div> 
+				</div>
+				<!-- e: main_contents-->
+			</div>
+		</div>	
+		<!-- e: body_contents-->
+		
+		<!-- s: footer-->
+		<div class="footer_container">
+			<div class="footer_inner">
+				<img src="../../images/sk_logo_b.png" alt="SK telecom">
+			</div>
+		</div>
+		<!-- e: footer-->
+
+	</body>
+</html>

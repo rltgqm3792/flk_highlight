@@ -19,109 +19,7 @@
 		<script src="../../js/slick.js"></script>
 		<!-- default -->
 		<link rel="stylesheet" href="../../css/default.css">
-		<script type="text/javascript" src="../../js/ui.js"></script>
-		<script>
-		    //s:datepicker
-			jui.ready(["ui.datepicker"], function(datepicker) {
-				// 날짜 지정c
-				datepicker1 = datepicker("#datepicker1", {
-					titleFormat : "yyyy MM",
-					format : "yyyy/MM/dd",
-					event : {
-						select : function(date, e) {
-							// $("#datepicker1_group").find("input").val(this.getFormat("yyyyMMdd"));
-							alert(date);
-						}
-					}
-				});
-
-				// From~to 지정
-				datepicker2 = datepicker("#datepicker2", {
-					titleFormat: "yyyy MM",
-					format: "yyyy/MM/dd",
-					event: {
-						select: function (date, e) {
-							$("#datepicker2_group").find("input").val(this.getFormat("yyyyMMdd"));
-							$("#datepicker2_group").find("a").click();
-							datepicker3.setOption('minDate', new Date(date));
-							datepicker3.reload();
-						}
-					}
-				});
-
-				$("#datepicker2_group").find("a").on("click", function (e) {
-					var $r = $(datepicker2.root);
-					if ($r.css("display") == "none") {
-						$r.show();
-					} else {
-						$r.hide();
-					}
-				});
-
-				datepicker3 = datepicker("#datepicker3", {
-					titleFormat: "yyyy MM",
-					format: "yyyy/MM/dd",
-					event: {
-						select: function (date, e) {
-							$("#datepicker3_group").find("input").val(this.getFormat("yyyyMMdd"));
-							$("#datepicker3_group").find("a").click();
-							datepicker2.setOption('maxDate', new Date(date));
-							datepicker2.reload();
-						}
-					}
-				});
-
-				$("#datepicker3_group").find("a").on("click", function (e) {
-					var $r = $(datepicker3.root);
-					if ($r.css("display") == "none") {
-						$r.show();
-					} else {
-						$r.hide();
-					}
-				});
-
-			});
-			//e:datepicker
-
-			//s: video slider
-			jui.ready(["ui.slider"], function (slider) {
-				slider("#slider_1", {
-					type: "double",
-					from: 50,
-					to: 70,
-					min: 0,
-					max: 100,
-					step: 0.01, /*단위*/
-					tooltip: true,
-					event: {
-						change: function (data) {
-							console.log(data.from + "~" + data.to); // 시작, 끝 표기
-						}
-					}
-				});
-			});
-			//e: video slider
-
-			$(document).ready(function () {
-				//s: match slider
-				$('.match_slider').slick({
-					dots: false,
-					infinite: true,
-					speed: 300,
-					slidesToShow: 1,
-					adaptiveHeight: true,
-				});
-				//e: match slider
-
-				//s: items choice
-				$(".items").on("click", "li a", function (e) {
-					$(this).toggleClass("active");
-					return false;
-				});
-				//e: items choice
-
-			});
-		</script>
+		<script type="text/javascript" src="../../js/moment.js"></script> 
 
 	</head>
 
@@ -151,41 +49,80 @@
 		<!-- s: body_contents-->
 		<div class="body_container">
 			<div class="body_inner">
-				
 				<!-- s: main_contents-->	
 				<div class="main_contents">
 					<div class="container_wrap">
-						<!-- s: LEFT contents-->
-						<div class="left_wrap">
-							<!--s: LNB -->
-							<div class="lnb_wrap">
-								<h2>Highlight<br>Editing</h2>
-							</div>
-							<!--e: LNB -->
-							<!-- s: datepicker -->
-							<div class="date_warp">
-								<div id="datepicker1_group" class="group">
-									<div id="datepicker1" class="datepicker">
-										<div class="head">
-											<div class="prev"><i class="icon-chevron-left"></i></div>
-											<div class="title"></div>
-											<div class="next"><i class="icon-chevron-right"></i></div>
-										</div>
-										<table class="body">
-											<tr>
-												<th>sun</th>
-												<th>mon</th>
-												<th>tue</th>
-												<th>wed</th>
-												<th>thu</th>
-												<th>fri</th>
-												<th>sat</th>
-											</tr>
-										</table>
+                        <!--s: LNB -->
+                        <div class="lnb_wrap">
+                            <h2>Highlight<br>Editing</h2>
+                        </div>
+                        <!--e: LNB -->
+						<div class="search_area">
+							<div class="search_wrap">
+								<div class="input_wrap">
+									<input type="text" class="input w07">
+									<div class="btn_wrap03">
+										<span class="btn"><img src="../../images/icon_search01.png" alt="검색"></span>
 									</div>
 								</div>
 							</div>
-							<!-- e: datepicker -->
+						</div>
+						<!-- s: LEFT contents--> 
+						<div class="left_wrap">
+
+							<div class="calendar_wrap" style="margin-left: 80px;"> 
+                                <!-- s: date picker -->
+                                <div id="datepicker1_group" class="group">
+                                    <span class="todayDate" id="datepicker_select_1">asfaf</span>
+                                    <div id="datepicker1" class="datepicker">
+                                        <div class="head">
+                                            <div class="prev"><button>이전달</button></div>
+                                            <div class="title"></div>
+                                            <div class="next"><button>다음달</button></div>
+                                        </div>
+                                        <table class="body">
+                                            <tr>
+                                                <th>sun</th>
+                                                <th>mon</th>
+                                                <th>tue</th>
+                                                <th>wed</th>
+                                                <th>thu</th>
+                                                <th>fri</th>
+                                                <th>sat</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- e: date picker --> 
+							</div>
+							<script>
+								jui.ready(["ui.datepicker"], function(datepicker) {
+									// 날짜 지정
+									datepicker1 = datepicker("#datepicker1", {
+										titleFormat : "M",
+										format : "yyyy/MM/dd",
+										event : {
+											select : function(date, e) {
+												var txt = this.getDate();
+												var newData = new Date(txt);
+												var a = moment(newData).format('MMMM'); 
+												var b = moment(newData).format('dddd'); 
+												var c = moment(newData).format('D');  
+												$("#datepicker_select_1").html("<strong>"+a+", "+c+"</strong> "+b);								
+											}
+										}
+									}); 
+									function getCalendarToday(obj, todayTxt){  
+										var txt = obj.getDate();
+										var newData = new Date(txt);
+										var a = moment(newData).format('MMMM'); 
+										var b = moment(newData).format('dddd'); 
+										var c = moment(newData).format('D');  
+										$(todayTxt).html("<strong>"+a+", "+c+"</strong> "+b);
+									}
+									getCalendarToday(datepicker1, "#datepicker_select_1");
+								});
+							</script>
 
 							<!-- s: match slider -->
 							<div class="slider_warp">
@@ -247,21 +184,9 @@
 						
 						<!-- 내용-->
 						<div class="contents_wrap">
-
-							<!-- s: search_wrap -->
-							<div class="search_wrap">
-								<div class="input_wrap">
-									<input type="text" class="input w03" />
-									<div class="btn_wrap03">
-										<span class="btn"><img src="../../images/icon_search01.png" alt="검색" /></span>
-									</div>
-								</div>
-							</div>
-							<!-- e: search_wrap -->
-
 							<!-- s: video wrap -->
 							<div class="video_wrap">
-								<video id="vid1" class="video-js vjs-default-skin" controls preload="none" width="960" height="540" poster="" data-setup=''>
+								<video id="vid1" class="video-js vjs-default-skin" controls preload="none" width="919" height="517" poster="" data-setup=''>
 									<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
 									<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
 									<source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
@@ -273,11 +198,12 @@
 											<!-- s: video slider-->
 											<div id="slider_1" class="slider"></div>
 											<!-- e: video slider-->
+											<div id="slider_2" class="slider slider02"></div>
 											<!-- s: marker 1-->
-											<div id="marker_1" class="marker" style="left:30%;"></div>
+											<!-- <div id="marker_1" class="marker" style="left:30%;"></div> -->
 											<!-- e: marker 1-->
 											<!-- s: marker 2-->
-											<div id="marker_2" class="marker" style="left:70%;"></div>
+											<!-- <div id="marker_2" class="marker" style="left:70%;"></div> -->
 											<!-- e: marker 2-->
 											<!-- s: play progress-->
 											<div class="progress simple">
@@ -289,24 +215,92 @@
 										</div>
 										<!-- s: player btns -->
 										<div class="edit_btn_wrap">
-											<a class="btn"><i class="iconv-video1"></i></a>
-											<a class="btn"><i class="iconv-video2"></i></a>
-											<a class="btn"><i class="iconv-video3"></i></a>
-											<a class="btn"><i class="iconv-video4"></i></a>
-											<a class="btn"><i class="iconv-video5"></i></a>
-											<a class="btn"><i class="iconv-video6"></i></a>
-											<a class="btn"><i class="iconv-video7"></i></a>
-											<a class="btn"><i class="iconv-video8"></i></a>
+											<div class="poL">
+												<button><i class="iconv-video1"></i></button>
+												<button><i class="iconv-video2"></i></button>
+												<button><i class="iconv-video3"></i></button>
+												<button><i class="iconv-video4"></i></button>
+											</div>
+											<button><i class="iconv-video5"></i></button>
+											<button><i class="iconv-video6"></i></button>
+											<button><i class="iconv-video7"></i></button>
+											<button><i class="iconv-video8"></i></button>
+											<button><i class="iconv-video9"></i></button>
+											<button><i class="iconv-video10"></i></button>
+											<button><i class="iconv-video11"></i></button>
+											<div class="poR">
+												<button><i class="iconv-video12"></i></button>
+												<button><i class="iconv-video13"></i></button>
+												<button><i class="iconv-video14"></i></button>
+												<button><i class="iconv-video15"></i></button>
+												<button><i class="iconv-video16"></i></button>
+											</div>
 										</div>
 										<!-- e: player btns -->
 									</div>
 								</div>
 							</div>
 							<!-- e: video wrap -->
-						</div>
-						<!-- e: 내용-->
-					</div>
 
+						</div>
+						<script>
+							//s: video slider
+							jui.ready(["ui.slider"], function (slider) {
+								slider("#slider_1", {
+									type: "double",
+									from: 50,
+									to: 70,
+									min: 0,
+									max: 100,
+									step: 0.01, /*단위*/
+									tooltip: true,
+									event: {
+										change: function (data) {
+											console.log(data.from + "~" + data.to); // 시작, 끝 표기
+										}
+									}
+								});
+							});
+							jui.ready(["ui.slider"], function (slider) {
+								slider("#slider_2", {
+									type: "single",
+									from: 5, 
+									min: 0,
+									max: 100,
+									step: 0.01, /*단위*/
+									tooltip: false,
+									event: {
+										change: function (data) {
+											console.log(data.from + "~" + data.to); // 시작, 끝 표기
+										}
+									}
+								});
+							});
+							//e: video slider
+
+							$(document).ready(function () {
+								//s: match slider
+								$('.match_slider').slick({
+									dots: false,
+									infinite: true,
+									speed: 300,
+									slidesToShow: 1,
+									adaptiveHeight: true,
+								});
+								//e: match slider
+
+								//s: items choice
+								$(".items").on("click", "li a", function (e) {
+									$(this).toggleClass("active");
+									return false;
+								});
+								//e: items choice
+							});
+ 
+						</script>
+						<!-- e: 내용-->
+					</div> 
+                    
 					<div class="container_wrap bottom">
 						<!-- s: table wrap-->
 						<div class="table_wrap">
@@ -491,24 +485,17 @@
 		<script data-jui="#datepicker1" data-tpl="dates" type="text/template">
 		    <tr>
 		        <! for(var i = 0; i < dates.length; i++) { !>
-		        <td><!= dates[i] !></td>
+		        <td><span><!= dates[i] !></span></td>
 		        <! } !>
 		    </tr>
 		</script>
 		<script data-jui="#datepicker2" data-tpl="dates" type="text/template">
 			<tr>
 				<! for(var i = 0; i < dates.length; i++) { !>
-				<td><!= dates[i] !></td>
+				<td><span><!= dates[i] !></span></td>
 				<! } !>
 			</tr>
-		</script>
-		<script data-jui="#datepicker3" data-tpl="dates" type="text/template">
-			<tr>
-				<! for(var i = 0; i < dates.length; i++) { !>
-				<td><!= dates[i] !></td>
-				<! } !>
-			</tr>
-		</script>
+		</script> 
 
 	</body>
 </html>

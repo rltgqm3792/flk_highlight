@@ -1,0 +1,459 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>hightlight</title>
+		<link rel="stylesheet" href="../../js/lib/jui/css/ui.css"/>
+		<link id="ui_theme" rel="stylesheet" href="../../js/lib/jui/css/ui-jennifer.css"/>
+		<script src="../../js/lib/jquery/jquery.min.js"></script>
+		<script src="../../js/lib/jui/js/core.min.js"></script>
+		<script src="../../js/lib/jui/js/ui.min.js"></script>
+		<!--video-js-->
+		<link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+		<script src="https://vjs.zencdn.net/7.8.3/video.js"></script>
+		<!-- slider -->
+		<link rel="stylesheet" href="../../js/slick.css" />
+		<link rel="stylesheet" href="../../js/slick-theme.css" />
+		<script src="../../js/slick.js"></script>
+		<!-- default -->
+		<link rel="stylesheet" href="../../css/default.css">
+		<script type="text/javascript" src="../../js/ui.js"></script> 
+		<script type="text/javascript" src="../../js/moment.js"></script> 
+
+	</head>
+
+	<body class="jui">
+		
+		<!--s: header -->
+		<div class="header_container">
+			<div class="header_inner">
+				<div class="header_top cboth">
+					<div class="center">
+						<h1 class="logo"><a href="#"><img src="../../images/logo.png" alt="media content summarization"></a></h1>
+					</div>
+				</div>
+				
+				<div class="gnb_wrap">
+					<ul class="menu_wrap">
+						<li><a href="" class="tit_gnb">home</a></li>
+						<li><a href="" class="tit_gnb on">work management</a></li>
+						<li><a href="" class="tit_gnb">monitoring</a></li>
+						<li><a href="" class="tit_gnb">setting</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--e: header -->
+		
+		<!-- s: body_contents-->
+		<div class="body_container" id="body_container">
+			<div class="body_inner">
+				<!-- s: main_contents-->	
+				<div class="main_contents">
+					<div class="container_wrap">
+						<div class="search_area">
+							<div class="search_wrap">
+								<div class="input_wrap">
+									<input type="text" class="input w07">
+									<div class="btn_wrap03">
+										<span class="btn"><img src="../../images/icon_search01.png" alt="검색"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: LEFT contents-->
+						<div class="leftCont_wrap">
+							<div class="clubList_wrap">
+								<ul>
+									<li><a href="#" class="on"><img src="../../images/img_club_01.png" width="40" height="40" alt="SK"></a></li>
+									<li><a href="#"><img src="../../images/img_club_02.png" width="40" height="40" alt="NC"></a></li>
+									<li><a href="#"><img src="../../images/img_club_03.png" width="40" height="40" alt="LG"></a></li>
+									<li><a href="#"><img src="../../images/img_club_04.png" width="40" height="40" alt="두산"></a></li>
+									<li><a href="#"><img src="../../images/img_club_05.png" width="40" height="40" alt="키움"></a></li>
+									<li><a href="#"><img src="../../images/img_club_06.png" width="40" height="40" alt="KIA"></a></li>
+									<li><a href="#"><img src="../../images/img_club_07.png" width="40" height="40" alt="롯데"></a></li>
+									<li><a href="#"><img src="../../images/img_club_08.png" width="40" height="40" alt="KT"></a></li>
+									<li><a href="#"><img src="../../images/img_club_09.png" width="40" height="40" alt="삼성"></a></li>
+									<li><a href="#"><img src="../../images/img_club_10.png" width="40" height="40" alt="한화"></a></li>
+								</ul>
+							</div>
+							<script>
+								$(".clubList_wrap li a").click(function(){
+									$(".clubList_wrap li a").removeClass("on");
+									$(this).addClass("on");
+								});
+							</script>
+							<div class="categoryList_wrap">
+								<a href="#" class="btn_prev"><img src="../../images/btn_prev_01.png" alt="이전"></a>
+								<ul>
+									<li class="slick-slide">
+										<a href="#" class="on">
+											<span><img src="../../images/type_01_off.png" alt="homerun"></span>
+											<strong>homerun</strong>
+										</a>
+									</li> 
+									<li class="slick-slide">
+										<a href="#">
+											<span><img src="../../images/type_02_off.png" alt="homerun"></span>
+											<strong>homerun</strong>
+										</a>
+									</li> 
+									<li class="slick-slide">
+										<a href="#">
+											<span><img src="../../images/type_03_off.png" alt="homerun"></span>
+											<strong>homerun</strong>
+										</a>
+									</li> 
+									<li class="slick-slide">
+										<a href="#">
+											<span><img src="../../images/type_04_off.png" alt="homerun"></span>
+											<strong>homerun</strong>
+										</a>
+									</li> 
+									<li class="slick-slide">
+										<a href="#">
+											<span><img src="../../images/type_05_off.png" alt="homerun"></span>
+											<strong>homerun</strong>
+										</a>
+									</li> 
+									<li class="slick-slide">
+										<a href="#">
+											<span><img src="../../images/type_06_off.png" alt="homerun"></span>
+											<strong>homerun</strong>
+										</a>
+									</li> 
+									<li class="slick-slide">
+										<a href="#">
+											<span><img src="../../images/type_07_off.png" alt="homerun"></span>
+											<strong>homerun</strong>
+										</a>
+									</li> 
+									<li class="slick-slide">
+										<a href="#">
+											<span><img src="../../images/type_08_off.png" alt="homerun"></span>
+											<strong>homerun</strong>
+										</a>
+									</li>
+									<li class="slick-slide">
+										<a href="#">
+											<span><img src="../../images/type_09_off.png" alt="homerun"></span>
+											<strong>homerun</strong>
+										</a>
+									</li>
+									<li class="slick-slide">
+										<a href="#">
+											<span><img src="../../images/type_10_off.png" alt="homerun"></span>
+											<strong>homerun</strong>
+										</a>
+									</li> 
+								</ul>
+								<a href="#" class="btn_next"><img src="../../images/btn_next_01.png" alt="다음"></a>
+							</div>
+							<script>
+								$(".categoryList_wrap li a").click(function(){
+									$(".categoryList_wrap li a").removeClass("on");
+									$(".categoryList_wrap li a img").attr("src", function(){ return $(this).attr("src").replace("_on.png","_off.png") });
+									$(this).addClass("on");
+									$(this).find("img").attr("src", function(){ return $(this).attr("src").replace("_off.png","_on.png") });
+								});
+							</script>
+							<script>
+								$('.categoryList_wrap ul').slick({
+									infinite: true,
+									slidesToShow: 7,
+									slidesToScroll: 1,
+									slide:"li",
+									prevArrow:$(".btn_prev"),
+									nextArrow:$(".btn_next")
+								});
+							</script>
+							<div class="calendar_wrap">
+								<div class="ltr">
+									<!-- s: date picker -->
+									<div id="datepicker1_group" class="group">
+										<span class="todayDate" id="datepicker_select_1">asfaf</span>
+										<div id="datepicker1" class="datepicker">
+											<div class="head">
+												<div class="prev"><button>이전달</button></div>
+												<div class="title"></div>
+												<div class="next"><button>다음달</button></div>
+											</div>
+											<table class="body">
+												<tr>
+													<th>sun</th>
+													<th>mon</th>
+													<th>tue</th>
+													<th>wed</th>
+													<th>thu</th>
+													<th>fri</th>
+													<th>sat</th>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<!-- e: date picker -->
+								</div>
+								<div class="rtl">
+									<!-- s: date picker -->
+									<div id="datepicker2_group" class="group">
+										<span class="todayDate" id="datepicker_select_2">asfaf</span>
+										<div id="datepicker2" class="datepicker">
+											<div class="head">
+												<div class="prev"><button>이전달</button></div>
+												<div class="title"></div>
+												<div class="next"><button>다음달</button></div>
+											</div>
+											<table class="body">
+												<tr>
+													<th>sun</th>
+													<th>mon</th>
+													<th>tue</th>
+													<th>wed</th>
+													<th>thu</th>
+													<th>fri</th>
+													<th>sat</th>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<!-- e: date picker -->
+								</div>
+							</div>
+							<script>
+								jui.ready(["ui.datepicker"], function(datepicker) {
+									// 날짜 지정
+									datepicker1 = datepicker("#datepicker1", {
+										titleFormat : "M",
+										format : "yyyy/MM/dd",
+										event : {
+											select : function(date, e) {
+												var txt = this.getDate();
+												var newData = new Date(txt);
+												var a = moment(newData).format('MMMM'); 
+												var b = moment(newData).format('dddd'); 
+												var c = moment(newData).format('D');  
+												$("#datepicker_select_1").html("<strong>"+a+", "+c+"</strong> "+b);								
+											}
+										}
+									});
+									// 날짜 지정
+									datepicker2 = datepicker("#datepicker2", {
+										titleFormat : "M",
+										format : "yyyy/MM/dd",
+										event : {
+											select : function(date, e) {
+												var txt = this.getDate();
+												var newData = new Date(txt);
+												var a = moment(newData).format('MMMM'); 
+												var b = moment(newData).format('dddd'); 
+												var c = moment(newData).format('D');  
+												$("#datepicker_select_2").html("<strong>"+a+", "+c+"</strong> "+b);								
+											}
+										}
+									});
+									function getCalendarToday(obj, todayTxt){  
+										var txt = obj.getDate();
+										var newData = new Date(txt);
+										var a = moment(newData).format('MMMM'); 
+										var b = moment(newData).format('dddd'); 
+										var c = moment(newData).format('D');  
+										$(todayTxt).html("<strong>"+a+", "+c+"</strong> "+b);
+									}
+									getCalendarToday(datepicker1, "#datepicker_select_1");
+									getCalendarToday(datepicker2, "#datepicker_select_2");
+								});
+							</script>
+						</div>
+						<!-- e: LEFT contents-->
+						
+						<!-- 내용-->
+						<div class="rightCont_wrap">
+							<div class="video_header">
+								<div class="score_wrap">
+									<p class="versus">
+										<span><strong>SK</strong><img src="../../images/img_club_01.png" height="30" width="30" alt="SK"></span>
+										<span class="vs">vs</span>
+										<span><img src="../../images/img_club_02.png" height="30" width="30" alt="NC"><strong>NC</strong></span>
+									</p>
+									<p class="score"><span class="win">6</span><span class="vs">:</span><span>5</span></p>
+								</div>
+								<div class="gameDate_wrap">
+									<span class="todayDate"><strong>August, 3</strong> Monday</span>
+									<span class="time"><sub>pm</sub><strong>06:30:00</strong></span>
+								</div>
+								<div class="utilMenu_wrap">
+									<a href="#"><img src="../../images/btn_ham_01.png" width="30" height="30" alt="메뉴"></a>
+									<a href="#"><img src="../../images/btn_view_01.png" width="30" height="30" alt="보기"></a>
+								</div>
+							</div>
+							
+							<!-- s: video wrap -->
+							<div class="video_wrap">
+								<video id="vid1" class="video-js vjs-default-skin" controls preload="none" width="919" height="517" poster="" data-setup=''>
+									<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+									<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+									<source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+								</video>
+
+								<div class="video_edit_wrap">
+									<div class="row">
+										<div class="col col-12">
+											<!-- s: video slider-->
+											<div id="slider_1" class="slider"></div>
+											<!-- e: video slider-->
+											<div id="slider_2" class="slider slider02"></div>
+											<!-- s: marker 1-->
+											<!-- <div id="marker_1" class="marker" style="left:30%;"></div> -->
+											<!-- e: marker 1-->
+											<!-- s: marker 2-->
+											<!-- <div id="marker_2" class="marker" style="left:70%;"></div> -->
+											<!-- e: marker 2-->
+											<!-- s: play progress-->
+											<div class="progress simple">
+												<div class="area">
+													<div class="bar" style="width: 40%;"></div>
+												</div>
+											</div>
+											<!-- e: play progress-->
+										</div>
+										<!-- s: player btns -->
+										<div class="edit_btn_wrap">
+											<div class="poL">
+												<button><i class="iconv-video1"></i></button>
+												<button><i class="iconv-video2"></i></button>
+												<button><i class="iconv-video3"></i></button>
+												<button><i class="iconv-video4"></i></button>
+											</div>
+											<button><i class="iconv-video5"></i></button>
+											<button><i class="iconv-video6"></i></button>
+											<button><i class="iconv-video7"></i></button>
+											<button><i class="iconv-video8"></i></button>
+											<button><i class="iconv-video9"></i></button>
+											<button><i class="iconv-video10"></i></button>
+											<button><i class="iconv-video11"></i></button>
+											<div class="poR">
+												<button><i class="iconv-video12"></i></button>
+												<button><i class="iconv-video13"></i></button>
+												<button><i class="iconv-video14"></i></button>
+												<button><i class="iconv-video15"></i></button>
+												<button><i class="iconv-video16"></i></button>
+											</div>
+										</div>
+										<!-- e: player btns -->
+									</div>
+								</div>
+							</div>
+							<!-- e: video wrap -->
+
+							<div class="video_footer">
+								<div class="poL">
+									<span class="pageTotal">total - 236 | <strong>32</strong></span>
+								</div>
+								<div class="page">
+									<a href="#" class="now">1</a>
+									<a href="#">2</a>
+									<a href="#">3</a>
+									<a href="#">4</a>
+									<a href="#">5</a>
+									<a href="#">6</a>
+									<a href="#">7</a>
+									<a href="#">8</a>
+									<a href="#">9</a>
+									<a href="#">10</a>
+								</div>
+								<div class="poR">
+									<a href="#" class="btn_prev">이전</a>
+									<a href="#" class="btn_next">다음</a>
+								</div>
+							</div>
+						</div>
+						<script>
+							//s: video slider
+							jui.ready(["ui.slider"], function (slider) {
+								slider("#slider_1", {
+									type: "double",
+									from: 50,
+									to: 70,
+									min: 0,
+									max: 100,
+									step: 0.01, /*단위*/
+									tooltip: true,
+									event: {
+										change: function (data) {
+											console.log(data.from + "~" + data.to); // 시작, 끝 표기
+										}
+									}
+								});
+							});
+							jui.ready(["ui.slider"], function (slider) {
+								slider("#slider_2", {
+									type: "single",
+									from: 5, 
+									min: 0,
+									max: 100,
+									step: 0.01, /*단위*/
+									tooltip: false,
+									event: {
+										change: function (data) {
+											console.log(data.from + "~" + data.to); // 시작, 끝 표기
+										}
+									}
+								});
+							});
+							//e: video slider
+
+							$(document).ready(function () {
+								//s: match slider
+								$('.match_slider').slick({
+									dots: false,
+									infinite: true,
+									speed: 300,
+									slidesToShow: 1,
+									adaptiveHeight: true,
+								});
+								//e: match slider
+
+								//s: items choice
+								$(".items").on("click", "li a", function (e) {
+									$(this).toggleClass("active");
+									return false;
+								});
+								//e: items choice
+							});
+ 
+						</script>
+						<!-- e: 내용-->
+					</div> 
+				</div>
+				<!-- e: main_contents-->
+			</div>
+		</div>	
+		<!-- e: body_contents-->
+		
+		<!-- s: footer-->
+		<div class="footer_container">
+			<div class="footer_inner">
+				<img src="../../images/sk_logo_b.png" alt="SK telecom">
+			</div>
+		</div>
+		<!-- e: footer-->
+		
+		<script data-jui="#datepicker1" data-tpl="dates" type="text/template">
+		    <tr>
+		        <! for(var i = 0; i < dates.length; i++) { !>
+		        <td><span><!= dates[i] !></span></td>
+		        <! } !>
+		    </tr>
+		</script>
+		<script data-jui="#datepicker2" data-tpl="dates" type="text/template">
+			<tr>
+				<! for(var i = 0; i < dates.length; i++) { !>
+				<td><span><!= dates[i] !></span></td>
+				<! } !>
+			</tr>
+		</script> 
+
+	</body>
+</html>

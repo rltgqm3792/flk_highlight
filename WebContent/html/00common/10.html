@@ -1,0 +1,354 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>hightlight</title>
+		<link rel="stylesheet" href="../../js/lib/jui/css/ui.css"/>
+		<link id="ui_theme" rel="stylesheet" href="../../js/lib/jui/css/ui-jennifer.css"/>
+		<script src="../../js/lib/jquery/jquery.min.js"></script>
+		<script src="../../js/lib/jui/js/core.min.js"></script>
+		<script src="../../js/lib/jui/js/ui.min.js"></script>
+		<!--video-js-->
+		<link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+		<script src="https://vjs.zencdn.net/7.8.3/video.js"></script>
+		<!-- slider -->
+		<link rel="stylesheet" href="../../js/slick.css" />
+		<link rel="stylesheet" href="../../js/slick-theme.css" />
+		<script src="../../js/slick.js"></script>
+		<!-- default -->
+		<link rel="stylesheet" href="../../css/default.css">
+		<script type="text/javascript" src="../../js/ui.js"></script> 
+		<script type="text/javascript" src="../../js/moment.js"></script> 
+
+	</head>
+
+	<body class="jui">
+		
+		<!--s: header -->
+		<div class="header_container">
+			<div class="header_inner">
+				<div class="header_top cboth">
+					<div class="center">
+						<h1 class="logo"><a href="#"><img src="../../images/logo.png" alt="media content summarization"></a></h1>
+					</div>
+				</div>
+				
+				<div class="gnb_wrap">
+					<ul class="menu_wrap">
+						<li><a href="" class="tit_gnb">home</a></li>
+						<li><a href="" class="tit_gnb on">work management</a></li>
+						<li><a href="" class="tit_gnb">monitoring</a></li>
+						<li><a href="" class="tit_gnb">setting</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--e: header -->
+		
+		<!-- s: body_contents-->
+		<div class="body_container" id="batch_container">
+			<div class="body_inner">
+				<!-- s: main_contents-->	
+				<div class="main_contents">
+					<div class="container_wrap">
+                        <!--s: LNB -->
+                        <div class="lnb_wrap">
+                            <h2>Create<br>Batch</h2>
+                            <p class="today_date"><strong>June, 23</strong> Tuesday</p>
+                        </div>
+                        <!--e: LNB -->
+						<div class="search_area">
+							<div class="search_wrap">
+								<div class="input_wrap">
+									<input type="text" class="input w07">
+									<div class="btn_wrap03">
+										<span class="btn"><img src="../../images/icon_search01.png" alt="검색"></span>
+									</div>
+								</div>
+							</div>
+                        </div>
+                        <!-- s: contents-->
+                        <div class="contents_wrap">
+                            <!-- s: table wrap-->
+                            <div class="table_wrap">
+                                <table class="table simple table_write_type">
+                                    <colgroup>
+                                        <col width="20%" />
+                                        <col width="20%" />
+                                        <col width="20%" />
+                                        <col width="40%" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="4">Batch name</th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <input type="text" name="" class="input w01" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Batch operation time setting</th>
+                                            <th>Team Selection</th>
+                                            <th>Player selection</th>
+                                            <th>Select period</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <select class="select w01">
+                                                    <option value="" selected="selected">video1</option>
+                                                    <option value="">video2</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select class="select w01">
+                                                    <option value="" selected="selected">video1</option>
+                                                    <option value="">video2</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select class="select w01">
+                                                    <option value="" selected="selected">video1</option>
+                                                    <option value="">video2</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <!-- s: date picker -->
+                                                <div id="datepicker2_group" class="group pop">
+                                                    <input type="text" class="input" style="width: 157px;" value="From" />
+                                                    <a class="btn btn-gray"><i class="icon-calendar"></i></a>
+                                                    <div id="datepicker2" class="datepicker" style="display: none; position: absolute; z-index: 999; margin-left: 1px; margin-top: 1px;">
+                                                        <div class="head">
+                                                            <div class="prev">
+                                                                <i class="icon-chevron-left"></i>
+                                                            </div>
+                                                            <div class="title"></div>
+                                                            <div class="next">
+                                                                <i class="icon-chevron-right"></i>
+                                                            </div>
+                                                        </div>
+                                                        <table class="body">
+                                                            <tr>
+                                                                <th>sun</th>
+                                                                <th>mon</th>
+                                                                <th>tue</th>
+                                                                <th>wed</th>
+                                                                <th>thu</th>
+                                                                <th>fri</th>
+                                                                <th>sat</th>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- e: date picker -->
+
+                                                <!-- s: date picker -->
+                                                <div id="datepicker3_group" class="group pop">
+                                                    <input type="text" class="input" style="width: 157px;" value="To" />
+                                                    <a class="btn btn-gray"><i class="icon-calendar"></i></a>
+                                                    <div id="datepicker3" class="datepicker" style="display: none; position: absolute; z-index: 999; margin-left: 1px; margin-top: 1px;">
+                                                        <div class="head">
+                                                            <div class="prev">
+                                                                <i class="icon-chevron-left"></i>
+                                                            </div>
+                                                            <div class="title"></div>
+                                                            <div class="next">
+                                                                <i class="icon-chevron-right"></i>
+                                                            </div>
+                                                        </div>
+                                                        <table class="body">
+                                                            <tr>
+                                                                <th>sun</th>
+                                                                <th>mon</th>
+                                                                <th>tue</th>
+                                                                <th>wed</th>
+                                                                <th>thu</th>
+                                                                <th>fri</th>
+                                                                <th>sat</th>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- e: date picker -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4">Item Settings</th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <!-- s: sportList_wrap -->
+                                                <div class="sportList_wrap">
+                                                    <a href="#" class="btn_prev"><img src="../../images/btn_prev_01.png" alt="이전"></a>
+                                                    <ul>
+                                                        <li class="slick-slide">
+                                                            <a href="#" class="on">
+                                                                <span><img src="../../images/type_01_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_02_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_03_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_04_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_05_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_06_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li>
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_01_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_02_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_03_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_04_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_05_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_06_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li>
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_01_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_02_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_03_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_04_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_05_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li> 
+                                                        <li class="slick-slide">
+                                                            <a href="#">
+                                                                <span><img src="../../images/type_06_off.png" alt="homerun"></span>
+                                                                <strong>homerun</strong>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <a href="#" class="btn_next"><img src="../../images/btn_next_01.png" alt="다음"></a>
+                                                </div>
+                                                <script>
+                                                    $(".sportList_wrap li a").click(function(){
+                                                        $(".sportList_wrap li a").removeClass("on");
+                                                        $(".sportList_wrap li a img").attr("src", function(){ return $(this).attr("src").replace("_on.png","_off.png") });
+                                                        $(this).addClass("on");
+                                                        $(this).find("img").attr("src", function(){ return $(this).attr("src").replace("_off.png","_on.png") });
+                                                    });
+                                                </script>
+                                                <script>
+                                                    $('.sportList_wrap ul').slick({
+                                                        infinite: true,
+                                                        slidesToShow: 13,
+                                                        slidesToScroll: 1,
+                                                        slide:"li",
+                                                        prevArrow:$(".btn_prev"),
+                                                        nextArrow:$(".btn_next")
+                                                    });
+                                                </script>
+                                                <!-- e: sportList_wrap -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4">Descriptions</th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <textarea class="input textareabox"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- e: table wrap-->
+
+                            <!-- s: btn-->
+                            <div class="btn_wrap">
+                                <a class="btn large focus">Submission</a>
+                            </div>
+                            <!-- e: btn-->
+                        </div>
+						<!-- e: contents-->
+					</div>
+				</div>
+				<!-- e: main_contents-->
+			</div>
+		</div>	
+		<!-- e: body_contents-->
+		
+		<!-- s: footer-->
+		<div class="footer_container">
+			<div class="footer_inner">
+				<img src="../../images/sk_logo_b.png" alt="SK telecom">
+			</div>
+		</div>
+		<!-- e: footer-->
+
+	</body>
+</html>

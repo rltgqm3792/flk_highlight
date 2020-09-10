@@ -1191,66 +1191,7 @@
 .jui .outline,
 .jui .outline * {
   outline: 1px solid #7fa5f6;
-}
-.jui .btn {
-  color: #201834;
-  border: 1px solid #cdcdcd;
-  background-color: #ffffff;
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
-  background-image: linear-gradient(top, #ffffff 0%, #ececec 100%);
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
-  background-image: -o-linear-gradient(top, #ffffff 0%, #ececec 100%);
-  background-image: -ms-linear-gradient(top, #ffffff 0%, #ececec 100%);
-  text-align:center;
-}
-.jui .btn:hover {
-  color: #201834;
-  background-color: #ffffff;
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 100%);
-  background-image: linear-gradient(top, #ffffff 0%, #f3f3f3 100%);
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f3f3f3 100%);
-  background-image: -o-linear-gradient(top, #ffffff 0%, #f3f3f3 100%);
-  background-image: -ms-linear-gradient(top, #ffffff 0%, #f3f3f3 100%);
-}
-.jui .btn.active:not([disabled]),
-.jui .btn:active:not([disabled]) {
-  color: #000;
-  border: 1px solid #cdcdcd;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 5px inset, rgba(255, 255, 255, 0.2) 0 1px 0;
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 5px inset, rgba(255, 255, 255, 0.2) 0 1px 0;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 5px inset, rgba(255, 255, 255, 0.2) 0 1px 0;
-  background-color: #ffffff;
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
-  background-image: linear-gradient(top, #ffffff 0%, #ececec 100%);
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
-  background-image: -o-linear-gradient(top, #ffffff 0%, #ececec 100%);
-  background-image: -ms-linear-gradient(top, #ffffff 0%, #ececec 100%);
-}
-.jui .btn.focus, 
-.jui .btn.focus:hover {
-  color:#fff;
-  border: 1px solid #12a19f;
-  background-color: #1bb7b5;
-  background-image: -moz-linear-gradient(top, #1bb7b5 0%, #18acaa 100%);
-  background-image: linear-gradient(top, #1bb7b5 0%, #18acaa 100%);
-  background-image: -webkit-linear-gradient(top, #1bb7b5 0%, #18acaa 100%);
-  background-image: -o-linear-gradient(top, #1bb7b5 0%, #18acaa 100%);
-  background-image: -ms-linear-gradient(top, #1bb7b5 0%, #18acaa 100%);
-}
-
-.jui .btn.focus.active:not([disabled]),
-.jui .btn.focus:active:not([disabled]) {
-  border: 1px solid #12a19f;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 5px inset, rgba(255, 255, 255, 0.2) 0 1px 0;
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 5px inset, rgba(255, 255, 255, 0.2) 0 1px 0;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 5px inset, rgba(255, 255, 255, 0.2) 0 1px 0;
-  background-color: #1bb7b5;
-  background-image: -moz-linear-gradient(top, #1bb7b5 0%, #18acaa 100%);
-  background-image: linear-gradient(top, #1bb7b5 0%, #18acaa 100%);
-  background-image: -webkit-linear-gradient(top, #1bb7b5 0%, #18acaa 100%);
-  background-image: -o-linear-gradient(top, #1bb7b5 0%, #18acaa 100%);
-  background-image: -ms-linear-gradient(top, #1bb7b5 0%, #18acaa 100%);
-}
+} 
 .jui .btn[disabled],
 .jui .disabled {
   opacity: 0.5;
