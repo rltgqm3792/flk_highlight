@@ -1,0 +1,514 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>hightlight</title>
+		<link rel="stylesheet" href="../../js/lib/jui/css/ui.css"/>
+		<link id="ui_theme" rel="stylesheet" href="../../js/lib/jui/css/ui-jennifer.css"/>
+		<script src="../../js/lib/jquery/jquery.min.js"></script>
+		<script src="../../js/lib/jui/js/core.min.js"></script>
+		<script src="../../js/lib/jui/js/ui.min.js"></script>
+		<!--video-js-->
+		<link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+		<script src="https://vjs.zencdn.net/7.8.3/video.js"></script>
+		<!-- slider -->
+		<link rel="stylesheet" href="../../js/slick.css" />
+		<link rel="stylesheet" href="../../js/slick-theme.css" />
+		<script src="../../js/slick.js"></script>
+		<!-- default -->
+		<link rel="stylesheet" href="../../css/default.css">
+		<script type="text/javascript" src="../../js/ui.js"></script>
+		<script>
+		    //s:datepicker
+			jui.ready(["ui.datepicker"], function(datepicker) {
+				// 날짜 지정c
+				datepicker1 = datepicker("#datepicker1", {
+					titleFormat : "yyyy MM",
+					format : "yyyy/MM/dd",
+					event : {
+						select : function(date, e) {
+							// $("#datepicker1_group").find("input").val(this.getFormat("yyyyMMdd"));
+							alert(date);
+						}
+					}
+				});
+
+				// From~to 지정
+				datepicker2 = datepicker("#datepicker2", {
+					titleFormat: "yyyy MM",
+					format: "yyyy/MM/dd",
+					event: {
+						select: function (date, e) {
+							$("#datepicker2_group").find("input").val(this.getFormat("yyyyMMdd"));
+							$("#datepicker2_group").find("a").click();
+							datepicker3.setOption('minDate', new Date(date));
+							datepicker3.reload();
+						}
+					}
+				});
+
+				$("#datepicker2_group").find("a").on("click", function (e) {
+					var $r = $(datepicker2.root);
+					if ($r.css("display") == "none") {
+						$r.show();
+					} else {
+						$r.hide();
+					}
+				});
+
+				datepicker3 = datepicker("#datepicker3", {
+					titleFormat: "yyyy MM",
+					format: "yyyy/MM/dd",
+					event: {
+						select: function (date, e) {
+							$("#datepicker3_group").find("input").val(this.getFormat("yyyyMMdd"));
+							$("#datepicker3_group").find("a").click();
+							datepicker2.setOption('maxDate', new Date(date));
+							datepicker2.reload();
+						}
+					}
+				});
+
+				$("#datepicker3_group").find("a").on("click", function (e) {
+					var $r = $(datepicker3.root);
+					if ($r.css("display") == "none") {
+						$r.show();
+					} else {
+						$r.hide();
+					}
+				});
+
+			});
+			//e:datepicker
+
+			//s: video slider
+			jui.ready(["ui.slider"], function (slider) {
+				slider("#slider_1", {
+					type: "double",
+					from: 50,
+					to: 70,
+					min: 0,
+					max: 100,
+					step: 0.01, /*단위*/
+					tooltip: true,
+					event: {
+						change: function (data) {
+							console.log(data.from + "~" + data.to); // 시작, 끝 표기
+						}
+					}
+				});
+			});
+			//e: video slider
+
+			$(document).ready(function () {
+				//s: match slider
+				$('.match_slider').slick({
+					dots: false,
+					infinite: true,
+					speed: 300,
+					slidesToShow: 1,
+					adaptiveHeight: true,
+				});
+				//e: match slider
+
+				//s: items choice
+				$(".items").on("click", "li a", function (e) {
+					$(this).toggleClass("active");
+					return false;
+				});
+				//e: items choice
+
+			});
+		</script>
+
+	</head>
+
+	<body class="jui">
+		
+		<!--s: header -->
+		<div class="header_container">
+			<div class="header_inner">
+				<div class="header_top cboth">
+					<div class="center">
+						<h1 class="logo"><a href="#"><img src="../../images/logo.png" alt="media content summarization"></a></h1>
+					</div>
+				</div>
+				
+				<div class="gnb_wrap">
+					<ul class="menu_wrap">
+						<li><a href="" class="tit_gnb">home</a></li>
+						<li><a href="" class="tit_gnb on">work management</a></li>
+						<li><a href="" class="tit_gnb">monitoring</a></li>
+						<li><a href="" class="tit_gnb">setting</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--e: header -->
+		
+		<!-- s: body_contents-->
+		<div class="body_container">
+			<div class="body_inner">
+				
+				<!-- s: main_contents-->	
+				<div class="main_contents">
+					<div class="container_wrap">
+						<!-- s: LEFT contents-->
+						<div class="left_wrap">
+							<!--s: LNB -->
+							<div class="lnb_wrap">
+								<h2>Highlight<br>Editing</h2>
+							</div>
+							<!--e: LNB -->
+							<!-- s: datepicker -->
+							<div class="date_warp">
+								<div id="datepicker1_group" class="group">
+									<div id="datepicker1" class="datepicker">
+										<div class="head">
+											<div class="prev"><i class="icon-chevron-left"></i></div>
+											<div class="title"></div>
+											<div class="next"><i class="icon-chevron-right"></i></div>
+										</div>
+										<table class="body">
+											<tr>
+												<th>sun</th>
+												<th>mon</th>
+												<th>tue</th>
+												<th>wed</th>
+												<th>thu</th>
+												<th>fri</th>
+												<th>sat</th>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- e: datepicker -->
+
+							<!-- s: match slider -->
+							<div class="slider_warp">
+								<div class="tit_table">Match selection</div>
+								<div class="match_slider">
+									<div>
+										<a href="#none">
+											<div class="match_item">
+												<div class="versus">
+													<span class="winner"><span class="team">SK</span><span class="logo"><img src="../../images/team_sk.png" alt="logo"></span></span>
+													<span class="vs">vs</span>
+													<span class="loser"><span class="logo"><img src="../../images/team_nc.png" alt="logo"></span><span class="team">NC</span></span>
+												</div>
+												<div class="result">
+													<span class="winner">6</span>
+													<span class="vs">:</span>
+													<span class="loser">4</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div>
+										<a href="#none">
+											<div class="match_item">
+												<div class="versus">
+													<span class="winner"><span class="team">NC</span><span class="logo"><img src="../../images/team_nc.png" alt="logo"></span></span>
+													<span class="vs">vs</span>
+													<span class="loser"><span class="logo"><img src="../../images/team_sk.png" alt="logo"></span><span class="team">SK</span></span>
+												</div>
+												<div class="result">
+													<span class="winner">12</span>
+													<span class="vs">:</span>
+													<span class="loser">3</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div>
+										<a href="#none">
+											<div class="match_item">
+												<div class="versus">
+													<span class="winner"><span class="team">SK</span><span class="logo"><img src="../../images/team_sk.png" alt="logo"></span></span>
+													<span class="vs">vs</span>
+													<span class="loser"><span class="logo"><img src="../../images/team_nc.png" alt="logo"></span><span class="team">NC</span></span>
+												</div>
+												<div class="result">
+													<span class="winner">6</span>
+													<span class="vs">:</span>
+													<span class="loser">4</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- e: team slider -->
+						</div>
+						<!-- e: LEFT contents-->
+						
+						<!-- 내용-->
+						<div class="contents_wrap">
+
+							<!-- s: search_wrap -->
+							<div class="search_wrap">
+								<div class="input_wrap">
+									<input type="text" class="input w03" />
+									<div class="btn_wrap03">
+										<span class="btn"><img src="../../images/icon_search01.png" alt="검색" /></span>
+									</div>
+								</div>
+							</div>
+							<!-- e: search_wrap -->
+
+							<!-- s: video wrap -->
+							<div class="video_wrap">
+								<video id="vid1" class="video-js vjs-default-skin" controls preload="none" width="960" height="540" poster="" data-setup=''>
+									<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+									<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+									<source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+								</video>
+
+								<div class="video_edit_wrap">
+									<div class="row">
+										<div class="col col-12">
+											<!-- s: video slider-->
+											<div id="slider_1" class="slider"></div>
+											<!-- e: video slider-->
+											<!-- s: marker 1-->
+											<div id="marker_1" class="marker" style="left:30%;"></div>
+											<!-- e: marker 1-->
+											<!-- s: marker 2-->
+											<div id="marker_2" class="marker" style="left:70%;"></div>
+											<!-- e: marker 2-->
+											<!-- s: play progress-->
+											<div class="progress simple">
+												<div class="area">
+													<div class="bar" style="width: 40%;"></div>
+												</div>
+											</div>
+											<!-- e: play progress-->
+										</div>
+										<!-- s: player btns -->
+										<div class="edit_btn_wrap">
+											<a class="btn"><i class="iconv-video1"></i></a>
+											<a class="btn"><i class="iconv-video2"></i></a>
+											<a class="btn"><i class="iconv-video3"></i></a>
+											<a class="btn"><i class="iconv-video4"></i></a>
+											<a class="btn"><i class="iconv-video5"></i></a>
+											<a class="btn"><i class="iconv-video6"></i></a>
+											<a class="btn"><i class="iconv-video7"></i></a>
+											<a class="btn"><i class="iconv-video8"></i></a>
+										</div>
+										<!-- e: player btns -->
+									</div>
+								</div>
+							</div>
+							<!-- e: video wrap -->
+						</div>
+						<!-- e: 내용-->
+					</div>
+
+					<div class="container_wrap bottom">
+						<!-- s: table wrap-->
+						<div class="table_wrap">
+							<table class="table simple table_write_type">
+								<colgroup>
+									<col width="20%" />
+									<col width="20%" />
+									<col width="20%" />
+									<col width="40%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th colspan="4">Batch name</th>
+									</tr>
+									<tr>
+										<td colspan="4">
+											<input type="text" name="" class="input w01" />
+										</td>
+									</tr>
+									<tr>
+										<th>Batch operation time setting</th>
+										<th>Team Selection</th>
+										<th>Player selection</th>
+										<th>Player selection</th>
+									</tr>
+									<tr>
+										<td>
+											<select class="select w01">
+												<option value="" selected="selected">video1</option>
+												<option value="">video2</option>
+											</select>
+										</td>
+										<td>
+											<select class="select w01">
+												<option value="" selected="selected">video1</option>
+												<option value="">video2</option>
+											</select>
+										</td>
+										<td>
+											<select class="select w01">
+												<option value="" selected="selected">video1</option>
+												<option value="">video2</option>
+											</select>
+										</td>
+										<td>
+											<!-- s: date picker -->
+											<div id="datepicker2_group" class="group pop">
+												<input type="text" class="input" style="width: 157px;" value="From" />
+												<a class="btn btn-gray"><i class="icon-calendar"></i></a>
+												<div id="datepicker2" class="datepicker" style="display: none; position: absolute; z-index: 999; margin-left: 1px; margin-top: 1px;">
+													<div class="head">
+														<div class="prev">
+															<i class="icon-chevron-left"></i>
+														</div>
+														<div class="title"></div>
+														<div class="next">
+															<i class="icon-chevron-right"></i>
+														</div>
+													</div>
+													<table class="body">
+														<tr>
+															<th>sun</th>
+															<th>mon</th>
+															<th>tue</th>
+															<th>wed</th>
+															<th>thu</th>
+															<th>fri</th>
+															<th>sat</th>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<!-- e: date picker -->
+
+											<!-- s: date picker -->
+											<div id="datepicker3_group" class="group pop">
+												<input type="text" class="input" style="width: 157px;" value="To" />
+												<a class="btn btn-gray"><i class="icon-calendar"></i></a>
+												<div id="datepicker3" class="datepicker" style="display: none; position: absolute; z-index: 999; margin-left: 1px; margin-top: 1px;">
+													<div class="head">
+														<div class="prev">
+															<i class="icon-chevron-left"></i>
+														</div>
+														<div class="title"></div>
+														<div class="next">
+															<i class="icon-chevron-right"></i>
+														</div>
+													</div>
+													<table class="body">
+														<tr>
+															<th>sun</th>
+															<th>mon</th>
+															<th>tue</th>
+															<th>wed</th>
+															<th>thu</th>
+															<th>fri</th>
+															<th>sat</th>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<!-- e: date picker -->
+										</td>
+									</tr>
+									<tr>
+										<th colspan="4">Item Settings</th>
+									</tr>
+									<tr>
+										<td colspan="4">
+											<!-- s: items choice -->
+											<div class="items">
+												<ul>
+													<li><a href="#none">none</a></li>
+													<li><a href="#none" class="active">strike</a></li>
+													<li><a href="#none">ball</a></li>
+													<li><a href="#none">strike out</a></li>
+													<li><a href="#none">strike out not out</a></li>
+													<li><a href="#none">four ball</a></li>
+													<li><a href="#none">intentional walk</a></li>
+													<li><a href="#none">foul ball </a></li>
+													<li><a href="#none">ground out </a></li>
+													<li><a href="#none">homerun</a></li>
+													<li><a href="#none">home in</a></li>
+													<li><a href="#none">one base hit</a></li>
+													<li><a href="#none">two base hit</a></li>
+													<li><a href="#none">three base hit</a></li>
+													<li><a href="#none">hit by pitch</a></li>
+													<li><a href="#none">fly out</a></li>
+													<li><a href="#none">infield fly out </a></li>
+													<li><a href="#none">force out</a></li>
+													<li><a href="#none">tag out</a></li>
+													<li><a href="#none">sacrifice batting</a></li>
+													<li><a href="#none">sacrifice fly</a></li>
+													<li><a href="#none">sacrifice bunt</a></li>
+													<li><a href="#none">squeeze bunt</a></li>
+													<li><a href="#none">safety bunt</a></li>
+													<li><a href="#none">bunt after two strikes</a></li>
+													<li><a href="#none">wild pitch</a></li>
+													<li><a href="#none">passed ball</a></li>
+													<li><a href="#none">bench clearing </a></li>
+													<li><a href="#none">steal a base</a></li>
+													<li><a href="#none">be caught stealing</a></li>
+												</ul>	
+											</div>
+											<!-- e: items choice -->
+										</td>
+									</tr>
+									<tr>
+										<th colspan="4">Descriptions</th>
+									</tr>
+									<tr>
+										<td colspan="4">
+											<textarea class="input textareabox"></textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- e: table wrap-->
+
+						<!-- s: btn-->
+						<div class="btn_wrap">
+							<a class="btn large focus">Submission</a>
+						</div>
+						<!-- e: btn-->
+
+					</div>
+				</div>
+				<!-- e: main_contents-->
+			</div>
+		</div>	
+		<!-- e: body_contents-->
+		
+		<!-- s: footer-->
+		<div class="footer_container">
+			<div class="footer_inner">
+				<img src="../../images/sk_logo_b.png" alt="SK telecom">
+			</div>
+		</div>
+		<!-- e: footer-->
+		
+		<script data-jui="#datepicker1" data-tpl="dates" type="text/template">
+		    <tr>
+		        <! for(var i = 0; i < dates.length; i++) { !>
+		        <td><!= dates[i] !></td>
+		        <! } !>
+		    </tr>
+		</script>
+		<script data-jui="#datepicker2" data-tpl="dates" type="text/template">
+			<tr>
+				<! for(var i = 0; i < dates.length; i++) { !>
+				<td><!= dates[i] !></td>
+				<! } !>
+			</tr>
+		</script>
+		<script data-jui="#datepicker3" data-tpl="dates" type="text/template">
+			<tr>
+				<! for(var i = 0; i < dates.length; i++) { !>
+				<td><!= dates[i] !></td>
+				<! } !>
+			</tr>
+		</script>
+
+	</body>
+</html>
