@@ -33,37 +33,55 @@
 						<h1 class="logo"><a href="#"><img src="../../images/logo.png" alt="media content summarization"></a></h1>
 					</div>
 				</div>
-				
-			<div class="gnb_wrap">
-				<ul class="menu_wrap">
-					<li><a href="/home" class="tit_gnb" id="home">홈</a></li>
-					<li><a href="/workManagement" class="tit_gnb" id="workManagement">작업관리</a>
-						<ul>
-							<li><a href="/workManagement/editHighlight/20200826HHNC0_29_213122" class="tit_gnb" id="editeHighlight">하이라이트편 편집(영상 PLAY)</a></li>
-							<li><a href="/workManagement/editHighlightByList" class="tit_gnb" id="editHighlgihtByList">하이라이트 편집(목록)</a></li>
-							<li><a href="/workManagement/detection" class="tit_gnb" id="detection">디텍션 판정</a></li>
-							<li><a href="/workManagement/batchManagement/batchList" class="tit_gnb" id="batchManagement">배치관리</a>
-								<ul>
-									<li><a href="/workManagement/batchManagement/batchList" class="tit_gnb" id="batchList">배치 목록</a></li>
-									<li><a href="/workManagement/batchManagement/createBatch" class="tit_gnb" id="creatBatch">배치 생성</a></li>					
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><span class="tit_gnb">모니터링</span>
-						<ul>
-							<li><a href="/monitoring/gameResults" class="tit_gnb" id="gameResults">경기 결과</a></li>
-							<li><a href="/monitoring/progressStatus" class="tit_gnb" id="progressStatus">진행 상태</a></li>						
-						</ul>
-					</li>
-					<li><span class="tit_gnb">환경설정</span>
-						<ul>
-							<li><a href="/setting/userList" class="tit_gnb" id="userList">사용자 목록</a></li>
-							<li><a href="/setting/createUser" class="tit_gnb" id="createUser">사용자 정보 등록</a></li>					
-						</ul>							
-					</li>
-				</ul>
-			</div>
+
+
+<script>
+
+
+</script>
+
+                <div class="gnb_wrap">
+                    <ul class="menu_wrap">
+                        <li><a href="/home" class="tit_gnb" id="home">홈</a></li>
+                        <li><a href="/workManagement" class="tit_gnb" id="workManagement">작업관리</a>
+                            <div class="dropdown">
+                                <ul style="width: 200px;">
+                                    <li><a href="/workManagement/editHighlight/20200826HHNC0_29_213122" id="editeHighlight">하이라이트편 편집(영상 PLAY)</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/workManagement/editHighlightByList" id="editHighlgihtByList">하이라이트 편집(목록)</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/workManagement/detection" id="detection">디텍션 판정</a></li>
+                                    <li class="divider"></li>
+                                    <li class="submenu">
+                                        <a href="/workManagement/batchManagement/batchList" id="batchManagement">배치관리</a>
+                                        <ul style="width: 150px">
+                                            <li><a href="/workManagement/batchManagement/batchList" id="batchList">배치 목록</a></li>
+                                            <li><a href="/workManagement/batchManagement/createBatch" id="creatBatch">배치 생성</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><span class="tit_gnb">모니터링</span>
+                            <div class="dropdown">
+                                <ul style="width: 200px;">
+                                    <li><a href="/monitoring/gameResults" id="gameResults">경기 결과</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/monitoring/progressStatus" id="progressStatus">진행 상태</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><span class="tit_gnb">환경설정</span>
+                            <div class="dropdown">
+                                <ul style="width: 200px;">
+                                    <li><a href="/setting/userList" id="userList">사용자 목록</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/monitoring/progressStatus" id="progressStatus">진행 상태</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 			</div>
 		</div>
 		<!--e: header -->
