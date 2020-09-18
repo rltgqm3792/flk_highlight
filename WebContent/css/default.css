@@ -300,11 +300,12 @@ a.link{color:#52657c; text-decoration:underline;}
 .video_play_wrap .video_play_box {display:table-cell; }
 .video_play_wrap .video_list_box {display:table-cell; height:auto; vertical-align: top; border:1px #ccc solid; border-left:0; box-sizing: border-box;}
 .video_play_wrap .video_list_box .v_list_tit {height: 40px; line-height: 40px; padding:0 20px; text-align: center; background: #fff; border-bottom:1px #ccc solid; box-sizing: border-box;}
-.video_play_wrap .video_list_box .v_list { overflow-y:auto;}
+.video_play_wrap .video_list_box .v_list {width:200px; height:calc(517px - 42px); overflow-y:auto;}
 .video_play_wrap .video_list_box .v_list li {width:auto; line-height:20px;padding:10px 14px;border-bottom:1px #ccc solid;}
 .video_play_wrap .video_list_box .v_list li:last-child {border-bottom:0}
 .video_play_wrap .video_list_box .v_list li:hover {background-color: #f4f4f4;}
-.video_play_wrap .video_list_box .v_list li.on {background-color: #ececec;}
+.video_play_wrap .video_list_box .v_list li.on {background-color: #ececec;} 
+
 
 .video_edit_wrap {padding-top:60px;}
 
