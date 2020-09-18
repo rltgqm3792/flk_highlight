@@ -296,6 +296,17 @@ a.link{color:#52657c; text-decoration:underline;}
 .search_wrap .btn.focus, .search_wrap .btn.focus:hover {border:0; background-color:initial; background-image: initial;}
 
 /* video */
+.video_play_wrap {display:table}
+.video_play_wrap .video_play_box {display:table-cell; }
+.video_play_wrap .video_list_box {display:table-cell; height:auto; vertical-align: top; border:1px #ccc solid; border-left:0; box-sizing: border-box;}
+.video_play_wrap .video_list_box .v_list_tit {height: 40px; line-height: 40px; padding:0 20px; text-align: center; background: #fff; border-bottom:1px #ccc solid; box-sizing: border-box;}
+.video_play_wrap .video_list_box .v_list { overflow-y:auto;}
+.video_play_wrap .video_list_box .v_list li {width:auto; line-height:20px;padding:10px 14px;border-bottom:1px #ccc solid;}
+.video_play_wrap .video_list_box .v_list li:last-child {border-bottom:0}
+.video_play_wrap .video_list_box .v_list li:hover {background-color: #f4f4f4;}
+.video_play_wrap .video_list_box .v_list li.on {background-color: #ececec;}
+
+
 .video_edit_wrap {padding-top:60px;}
 
 /* video slider bar, progress bar */
@@ -384,7 +395,9 @@ a.link{color:#52657c; text-decoration:underline;}
 .match_slider .match_item .result .winner, .match_slider .match_item .result .loser {width:46px;}
 .match_slider .match_item .versus .vs,.match_slider .match_item .result .vs {width:40px}
 .match_slider .match_item .result .winner {color:#db4242;}
-
+.match_slider.no_match {position:relative;}
+.match_slider.no_match:after {content:"no match result"; display:block; font-size:20px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
+.match_slider.no_match > *{ visibility: hidden;}
         
 .leftCont_wrap {float: left;width: 793px;margin-right: 63px;}
 .rightCont_wrap {float: right;width: 919px;}
