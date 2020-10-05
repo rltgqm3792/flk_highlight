@@ -636,7 +636,6 @@ td .progress_wrap {left:80px; width:620px;}
 .progress_wrap .bar.type-b em {background-color: #ffba00;}
 .progress_wrap .bar em {position:absolute; left:0; top:0; display:inline-block; height:100%; background-color:#1BD3C9; border-radius:10px; font-size:0; text-indent:-999em;}
 
-
 .topicHighlight_wrap {height: 300px;position: relative; width: calc(100% - 60px); margin-left: 30px;}
 .topicHighlight_wrap .item {float: left;width: 230px !important;margin-left:60px !important;}
 .topicHighlight_wrap .item:first-child {margin-left: 36px !important;}
