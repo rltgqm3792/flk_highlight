@@ -666,8 +666,8 @@ td .progress_wrap {left:80px; width:620px;}
 .topicHighlight_wrap .item.on .time {color: #DCDAE4;}
 .topicHighlight_wrap .item.on .endTime { color: #58BAE1;}
 .topicHighlight_wrap .item.on .btn_summary{border: 2px solid #1592E6;color: #1592E6;}
-.topicHighlight_wrap > .btn_prev {position: absolute; top:134px; left:-28px;}
-.topicHighlight_wrap > .btn_next {position: absolute; top:134px; right:-28px;}
+.topicHighlight_wrap > .btn_prev {position: absolute; top:120px; left:-28px;}
+.topicHighlight_wrap > .btn_next {position: absolute; top:120px; right:-28px;}
 
 #editing_container {width: 1515px;margin: 0 auto;position: relative;}
 #editing_container .contents_wrap{width: 1515px;}
