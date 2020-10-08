@@ -750,9 +750,7 @@ td .progress_wrap {left:80px; width:620px;}
 
 /* main area */
 
-body.main {background:#ddd; }
-body.main #today_container {background:#ddd; }
-/* body.main:after{content:""; clear:both; display:block;} */
+.wrap {background:#ddd; }
 
 .intro_wrap {margin:100px 0 100px}
 .intro_wrap .video_wrap {width:800px; margin:0 auto;}
