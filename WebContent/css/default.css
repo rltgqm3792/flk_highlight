@@ -19,7 +19,7 @@ hr {clear:both; display:none;}
 legend, caption {position:absolute; visibility:hidden; overflow:hidden; line-height:0; width:0; height:0; margin:0; padding:0;}
 img, fieldset {border:0 none; vertical-align:middle;}
 label {cursor:pointer;margin-bottom:0px;font-weight:normal;word-break:break-all; word-wrap:break-word;vertical-align:middle;}
-a {color:#3c3c3c;}
+a {color:#3c3c3c; outline:none;}
 a:link, 
 a:visited {color:#3c3c3c; text-decoration:none;}
 a:hover {color:#3c3c3c; text-decoration:none;}
@@ -771,3 +771,23 @@ td .progress_wrap {left:80px; width:620px;}
 .createMoviePlayer {margin:200px 0 200px}
 .createMoviePlayer .video_wrap {width:800px; margin:0 auto;}
 .createMoviePlayer .video_wrap .video_play_box video {width:800px; height:450px;}
+
+.datepicker_wrap {}
+.datepicker_wrap .date_slider1 {width:1000px; margin:0 auto;}
+.datepicker_wrap .date_slider1 .btn_prev {}
+.datepicker_wrap .date_slider1 .btn_next {}
+.datepicker_wrap .date_slider1 .date {text-align:center; background-color:#f1f1f1;}
+.datepicker_wrap .date_slider1 .date a {width:100%; height:100px; display: inline-block;}
+.datepicker_wrap .date_slider1 .date span {width:50px; display:inline-block;}
+.datepicker_wrap .date_slider1 .date strong {width: 50px;
+    display: inline-block;
+    height: 50px;
+    vertical-align: middle;
+    line-height: 50px;
+    /* border: 1px #ccc solid; */
+    margin: 20px 0;
+}
+.datepicker_wrap .date_slider1 .date .on strong {background-color:#fff; border-radius: 25px;}
+.datepicker_wrap .date_slider1 .date .start strong {width:100%; margin-left:calc(50% - 25px); text-indent:-100px; background-color:#fff; border-radius:25px 0 0 25px;}
+.datepicker_wrap .date_slider1 .date .ing strong {width:100%; background-color:#fff;}
+.datepicker_wrap .date_slider1 .date .end strong {width:100%; margin-left:-102px; text-indent:100px;background-color:#fff; border-radius:0 25px 25px 0;}

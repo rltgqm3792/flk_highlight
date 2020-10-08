@@ -24,54 +24,6 @@
 	</head>
 
 	<body class="jui">
-		
-		<!--s: header -->
-		<div class="header_container">
-			<div class="header_inner">
-				<div class="header_top cboth">
-					<div class="center">
-						<h1 class="logo"><a href="#"><img src="../../images/logo.png" alt="media content summarization"></a></h1>
-					</div>
-				</div>
-
-                <!--s: GNB -->
-                <div class="gnb_wrap">
-                    <div class="menu_wrap">
-                        <ul class="level1">
-                            <li><a href="/home"" id="home">홈</a></li>
-                            <li><a href="/workManagement" id="workManagement">작업관리</a>
-                                <ul class="level2">
-                                    <li><a href="/workManagement/editHighlight/20200826HHNC0_29_213122" id="editeHighlight">하이라이트편 편집(영상 PLAY)</a></li>
-                                    <li><a href="/workManagement/editHighlightByList" id="editHighlgihtByList">하이라이트 편집(목록)</a></li>
-                                    <li><a href="/workManagement/detection" id="detection">디텍션 판정</a>
-                                    <li><a href="/workManagement/batchManagement/batchList" id="batchManagement">배치관리</a>
-                                        <ul class="level3">
-                                            <li><a href="/workManagement/batchManagement/batchList" id="batchList">배치 목록</a></li>
-                                            <li><a href="/workManagement/batchManagement/createBatch" id="creatBatch">배치 생성</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="#">모니터링</a>
-                                <ul class="level2">
-                                    <li><a href="/monitoring/gameResults" id="gameResults">경기 결과</a></li>
-                                    <li><a href="/monitoring/progressStatus" id="progressStatus">진행 상태</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">환경설정</a>
-                                <ul class="level2">
-                                    <li><a href="/setting/userList" id="userList">사용자 목록</a></li>
-                                    <li><a href="/monitoring/progressStatus" id="progressStatus">진행 상태</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!--e: GNB -->
-
-			</div>
-		</div>
-		<!--e: header -->
 
 		<!-- s: body_contents-->
 		<div class="body_container" id="today_container">
@@ -79,22 +31,6 @@
 				<!-- s: main_contents-->	
 				<div class="main_contents">
 					<div class="container_wrap">
-                        <!--s: LNB -->
-                        <div class="lnb_wrap">
-                            <h2>Today’s<br> Highlight</h2>
-                            <p class="today_date"><strong>June, 23</strong> Tuesday</p>
-                        </div>
-                        <!--e: LNB -->
-						<div class="search_area">
-							<div class="search_wrap">
-								<div class="input_wrap">
-									<input type="text" class="input w07">
-									<div class="btn_wrap03">
-										<span class="btn"><img src="../../images/icon_search01.png" alt="검색"></span>
-									</div>
-								</div>
-							</div>
-                        </div>
  
                         <!-- s: contents-->
                         <div class="contents_wrap">
@@ -105,8 +41,7 @@
                                 <div class="video_wrap">
                                     <div class="video_play_wrap">
                                         <div class="video_play_box">
-                                            <video id="intro_vid1" class="video-js vjs-default-skin" controls preload="none" width="800" height="450"
-                                                poster="" data-setup=''>
+                                            <video id="intro_vid1" class="video-js vjs-default-skin" controls preload="none" width="800" height="450" poster="" data-setup=''>
                                                 <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
                                                 <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
                                                 <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
@@ -116,6 +51,90 @@
                                 </div>
                                 <!-- e: video wrap -->
                             </div>
+
+
+
+                            <!-- 날짜 슬라이드 -->
+                            <div class="datepicker_wrap">
+                                <div class="date_slider1">
+                                    <a href="#" class="btn_prev"><img src="../../images/btn_prev_01.png" alt="이전"></a><!-- 2020-10-05 슬라이드 추가 -->
+                                    <ul>
+                                        <li class="date">
+                                            <a href="#" class="start">
+                                                <span>sun</span><br>
+                                                <strong>17</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#" class="end">
+                                                <span>mon</span><br>
+                                                <strong>18</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#" class="start">
+                                                <span>tue</span><br>
+                                                <strong>19</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#" class="ing">
+                                                <span>wed</span><br>
+                                                <strong>20</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#" class="ing">
+                                                <span>thu</span><br>
+                                                <strong>21</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#" class="end">
+                                                <span>fri</span><br>
+                                                <strong>22</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#" class="on">
+                                                <span>sat</span><br>
+                                                <strong>23</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#">
+                                                <span>sun</span><br>
+                                                <strong>24</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#">
+                                                <span>mon</span><br>
+                                                <strong>25</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#">
+                                                <span>tue</span><br>
+                                                <strong>26</strong>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn_next"><img src="../../images/btn_next_01.png" alt="다음"></a>
+                                </div>
+                            </div>
+                            <script>
+                                $('.date_slider1 ul').slick({
+                                    infinite: true,
+                                    slidesToShow: 7,
+                                    slidesToScroll: 1,
+                                    slide: "li",
+                                    prevArrow: $(".btn_prev"),
+                                    nextArrow: $(".btn_next")
+                                });
+                            </script>
+
+                            <!--// 날짜 슬라이드 -->
 
                             <!-- 날짜별 동영상 리스트 -->
                             <div class="mainHighlight_wrap">
