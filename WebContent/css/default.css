@@ -788,6 +788,6 @@ td .progress_wrap {left:80px; width:620px;}
     margin: 20px 0;
 }
 .datepicker_wrap .date_slider1 .date .on strong {background-color:#fff; border-radius: 25px;}
-.datepicker_wrap .date_slider1 .date .start strong {width:100%; margin-left:calc(50% - 25px); text-indent:-100px; background-color:#fff; border-radius:25px 0 0 25px;}
+.datepicker_wrap .date_slider1 .date .start strong {width:100%; margin-left:calc(50% - 25px); text-indent:-95px; background-color:#fff; border-radius:25px 0 0 25px;}
 .datepicker_wrap .date_slider1 .date .ing strong {width:100%; background-color:#fff;}
 .datepicker_wrap .date_slider1 .date .end strong {width:100%; margin-left:-102px; text-indent:100px;background-color:#fff; border-radius:0 25px 25px 0;}
