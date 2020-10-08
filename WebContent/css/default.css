@@ -749,6 +749,11 @@ td .progress_wrap {left:80px; width:620px;}
 .item .video-js .vjs-load-progress div {background-color: #fceaf2;border-radius: 8px;}
 
 /* main area */
+
+body.main {background:#ddd; }
+body.main #today_container {background:#ddd; }
+/* body.main:after{content:""; clear:both; display:block;} */
+
 .intro_wrap {margin:100px 0 100px}
 .intro_wrap .video_wrap {width:800px; margin:0 auto;}
 .intro_wrap .video_wrap .video_play_box video {width:800px; height:450px;}
