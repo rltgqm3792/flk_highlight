@@ -750,47 +750,87 @@ td .progress_wrap {left:80px; width:620px;}
 
 /* main area */
 
-.wrap {background:#ddd; }
-
+.wrap {background:#000; }
+.main {padding:0;}
 .intro_wrap {margin:100px 0 100px}
 .intro_wrap .video_wrap {width:800px; margin:0 auto;}
 .intro_wrap .video_wrap .video_play_box video {width:800px; height:450px;}
 
-.mainHighlight_wrap {position: relative; width: 100%; padding-top: 100px;}
+/* .mainHighlight_wrap {position: relative; width: 100%; padding-top: 100px;}
 .mainHighlight_wrap:after {content:""; clear:both; display:block;}
 .mainHighlight_wrap .item_s {float: left; width: auto; height: 400px; margin-right:65px;}
 .mainHighlight_wrap .item_s:nth-child(3n+2) {margin-right:0;}
-.mainHighlight_wrap .item_s:nth-child(2) {margin-right:525px;}
-.mainHighlight_wrap .calendar_wrap.main {position:absolute; top:10px; right:50px} 
+.mainHighlight_wrap .item_s:nth-child(2) {margin-right:525px;} */
+
+
+
+.datepicker_wrap {width:1086px; margin:0 auto; background-color:#000; position:relative;}
+.datepicker_wrap .month_title {padding:30px 0 20px; text-align:center; font-size:40px; color:#fff; position:relative;}
+.datepicker_wrap .month_title a {color:#fff}
+
+.datepicker_wrap .month_title .calendar_wrap.main {display:none; position:absolute; top:100px; left: calc(50% - 190px); padding:20px; background-color:#fff; border: 1px #ccc solid; border-radius:20px; z-index:2} 
+.datepicker_wrap .month_title .calendar_wrap.main.on{display:block;}
+
+.datepicker_wrap .date_slider1 {width:1000px; margin:0 auto;}
+.datepicker_wrap .date_slider1 .btn_prev {position:absolute; top:50px; left:0}
+.datepicker_wrap .date_slider1 .btn_next {position:absolute; top:50px; right:0}
+.datepicker_wrap .date_slider1 .date {text-align:center;}
+.datepicker_wrap .date_slider1 .date a {width:100%; display: inline-block; color:#777; font-size:24px;}
+.datepicker_wrap .date_slider1 .date span {width:50px; margin: 20px 0 10px; display:inline-block;}
+.datepicker_wrap .date_slider1 .date strong {width: 70px; margin: 20px 0 50px; display: inline-block; height: 70px; vertical-align: middle; line-height: 70px; }
+.datepicker_wrap .date_slider1 .date .on span, .datepicker_wrap .date_slider1 .date .start span, .datepicker_wrap .date_slider1 .date .end span, .datepicker_wrap .date_slider1 .date .ing span {color:#fff;}
+.datepicker_wrap .date_slider1 .date .on strong {background-color:#fff; border-radius: 35px; color:#f90000;}
+.datepicker_wrap .date_slider1 .date .start strong {width:100%; margin-left:calc(50% - 35px); text-indent:-130px; background-color:#fff; border-radius:35px 0 0 35px; color:#f90000;}
+.datepicker_wrap .date_slider1 .date .ing strong {width:100%; background-color:#fff; color:#f90000;}
+.datepicker_wrap .date_slider1 .date .end strong {width:100%; margin-left:calc(50% - 226px); text-indent:126px;background-color:#fff; border-radius:0 35px 35px 0; color:#f90000;}
+.datepicker_wrap #date7 .date .start strong {width:100%; margin-left:calc(50% - 35px); text-indent:-74px; background-color:#fff; border-radius:35px 0 0 35px; color:#f90000;}
+.datepicker_wrap #date7 .date .end strong {width:100%; margin-left:-64px; text-indent:64px;background-color:#fff; border-radius:0 35px 35px 0; color:#f90000;}
+
+
+
+
+.todayHight_wrap {width:100%; background-color:#fff; padding-bottom:100px;}
+.todayHight_wrap .title {padding:100px 0 70px; text-align:center;}
+.todayHight_wrap .title .tit {display:inline-block; font-size:60px;}
+.todayHight_wrap .title .date {display:inline-block; padding-top:10px; font-size:30px;}
+.todayHight_wrap .title .date .time {padding-left:50px; color:#3db611; font-weight:bold;}
+
+.todayHight_slide {width:1086px; margin: 0 auto; position: relative; }
+.todayHight_slide .item_s {padding-left:10px;}
+.todayHight_slide .item_s .video {position: relative;z-index: 10;}
+.todayHight_slide .item_s .hd {width:530px; padding:30px 0 60px; position: relative;}
+.todayHight_slide .item_s .hd .score {font: normal 30px Lato;}
+.todayHight_slide .item_s .hd .score .team1 {margin-right: 5px;}
+.todayHight_slide .item_s .hd .score .team2 {margin-left: 5px;}
+.todayHight_slide .item_s .hd .score .win {padding-left:14px; color: #f10200;}
+.todayHight_slide .item_s .hd .score .lose {padding-left:14px; color: #666;}
+.todayHight_slide .item_s .hd .date {position: absolute; right:20px; top:35px; ;color: #999;font-size: 24px;}
+.todayHight_slide .item_s .hd .date sub {position: relative;top: -7px;margin-right: 8px;}
+
+.todayHight_slide > .btn_prev {position: absolute; top:120px; left:-28px;}
+.todayHight_slide > .btn_next {position: absolute; top:120px; right:-28px;}
+.todayHight_slide .slick-dots li button:before {width:16px; height:16px; background-color:#000; border-radius: 20px;}
+.todayHight_slide .slick-dots li.slick-active button:before {width:20px; height:20px; top:-2px;}
+
+
+
 
 .createHighlight_wrap .createHighlightList {display:table; margin:0 auto;}
 .createHighlight_wrap .createHighlightList li {width:200px; padding: 0 10px; display:table-cell;}
-.createHighlight_wrap .createHighlightMovie {position: relative; width: 100%; padding-top: 100px;}
-.createHighlight_wrap .createHighlightMovie ul:after {content:""; clear:both; display:block;}
-.createHighlight_wrap .createHighlightMovie .item_s {float: left; width: auto; height: 350px; margin-right: 60px; margin-bottom: 50px; border: 2px transparent solid;}
-.createHighlight_wrap .createHighlightMovie .item_s.on {border:2px red solid; display:inline-block;}
-.createHighlight_wrap .createHighlightMovie .item_s:nth-child(3n) {margin-right:0;}
-.createHighlight_wrap .btn_footer {float:none; margin:10px 0 30px; text-align:right;}
-.createMoviePlayer {margin:200px 0 200px}
-.createMoviePlayer .video_wrap {width:800px; margin:0 auto;}
-.createMoviePlayer .video_wrap .video_play_box video {width:800px; height:450px;}
 
-.datepicker_wrap {}
-.datepicker_wrap .date_slider1 {width:1000px; margin:0 auto;}
-.datepicker_wrap .date_slider1 .btn_prev {}
-.datepicker_wrap .date_slider1 .btn_next {}
-.datepicker_wrap .date_slider1 .date {text-align:center; background-color:#f1f1f1;}
-.datepicker_wrap .date_slider1 .date a {width:100%; height:100px; display: inline-block;}
-.datepicker_wrap .date_slider1 .date span {width:50px; display:inline-block;}
-.datepicker_wrap .date_slider1 .date strong {width: 50px;
-    display: inline-block;
-    height: 50px;
-    vertical-align: middle;
-    line-height: 50px;
-    /* border: 1px #ccc solid; */
-    margin: 20px 0;
-}
-.datepicker_wrap .date_slider1 .date .on strong {background-color:#fff; border-radius: 25px;}
-.datepicker_wrap .date_slider1 .date .start strong {width:100%; margin-left:calc(50% - 25px); text-indent:-95px; background-color:#fff; border-radius:25px 0 0 25px;}
-.datepicker_wrap .date_slider1 .date .ing strong {width:100%; background-color:#fff;}
-.datepicker_wrap .date_slider1 .date .end strong {width:100%; margin-left:-102px; text-indent:100px;background-color:#fff; border-radius:0 25px 25px 0;}
+.createHighlight_wrap .createHighlightMovie {position: relative; width: 1086px; padding-top: 100px; margin:0 auto;}
+.createHighlight_wrap .createHighlightMovie ul:after {content:""; clear:both; display:block;}
+.createHighlight_wrap .createHighlightMovie .item_s {float: left; width: 520px;; height: 490px; margin-right:26px; margin-bottom: 26px; border: 5px transparent solid; position:relative;}
+.createHighlight_wrap .createHighlightMovie .item_s:nth-child(2n) {margin-right:0;}
+.createHighlight_wrap .createHighlightMovie .item_s .video-js {width:520px; height:490px;}
+.createHighlight_wrap .createHighlightMovie .item_s.on {border:5px #fff solid; display:inline-block;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd {padding:20px 30px; position: absolute; bottom:0; left:0; background-color:#000; opacity: .5; color:#fff; font-size:18px;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .tag_wrap {display:inline-block; width:100%;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .tag_wrap .tag {background-color:#3664ff; padding:6px 10px;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .text {padding:24px 0; line-height:30px; display: inline-block;}
+
+.createHighlight_wrap .btn_footer {float:none; margin:10px 0 30px; text-align:right;}
+
+
+
+/* .vjs-poster {background-color:#f1f1f1;} */
