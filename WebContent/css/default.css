@@ -4,8 +4,8 @@
 
 /* common
 ------------------------------------------------------------------------------------------------- */
-*{-webkit-text-size-adjust:none;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent;}
-html ,body { height:100%; margin:0; padding:0; background:#fff; font-family:'Lato', NanumGothic,"나눔고딕",Dotum,"돋움",Helvetica,AppleSDGothicNeo,Arial,sans-serif; font-size:13px;color:#3c3c3c;}
+*{-webkit-text-size-adjust:none;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent; outline:0;}
+html ,body { height:100%; margin:0; padding:0; background:#fff; font-family:'Lato', NanumGothic,"나눔고딕",Dotum,"돋움",Helvetica,AppleSDGothicNeo,Arial,sans-serif; font-size:13px;color:#3c3c3c; }
 dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote {margin:0; padding:0;}
 th,td, input,textarea,select {font-size:12px; color:#3c3c3c; font-family: 'Lato', NanumGothic,"나눔고딕", Dotum,"돋움",Helvetica,AppleSDGothicNeo,Arial,sans-serif;vertical-align:middle;}
 th,td {word-break:break-all; word-wrap:break-word;}
@@ -748,26 +748,15 @@ td .progress_wrap {left:80px; width:620px;}
 .item .video-js .vjs-progress-control .vjs-progress-holder {margin:0 !important;height:8px !important;border-radius: 8px;}
 .item .video-js .vjs-load-progress div {background-color: #fceaf2;border-radius: 8px;}
 
+
 /* main area */
-
-.wrap {background:#000; }
+.wrap {background:#000;}
+.wrap.type2 {background:#fff;}
 .main {padding:0;}
-.intro_wrap {margin:100px 0 100px}
-.intro_wrap .video_wrap {width:800px; margin:0 auto;}
-.intro_wrap .video_wrap .video_play_box video {width:800px; height:450px;}
-
-/* .mainHighlight_wrap {position: relative; width: 100%; padding-top: 100px;}
-.mainHighlight_wrap:after {content:""; clear:both; display:block;}
-.mainHighlight_wrap .item_s {float: left; width: auto; height: 400px; margin-right:65px;}
-.mainHighlight_wrap .item_s:nth-child(3n+2) {margin-right:0;}
-.mainHighlight_wrap .item_s:nth-child(2) {margin-right:525px;} */
-
-
 
 .datepicker_wrap {width:1086px; margin:0 auto; background-color:#000; position:relative;}
 .datepicker_wrap .month_title {padding:30px 0 20px; text-align:center; font-size:40px; color:#fff; position:relative;}
 .datepicker_wrap .month_title a {color:#fff}
-
 .datepicker_wrap .month_title .calendar_wrap.main {display:none; position:absolute; top:100px; left: calc(50% - 190px); padding:20px; background-color:#fff; border: 1px #ccc solid; border-radius:20px; z-index:2} 
 .datepicker_wrap .month_title .calendar_wrap.main.on{display:block;}
 
@@ -786,9 +775,6 @@ td .progress_wrap {left:80px; width:620px;}
 .datepicker_wrap #date7 .date .start strong {width:100%; margin-left:calc(50% - 35px); text-indent:-74px; background-color:#fff; border-radius:35px 0 0 35px; color:#f90000;}
 .datepicker_wrap #date7 .date .end strong {width:100%; margin-left:-64px; text-indent:64px;background-color:#fff; border-radius:0 35px 35px 0; color:#f90000;}
 
-
-
-
 .todayHight_wrap {width:100%; background-color:#fff; padding-bottom:100px;}
 .todayHight_wrap .title {padding:100px 0 70px; text-align:center;}
 .todayHight_wrap .title .tit {display:inline-block; font-size:60px;}
@@ -798,6 +784,7 @@ td .progress_wrap {left:80px; width:620px;}
 .todayHight_slide {width:1086px; margin: 0 auto; position: relative; }
 .todayHight_slide .item_s {padding-left:10px;}
 .todayHight_slide .item_s .video {position: relative;z-index: 10;}
+.todayHight_slide .item_s .video .video-js {width:530px; height:298px;}
 .todayHight_slide .item_s .hd {width:530px; padding:30px 0 60px; position: relative;}
 .todayHight_slide .item_s .hd .score {font: normal 30px Lato;}
 .todayHight_slide .item_s .hd .score .team1 {margin-right: 5px;}
@@ -812,25 +799,39 @@ td .progress_wrap {left:80px; width:620px;}
 .todayHight_slide .slick-dots li button:before {width:16px; height:16px; background-color:#000; border-radius: 20px;}
 .todayHight_slide .slick-dots li.slick-active button:before {width:20px; height:20px; top:-2px;}
 
+.createHighlight_wrap {background: #09101a;}
+.createHighlight_wrap .createHighlightList {display:table; width: 1086px; margin:0 auto;}
+.createHighlight_wrap .createHighlightList .pill {height:100px; border-bottom:2px #32363f solid;}
+.createHighlight_wrap .createHighlightList .pill li {float:left; height:100px; line-height:100px; display:table-cell; font-size:24px;}
+.createHighlight_wrap .createHighlightList .pill li:first-child {padding-left:0; margin-right:48px;}
+.createHighlight_wrap .createHighlightList .pill li > a {height:auto; line-height:90px; padding: 0 65px 0 10px; background: transparent; color:#fff; font-weight:bold; }
+.createHighlight_wrap .createHighlightList .pill li.active {border-bottom: 2px #ee0501 solid;}
+.createHighlight_wrap .createHighlightList .pill li.active > a {height:90px; line-height:90px; background: transparent;  }
+.createHighlight_wrap .createHighlightList .pill_content {width: 1086px; margin: 0 auto; height:90px; line-height:90px; color:#777; font-size:24px;}
+.createHighlight_wrap .createHighlightList .pill_content li {float:left; padding:0px 25px; text-align: center;}
+.createHighlight_wrap .createHighlightList .pill_content li a {color:#777; font-weight:bold;}
 
-
-
-.createHighlight_wrap .createHighlightList {display:table; margin:0 auto;}
-.createHighlight_wrap .createHighlightList li {width:200px; padding: 0 10px; display:table-cell;}
-
-.createHighlight_wrap .createHighlightMovie {position: relative; width: 1086px; padding-top: 100px; margin:0 auto;}
+.createHighlight_wrap .createHighlightMovie {position: relative; width: 1086px; padding-top: 14px; margin:0 auto;}
 .createHighlight_wrap .createHighlightMovie ul:after {content:""; clear:both; display:block;}
 .createHighlight_wrap .createHighlightMovie .item_s {float: left; width: 520px;; height: 490px; margin-right:26px; margin-bottom: 26px; border: 5px transparent solid; position:relative;}
 .createHighlight_wrap .createHighlightMovie .item_s:nth-child(2n) {margin-right:0;}
 .createHighlight_wrap .createHighlightMovie .item_s .video-js {width:520px; height:490px;}
 .createHighlight_wrap .createHighlightMovie .item_s.on {border:5px #fff solid; display:inline-block;}
-.createHighlight_wrap .createHighlightMovie .item_s .hd {padding:20px 30px; position: absolute; bottom:0; left:0; background-color:#000; opacity: .5; color:#fff; font-size:18px;}
-.createHighlight_wrap .createHighlightMovie .item_s .hd .tag_wrap {display:inline-block; width:100%;}
-.createHighlight_wrap .createHighlightMovie .item_s .hd .tag_wrap .tag {background-color:#3664ff; padding:6px 10px;}
-.createHighlight_wrap .createHighlightMovie .item_s .hd .text {padding:24px 0; line-height:30px; display: inline-block;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd {padding:20px 30px; position: absolute; bottom:0; left:0; background-color:#000; opacity: 0.9; color:#fff; font-size:22px;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .tag_wrap {display:inline-block; width:100%; height:36px; line-height:36px;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .tag_wrap .tag {padding:3px 6px;  margin-right:10px; background-color:#3664ff; border-radius:4px;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .tag_wrap .tag.type1 { background-color:#9035ff;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .tag_wrap .tag.type2 { background-color:#fd6732;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .text {padding:11px 0; line-height:30px; display: inline-block; font-family: "나눔고딕",Dotum,"돋움",Helvetica,AppleSDGothicNeo,Arial,sans-serif}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .info {display: inline-block;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .info > span:after {content:""; display:inline-block; width:1px; height:13px; background-color:#fff; margin:0 10px;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .info > span:last-child:after {content:none}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .play_time {padding: 3px 6px; position:absolute; top:-42px; right:25px; background-color:#000; border-radius:4px;}
 
-.createHighlight_wrap .btn_footer {float:none; margin:10px 0 30px; text-align:right;}
+.createHighlight_wrap .btn_footer {float:none; padding:50px 0 130px; margin:0; text-align:center;}
+.createHighlight_wrap .btn_footer .btn_saveChanges {width:378px; height:96px; line-height:96px; border:3px #fff solid; border-radius:50px; background:transparent; font-size:28px; font-weight:bold; }
 
-
-
-/* .vjs-poster {background-color:#f1f1f1;} */
+/*play button style*/
+.video-js .vjs-big-play-button {width:2.5em; height:2.5em; line-height:2.3em; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background-color:transparent; border:3px #fff solid; border-radius:2em;}
+.video-js:hover .vjs-big-play-button, .video-js .vjs-big-play-button:focus {background-color:transparent;}
+.vjs-icon-play:before, .video-js .vjs-play-control .vjs-icon-placeholder:before, .video-js .vjs-big-play-button .vjs-icon-placeholder:before {font-size:46px; color:#ee0501}
