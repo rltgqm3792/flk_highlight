@@ -1,0 +1,502 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>hightlight</title>
+		<link rel="stylesheet" href="../../js/lib/jui/css/ui.css"/>
+		<link id="ui_theme" rel="stylesheet" href="../../js/lib/jui/css/ui-jennifer.css"/>
+		<script src="../../js/lib/jquery/jquery.min.js"></script>
+		<script src="../../js/lib/jui/js/core.min.js"></script>
+		<script src="../../js/lib/jui/js/ui.min.js"></script>
+		<!--video-js-->
+		<link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+		<script src="https://vjs.zencdn.net/7.8.3/video.js"></script>
+		<!-- slider -->
+		<link rel="stylesheet" href="../../js/slick.css" />
+		<link rel="stylesheet" href="../../js/slick-theme.css" />
+		<script src="../../js/slick.js"></script>
+		<!-- default -->
+		<link rel="stylesheet" href="../../css/default.css">
+		<script type="text/javascript" src="../../js/ui.js"></script> 
+		<script type="text/javascript" src="../../js/moment.js"></script> 
+	</head>
+
+	<body class="jui main">
+
+    <div class="wrap">
+		<!-- s: body_contents-->
+		<div class="body_container" id="today_container">
+			<div class="body_inner">
+				<!-- s: main_contents-->	
+				<div class="main_contents">
+					<div class="container_wrap">
+ 
+                        <!-- 인트로 영역-->
+                        <div class="intro_wrap">
+                            <!-- s: video wrap -->
+                            <div class="video_wrap">
+                                <div class="video_play_wrap">
+                                    <div class="video_play_box">
+                                        <video id="intro_vid1" class="video-js vjs-default-skin" controls preload="none" width="800" height="450" poster="" data-setup=''>
+                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- e: video wrap -->
+                        </div>
+
+                        <!-- 날짜 슬라이드 -->
+                        <div class="datepicker_wrap">
+                            <div class="date_slider1">
+                                <a href="#" class="btn_prev"><img src="../../images/btn_prev_01.png" alt="이전"></a><!-- 2020-10-05 슬라이드 추가 -->
+                                <ul>
+                                    <li class="date">
+                                        <a href="#" class="start">
+                                            <span>sun</span><br>
+                                            <strong>17</strong>
+                                        </a>
+                                    </li>
+                                    <li class="date">
+                                        <a href="#" class="end">
+                                            <span>mon</span><br>
+                                            <strong>18</strong>
+                                        </a>
+                                    </li>
+                                    <li class="date">
+                                        <a href="#" class="start">
+                                            <span>tue</span><br>
+                                            <strong>19</strong>
+                                        </a>
+                                    </li>
+                                    <li class="date">
+                                        <a href="#" class="ing">
+                                            <span>wed</span><br>
+                                            <strong>20</strong>
+                                        </a>
+                                    </li>
+                                    <li class="date">
+                                        <a href="#" class="ing">
+                                            <span>thu</span><br>
+                                            <strong>21</strong>
+                                        </a>
+                                    </li>
+                                    <li class="date">
+                                        <a href="#" class="end">
+                                            <span>fri</span><br>
+                                            <strong>22</strong>
+                                        </a>
+                                    </li>
+                                    <li class="date">
+                                        <a href="#" class="on">
+                                            <span>sat</span><br>
+                                            <strong>23</strong>
+                                        </a>
+                                    </li>
+                                    <li class="date">
+                                        <a href="#">
+                                            <span>sun</span><br>
+                                            <strong>24</strong>
+                                        </a>
+                                    </li>
+                                    <li class="date">
+                                        <a href="#">
+                                            <span>mon</span><br>
+                                            <strong>25</strong>
+                                        </a>
+                                    </li>
+                                    <li class="date">
+                                        <a href="#">
+                                            <span>tue</span><br>
+                                            <strong>26</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a href="#" class="btn_next"><img src="../../images/btn_next_01.png" alt="다음"></a>
+                            </div>
+                        </div>
+                        <script>
+                            $('.date_slider1 ul').slick({
+                                infinite: true,
+                                slidesToShow: 7,
+                                slidesToScroll: 1,
+                                slide: "li",
+                                prevArrow: $(".btn_prev"),
+                                nextArrow: $(".btn_next")
+                            });
+                        </script>
+
+                        <!--// 날짜 슬라이드 -->
+
+                        <!-- 날짜별 동영상 리스트 -->
+                        <div class="mainHighlight_wrap">
+                            <ul>
+                                <li class="item_s">
+                                    <div class="video">
+                                        <video id="vid1" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                        </video>
+                                    </div>
+                                </li>
+                                <li class="item_s">
+                                    <div class="video">
+                                        <video id="vid2" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                        </video>
+                                    </div>
+                                </li>
+                                <li class="item_s">
+                                    <div class="video">
+                                        <video id="vid3" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                        </video>
+                                    </div>
+                                </li>
+                                <li class="item_s">
+                                    <div class="video">
+                                        <video id="vid4" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                        </video>
+                                    </div>
+                                </li>
+                                <li class="item_s">
+                                    <div class="video">
+                                        <video id="vid5" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                        </video>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="calendar_wrap main" style="display:block;">
+                                <!-- s: date picker -->
+                                <div id="datepicker1_group" class="group">
+                                    <span class="todayDate" id="datepicker_select_1"></span>
+                                    <div id="datepicker1" class="datepicker">
+                                        <div class="head">
+                                            <div class="prev"><button>이전달</button></div>
+                                            <div class="title"></div>
+                                            <div class="next"><button>다음달</button></div>
+                                        </div>
+                                        <table class="body">
+                                            <tr>
+                                                <th>sun</th>
+                                                <th>mon</th>
+                                                <th>tue</th>
+                                                <th>wed</th>
+                                                <th>thu</th>
+                                                <th>fri</th>
+                                                <th>sat</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- e: date picker -->
+                                <script>
+                                    jui.ready(["ui.datepicker"], function (datepicker) {
+                                        // 날짜 지정
+                                        datepicker1 = datepicker("#datepicker1", {
+                                            titleFormat: "M",
+                                            format: "yyyy/MM/dd",
+                                            event: {
+                                                select: function (date, e) {
+                                                    var txt = this.getDate();
+                                                    var newData = new Date(txt);
+                                                    var a = moment(newData).format('MMMM');
+                                                    var b = moment(newData).format('dddd');
+                                                    var c = moment(newData).format('D');
+                                                    $("#datepicker_select_1").html("<strong>" + a + ", " + c + "</strong> " + b);
+                                                }
+                                            }
+                                        });
+                                        function getCalendarToday(obj, todayTxt){  
+                                            var txt = obj.getDate();
+                                            var newData = new Date(txt);
+                                            var a = moment(newData).format('MMMM'); 
+                                            var b = moment(newData).format('dddd'); 
+                                            var c = moment(newData).format('D');  
+                                            $(todayTxt).html("<strong>"+a+", "+c+"</strong> "+b);
+                                        }
+                                        getCalendarToday(datepicker1, "#datepicker_select_1");
+                                    });
+                                </script>
+
+                                <script data-jui="#datepicker1" data-tpl="dates" type="text/template">
+                                    <tr>
+                                        <! for(var i = 0; i < dates.length; i++) { !>
+                                        <td><span><!= dates[i] !></span></td>
+                                        <! } !>
+                                    </tr>
+                                </script>
+                            
+                            </div>
+                        </div>
+
+                        <!-- 동영상 선택후 생성 -->
+                        <div class="createHighlight_wrap">
+                            <div class="createHighlightList">
+                                <ul>
+                                    <li>
+                                        <select class="select w01">
+                                            <option value="" selected="selected">video1</option>
+                                            <option value="">video2</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <select class="select w01">
+                                            <option value="" selected="selected">video1</option>
+                                            <option value="">video2</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <select class="select w01">
+                                            <option value="" selected="selected">video1</option>
+                                            <option value="">video2</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <select class="select w01">
+                                            <option value="" selected="selected">video1</option>
+                                            <option value="">video2</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="createHighlightMovie">
+                                <ul>
+                                    <li class="item_s">
+                                        <div class="video">
+                                            <video id="c_vid1" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="item_s">
+                                        <div class="video">
+                                            <video id="c_vid2" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="item_s">
+                                        <div class="video">
+                                            <video id="c_vid3" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="item_s">
+                                        <div class="video">
+                                            <video id="c_vid4" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="item_s">
+                                        <div class="video">
+                                            <video id="c_vid5" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="item_s">
+                                        <div class="video">
+                                            <video id="c_vid6" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="item_s">
+                                        <div class="video">
+                                            <video id="c_vid7" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="item_s">
+                                        <div class="video">
+                                            <video id="c_vid8" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="item_s">
+                                        <div class="video">
+                                            <video id="c_vid9" class="video-js vjs-default-skin" controls preload="none" width="460" height="259" poster="" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                            </video>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- s: btn -->
+                            <div class="btn_footer">
+                                <a href="#" class="btn_saveChanges">생성하기</a>
+                            </div>
+                            <!-- e: btn -->
+
+                            <script>
+                                $(".createHighlight_wrap .item_s").click(function () {
+                                    $(this).toggleClass("on");
+                                });
+                            </script>
+
+                        </div>
+
+                        <!-- 생성된 동영상 -->
+                        <div class="createMoviePlayer">
+                            <!-- s: video wrap -->
+                            <div class="video_wrap">
+                            
+                                <!-- 20200918 동영상 목록추가 -->
+                                <div class="video_play_wrap">
+                                    <div class="video_play_box">
+                                        <video id="cm_vid1" class="video-js vjs-default-skin" controls preload="none" width="800" height="450" poster="" data-setup=''>
+                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                        </video>
+                                    </div>
+                            
+                                </div>
+                                <!--// 20200918 동영상 목록추가 -->
+                            
+                                <div class="video_edit_wrap">
+                                    <div class="row">
+                                        <div class="col col-12">
+                                            <!-- s: video slider-->
+                                            <div id="slider_1" class="slider"></div>
+                                            <!-- e: video slider-->
+                                            <div id="slider_2" class="slider slider02"></div>
+                                            <!-- s: marker 1-->
+                                            <!-- <div id="marker_1" class="marker" style="left:30%;"></div> -->
+                                            <!-- e: marker 1-->
+                                            <!-- s: marker 2-->
+                                            <!-- <div id="marker_2" class="marker" style="left:70%;"></div> -->
+                                            <!-- e: marker 2-->
+                                            <!-- s: play progress-->
+                                            <div class="progress simple">
+                                                <div class="area">
+                                                    <div class="bar" style="width: 40%;"></div>
+                                                </div>
+                                            </div>
+                                            <!-- e: play progress-->
+                                        </div>
+                                        <!-- s: player btns -->
+                                        <div class="edit_btn_wrap">
+                                            <div class="poL">
+                                                <button><i class="iconv-video1"></i></button>
+                                                <button><i class="iconv-video2"></i></button>
+                                                <button><i class="iconv-video3"></i></button>
+                                                <button><i class="iconv-video4"></i></button>
+                                            </div>
+                                            <button><i class="iconv-video5"></i></button>
+                                            <button><i class="iconv-video6"></i></button>
+                                            <button><i class="iconv-video7"></i></button>
+                                            <button><i class="iconv-video8"></i></button>
+                                            <button><i class="iconv-video9"></i></button>
+                                            <button><i class="iconv-video10"></i></button>
+                                            <button><i class="iconv-video11"></i></button>
+                                            <div class="poR">
+                                                <button><i class="iconv-video12"></i></button>
+                                                <button><i class="iconv-video13"></i></button>
+                                                <button><i class="iconv-video14"></i></button>
+                                                <button><i class="iconv-video15"></i></button>
+                                                <button><i class="iconv-video16"></i></button>
+                                            </div>
+                                        </div>
+                                        <!-- e: player btns -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- e: video wrap -->
+                        
+                            <script>
+                                //s: video slider
+                                jui.ready(["ui.slider"], function (slider) {
+                                    slider("#slider_1", {
+                                        type: "double",
+                                        from: 50,
+                                        to: 70,
+                                        min: 0,
+                                        max: 100,
+                                        step: 0.01, /*단위*/
+                                        tooltip: true,
+                                        event: {
+                                            change: function (data) {
+                                                console.log(data.from + "~" + data.to); // 시작, 끝 표기
+                                            }
+                                        }
+                                    });
+                                });
+                                jui.ready(["ui.slider"], function (slider) {
+                                    slider("#slider_2", {
+                                        type: "single",
+                                        from: 5,
+                                        min: 0,
+                                        max: 100,
+                                        step: 0.01, /*단위*/
+                                        tooltip: false,
+                                        event: {
+                                            change: function (data) {
+                                                console.log(data.from + "~" + data.to); // 시작, 끝 표기
+                                            }
+                                        }
+                                    });
+                                });
+                                //e: video slider
+                            </script>
+                        </div>
+						<!-- e: contents-->
+					</div> 
+				</div>
+				<!-- e: main_contents-->
+			</div>
+		</div>	
+		<!-- e: body_contents-->
+		
+		<!-- s: footer-->
+		<div class="footer_container">
+			<div class="footer_inner">
+				<img src="../../images/sk_logo_b.png" alt="SK telecom">
+			</div>
+		</div>
+		<!-- e: footer-->
+
+    </div>
+	</body>
+</html>
