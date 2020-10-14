@@ -782,7 +782,6 @@ td .progress_wrap {left:80px; width:620px;}
 .datepicker_wrap #date7 .date .start strong {width:100%; margin-left:calc(50% - 35px); text-indent:-74px; background-color:#fff; border-radius:35px 0 0 35px; color:#f90000;}
 .datepicker_wrap #date7 .date .end strong {width:100%; margin-left:-64px; text-indent:64px;background-color:#fff; border-radius:0 35px 35px 0; color:#f90000;}
 
-
 .datepicker_wrap.type1 {background-color:#fff;}
 .datepicker_wrap.type1 .month_title a {color:#222}
 .datepicker_wrap.type1 .month_title a span:before {content:""; position: absolute; top:10px; left:-55px; width:33px; height:33px; background:  url(../images/ico_cal_b.png) 0 0 no-repeat;}
@@ -793,10 +792,6 @@ td .progress_wrap {left:80px; width:620px;}
 .datepicker_wrap.type1 .date_slider1 .date .start strong {background-color:#ff0000; color:#fff;}
 .datepicker_wrap.type1 .date_slider1 .date .ing strong {width:100%; background-color:#ff0000; color:#fff;}
 .datepicker_wrap.type1 .date_slider1 .date .end strong {width:100%; background-color:#ff0000; color:#fff;}
-
-
-
-
 
 .createHighlight_wrap {background:#0f131e url(../images/bg_creative.jpg) 0 bottom no-repeat; background-size: 100% 100%;}
 .createHighlight_wrap .createHighlightList {display:table; width: 1086px; margin:0 auto;}
@@ -831,10 +826,6 @@ td .progress_wrap {left:80px; width:620px;}
 .createHighlight_wrap .btn_footer {float:none; padding:56px 0 94px; margin:0; text-align:center;}
 .createHighlight_wrap .btn_footer .btn_saveChanges {width:378px; height:96px; line-height:96px; border:3px #fff solid; border-radius:50px; background:transparent; font-size:28px; font-weight:bold; }
 
-
-
-
-
 .todayHight_wrap {width:100%; padding-bottom:100px;}
 .todayHight_wrap .title {padding:90px 0 60px; text-align:center;}
 .todayHight_wrap .title .tit {display:inline-block; font-size:60px;}
@@ -855,14 +846,12 @@ td .progress_wrap {left:80px; width:620px;}
 .todayHight_slide .item_s .hd .score .lose {padding-left:14px; color: #666;}
 .todayHight_slide .item_s .hd .date {position: absolute; right:20px; top:35px; ;color: #999;font-size: 24px;}
 .todayHight_slide .item_s .hd .date sub {position: relative;top: -7px;margin-right: 8px;}
-
 .todayHight_slide > .btn_prev {position: absolute; top:100px; left:170px; z-index: 1;}
 .todayHight_slide > .btn_next {position: absolute; top:100px; right:170px; z-index: 1;}
 .todayHight_slide .slick-slide {opacity:0.3}
 .todayHight_slide .slick-active {opacity:1}
 .todayHight_slide .slick-dots li button:before {width:16px; height:16px; background-color:#000; border-radius: 20px;}
 .todayHight_slide .slick-dots li.slick-active button:before {width:20px; height:20px; top:-2px;}
-
 
 .todaylist_wrap {} 
 .todaylist_wrap .title {padding: 60px 0 36px; width: 1086px; margin: 0 auto; text-align: left; font-size: 30px; font-weight:bold;}
@@ -874,14 +863,12 @@ td .progress_wrap {left:80px; width:620px;}
 .todaylist_wrap .today_list .item_s.on {border:5px #fff solid; display:inline-block;}
 .todaylist_wrap .today_list .item_s .hd {width:344px; height:100px; display:table-cell; vertical-align:middle; padding:6px 78px 6px 0; background-color:#fff; color:#222; font-size:20px; position:relative;}
 .todaylist_wrap .today_list .item_s .hd .text {padding:6px 0; width: 265px; line-height:32px; display: inline-block; font-weight:bold; font-family: "나눔고딕",Dotum,"돋움",Helvetica,AppleSDGothicNeo,Arial,sans-serif}
-
 .todaylist_wrap .today_list .item_s .hd .point {padding:3px 25px 5px 10px; position:absolute; top:50%; right:0; transform:translate(0, -50%);  background-color:#fff; border:2px #bebebe solid; border-radius:20px;}
 .todaylist_wrap .today_list .item_s .hd .point.inc span:after {content:"\25B2"; display:inline-block; position:absolute; top:8px; right:11px; font-size:12px; color:#ff0000;}
 .todaylist_wrap .today_list .item_s .hd .point.dec span:after {content:"\25BC"; display:inline-block; position:absolute; top:8px; right:11px; font-size:12px; color:#ff0000;}
 
 .dim {position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000; opacity: 0.7; z-index:10}
 .layer_pop {position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:700px; height:393px; background:#ccc; opacity: 0.7; z-index:11}
-
 
 /*play button style*/
 .video-js .vjs-big-play-button {width:2.5em; height:2.5em; line-height:2.3em; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background-color:transparent; border:3px #fff solid; border-radius:2em;}
