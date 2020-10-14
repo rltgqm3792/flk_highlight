@@ -801,7 +801,7 @@ td .progress_wrap {left:80px; width:620px;}
 .createHighlight_wrap .createHighlightList .pill li > a {height:auto; line-height:90px; padding: 0 58px 0 17px; background: transparent; color:#fff; font-weight:bold; }
 .createHighlight_wrap .createHighlightList .pill li.active {border-bottom: 2px #ee0501 solid;}
 .createHighlight_wrap .createHighlightList .pill li.active > a {height:90px; line-height:90px; background: transparent;  }
-.createHighlight_wrap .createHighlightList .pill li.active > a:after {content:""; position: absolute; top:36px; right:24px; width:20px; height:16px; background:  url(../images/ico_down_arrow_s.png) 0 0 no-repeat;}
+.createHighlight_wrap .createHighlightList .pill li.active > a:after {content:""; position: absolute; top:36px; right:24px; width:20px; height:16px; background: url(../images/ico_down_arrow_s.png) 0 0 no-repeat;}
 .createHighlight_wrap .createHighlightList .pill_content {width: 1086px; margin: 0 auto; height:90px; line-height:90px; color:#777; font-size:24px;}
 .createHighlight_wrap .createHighlightList .pill_content li {float:left; padding:0px 25px; text-align: center;}
 .createHighlight_wrap .createHighlightList .pill_content li a {color:#777; font-weight:bold;}
@@ -818,7 +818,8 @@ td .progress_wrap {left:80px; width:620px;}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .tag_wrap .tag.type1 { background-color:#9035ff;}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .tag_wrap .tag.type2 { background-color:#fd6732;}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .text {padding:4px 0; height:38px; line-height:20px; font-family: "나눔고딕",Dotum,"돋움",Helvetica,AppleSDGothicNeo,Arial,sans-serif}
-.createHighlight_wrap .createHighlightMovie .item_s .hd .info {display: inline-block; padding-bottom:4px;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .info {display: inline-block; padding-bottom:4px; padding-left:16px; position:relative;}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .info:before {content:""; position: absolute; top:2px; left:0; width:14px; height:14px; background: url(../images/ico_triangle.png) 0 0 no-repeat; background-size:12px auto;}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .info > span:after {content:""; display:inline-block; width:1px; height:8px; background-color:#fff; margin:0 10px;}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .info > span:last-child:after {content:none}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .play_time {padding: 3px 6px; position:absolute; top:-26px; right:6px; background-color:#000; border-radius:4px;}
