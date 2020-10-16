@@ -750,20 +750,24 @@ td .progress_wrap {left:80px; width:620px;}
 .item .video-js .vjs-load-progress div {background-color: #fceaf2;border-radius: 8px;}
 
 
-
-
+/* main */
 /* main area */
 .wrap {background:#080c12;}
 .wrap.type2 {background:#fff;}
 .wrap.type3 {background:#f8f8f9;}
 .main .body_container {padding:0;}
-.main .header_wrap {width:1086px; margin:0 auto; padding:55px 0 50px; border-bottom:2px #222 solid;}
+.main .header_wrap {width:1086px; margin:0 auto; padding:55px 0 50px; border-bottom:2px #222 solid; position: relative;}
+.main .header_wrap .link {position:absolute; top:60px; right:0; color:#777;}
+.main .header_wrap .link > span {font-size:18px;}
+.main .header_wrap .intro_wrap {padding:70px 0 10px; text-align:center; color:#fff; font-size:28px; font-weight:bold; font-family: "나눔고딕", Dotum,"돋움",Helvetica,AppleSDGothicNeo,Arial,sans-serif }
 
 .datepicker_wrap {width:1086px; margin:0 auto; background-color:#080c12; position:relative;}
 .datepicker_wrap .month_title {padding:50px 0 20px; text-align:center; font-size:40px; color:#fff; position:relative;}
-.datepicker_wrap .month_title a {position: relative; color:#fff}
-.datepicker_wrap .month_title a span:before {content:""; position: absolute; top:10px; left:-55px; width:33px; height:33px; background:  url(../images/ico_cal_w.png) 0 0 no-repeat;}
-.datepicker_wrap .month_title a span:after {content:""; position: absolute; top:10px; right:-46px; width:30px; height:30px; background:  url(../images/ico_down_arrow_w.png) 0 0 no-repeat;}
+.datepicker_wrap .month_title a {position: relative; color:#fff; display:inline-block; width:50px;}
+.datepicker_wrap .month_title a > img {margin-top:-7px;}
+/* .datepicker_wrap .month_title a span:before {content:""; position: absolute; top:10px; left:-55px; width:33px; height:33px; background:  url(../images/ico_cal_w.png) 0 0 no-repeat;}
+.datepicker_wrap .month_title a span:after {content:""; position: absolute; top:10px; right:-46px; width:30px; height:30px; background:  url(../images/ico_down_arrow_w.png) 0 0 no-repeat;} */
+.datepicker_wrap .month_title .btn_today {padding: 6px 18px; margin-top: -10px; display: inline-block; background: #3664ff; border-radius: 25px; font-size: 18px; font-weight: bold; vertical-align: middle;}
 .datepicker_wrap .month_title .calendar_wrap.main {display:none; position:absolute; top:110px; left: calc(50% - 190px); padding:20px; background-color:#fff; border: 1px #ccc solid; border-radius:20px; z-index:2} 
 .datepicker_wrap .month_title .calendar_wrap.main.on{display:block;}
 
@@ -776,22 +780,26 @@ td .progress_wrap {left:80px; width:620px;}
 .datepicker_wrap .date_slider1 .date strong {width: 70px; margin: 20px 0 50px; display: inline-block; height: 70px; vertical-align: middle; line-height: 70px; }
 .datepicker_wrap .date_slider1 .date .on span, .datepicker_wrap .date_slider1 .date .start span, .datepicker_wrap .date_slider1 .date .end span, .datepicker_wrap .date_slider1 .date .ing span {color:#fff;}
 .datepicker_wrap .date_slider1 .date .on strong {background-color:#fff; border-radius: 35px; color:#f90000;}
-.datepicker_wrap .date_slider1 .date .start strong {width:100%; margin-left:calc(50% - 35px); text-indent:-130px; background-color:#fff; border-radius:35px 0 0 35px; color:#f90000;}
-.datepicker_wrap .date_slider1 .date .ing strong {width:100%; background-color:#fff; color:#f90000;}
-.datepicker_wrap .date_slider1 .date .end strong {width:100%; margin-left:calc(50% - 226px); text-indent:126px;background-color:#fff; border-radius:0 35px 35px 0; color:#f90000;}
-.datepicker_wrap #date7 .date .start strong {width:100%; margin-left:calc(50% - 35px); text-indent:-74px; background-color:#fff; border-radius:35px 0 0 35px; color:#f90000;}
-.datepicker_wrap #date7 .date .end strong {width:100%; margin-left:-64px; text-indent:64px;background-color:#fff; border-radius:0 35px 35px 0; color:#f90000;}
+.datepicker_wrap .date_slider1 .date .start strong {width:100%; margin-left:calc(50% - 35px); text-indent:-130px; background-color:#fff; border-radius:35px 0 0 35px; color:#090c11;}
+.datepicker_wrap .date_slider1 .date .ing strong {width:100%; background-color:#fff; color:#090c11;}
+.datepicker_wrap .date_slider1 .date .end strong {width:100%; margin-left:calc(50% - 226px); text-indent:126px;background-color:#fff; border-radius:0 35px 35px 0; color:#090c11;}
+.datepicker_wrap #date7 .date .start strong {width:100%; margin-left:calc(50% - 35px); text-indent:-74px; background-color:#fff; border-radius:35px 0 0 35px; color:#090c11;}
+.datepicker_wrap #date7 .date .end strong {width:100%; margin-left:-64px; text-indent:64px;background-color:#fff; border-radius:0 35px 35px 0; color:#090c11;}
+.datepicker_wrap #date7 .date .start.end strong {width: 70px; margin-left: 0; text-indent: 0; background-color:#fff; border-radius: 35px; color:#090c11;}
 
 .datepicker_wrap.type1 {background-color:#fff;}
-.datepicker_wrap.type1 .month_title a {color:#222}
-.datepicker_wrap.type1 .month_title a span:before {content:""; position: absolute; top:10px; left:-55px; width:33px; height:33px; background:  url(../images/ico_cal_b.png) 0 0 no-repeat;}
-.datepicker_wrap.type1 .month_title a span:after {content:""; position: absolute; top:10px; right:-46px; width:30px; height:30px; background:  url(../images/ico_down_arrow_b.png) 0 0 no-repeat;}
+.datepicker_wrap.type1 .month_title  {color:#222}
+.datepicker_wrap.type1 .month_title a > img {margin-top:-7px;}
+/* .datepicker_wrap.type1 .month_title a span:before {content:""; position: absolute; top:10px; left:-55px; width:33px; height:33px; background:  url(../images/ico_cal_b.png) 0 0 no-repeat;}
+.datepicker_wrap.type1 .month_title a span:after {content:""; position: absolute; top:10px; right:-46px; width:30px; height:30px; background:  url(../images/ico_down_arrow_b.png) 0 0 no-repeat;} */
+/* .datepicker_wrap.type1 .month_title a.btn_today {padding:10px 20px; background:#777; border-radius: 25px;} */
+
 .datepicker_wrap.type1 .date_slider1 .date a {color:#777}
 .datepicker_wrap.type1 .date_slider1 .date .on span, .datepicker_wrap.type1 .date_slider1 .date .start span, .datepicker_wrap.type1 .date_slider1 .date .end span, .datepicker_wrap.type1 .date_slider1 .date .ing span {color:#222;}
-.datepicker_wrap.type1 .date_slider1 .date .on strong {background-color:#ff0000; color:#fff}
-.datepicker_wrap.type1 .date_slider1 .date .start strong {background-color:#ff0000; color:#fff;}
-.datepicker_wrap.type1 .date_slider1 .date .ing strong {width:100%; background-color:#ff0000; color:#fff;}
-.datepicker_wrap.type1 .date_slider1 .date .end strong {width:100%; background-color:#ff0000; color:#fff;}
+.datepicker_wrap.type1 .date_slider1 .date .on strong {background-color:#090c11; color:#fff}
+.datepicker_wrap.type1 .date_slider1 .date .start strong {background-color:#090c11; color:#fff;}
+.datepicker_wrap.type1 .date_slider1 .date .ing strong {width:100%; background-color:#090c11; color:#fff;}
+.datepicker_wrap.type1 .date_slider1 .date .end strong {width:100%; background-color:#090c11; color:#fff;}
 
 .createHighlight_wrap {background:#0f131e url(../images/bg_creative.jpg) 0 bottom no-repeat; background-size: 100% 100%;}
 .createHighlight_wrap .createHighlightList {display:table; width: 1086px; margin:0 auto;}
@@ -823,18 +831,29 @@ td .progress_wrap {left:80px; width:620px;}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .info > span:after {content:""; display:inline-block; width:1px; height:8px; background-color:#fff; margin:0 10px;}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .info > span:last-child:after {content:none}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .play_time {padding: 3px 6px; position:absolute; top:-26px; right:6px; background-color:#000; border-radius:4px;}
+.createHighlight_wrap .createHighlightMovie .page_info {padding:14px 0; color:#777; position:relative;}
+.createHighlight_wrap .createHighlightMovie .page_info .clip_num {padding-left:10px; font-size:18px;}
+.createHighlight_wrap .createHighlightMovie .page_info .clip_num > span:after {content:""; display:inline-block; width:1px; height:13px; margin:0 12px; background-color:#777;}
+.createHighlight_wrap .createHighlightMovie .page_info .clip_num > span:last-child:after {content:none;}
+.createHighlight_wrap .createHighlightMovie .page_info .clip_num .tit {color:#fff; font-weight:bold;}
+.createHighlight_wrap .createHighlightMovie .page_info .clip_num .num {padding-left:10px; color:#f10200;}
+.createHighlight_wrap .createHighlightMovie .page_info .clip_num .list_num {padding-right: 5px; color:#fff; font-weight:bold; }
+.createHighlight_wrap .createHighlightMovie .page_info .more {display:inline-block; position:absolute; top:10px; right:0;}
 
-.createHighlight_wrap .btn_footer {float:none; padding:56px 0 94px; margin:0; text-align:center;}
-.createHighlight_wrap .btn_footer .btn_saveChanges {width:378px; height:96px; line-height:96px; border:3px #fff solid; border-radius:50px; background:transparent; font-size:28px; font-weight:bold; }
+.createHighlight_wrap .btn_footer {width:1086px; padding:130px 0 94px; float:none; margin:0 auto; text-align:center; position:relative;}
+.createHighlight_wrap .btn_footer .btn_saveChanges {width:378px; height:96px; margin-right:16px; line-height:96px; border:3px #fff solid; border-radius:50px; background:transparent; font-size:28px; font-weight:bold;}
+.createHighlight_wrap .btn_footer .clipboard_wrap {position:absolute; top:16px; right:83px;}
+.createHighlight_wrap .btn_footer .clipboard_wrap input {width:400px; padding:10px 5px 10px 20px; font-size:20px; color:#bbb; border:2px #1e1e1d solid; background:#1e1e1d;}
+.createHighlight_wrap .btn_footer .clipboard_wrap .btn_copy {display: inline-block; position: absolute; top: 0px; left: auto; right: auto; color: #fff; width: 78px; height: 48px; line-height: 48px; font-size: 16px; font-weight: bold; background: #1e1e1d;}
 
 .todayHight_wrap {width:100%; padding-bottom:100px;}
 .todayHight_wrap .title {padding:90px 0 60px; text-align:center;}
+.todayHight_wrap .title .text {padding:30px 0; display:inline-block;}
 .todayHight_wrap .title .tit {display:inline-block; font-size:60px;}
 .todayHight_wrap .title .date {display:inline-block; padding-top:10px; font-size:30px;}
 .todayHight_wrap .title .date .time {padding-left:50px; color:#3db611; font-weight:bold; position:relative;}
 .todayHight_wrap .title .date .time:before {content:""; position: absolute; top:4px; left:13px; width:30px; height:30px; background:  url(../images/ico_time.png) 0 0 no-repeat;}
 
-/* .todayHight_slide {width:1086px; margin: 0 auto; position: relative; } */
 .todayHight_slide {width:100%; margin: 0 auto; position: relative; }
 .todayHight_slide .item_s {padding-left:10px;}
 .todayHight_slide .item_s .video {position: relative;z-index: 10;}
@@ -851,10 +870,11 @@ td .progress_wrap {left:80px; width:620px;}
 .todayHight_slide > .btn_next {position: absolute; top:100px; right:170px; z-index: 1;}
 .todayHight_slide .slick-slide {opacity:0.3}
 .todayHight_slide .slick-active {opacity:1}
-.todayHight_slide .slick-dots li button:before {width:16px; height:16px; background-color:#000; border-radius: 20px;}
-.todayHight_slide .slick-dots li.slick-active button:before {width:20px; height:20px; top:-2px;}
+.todayHight_slide .slick-dots li {width:25px; height:10px; margin: 0 6px;}
+.todayHight_slide .slick-dots li button {width:25px; height:10px;}
+.todayHight_slide .slick-dots li button:before {width:25px; height:10px; line-height:10px; background-color:#000; border-radius: 20px;}
+.todayHight_slide .slick-dots li.slick-active button:before {width:35px; height:10px; top:0px; left: -5px;}
 
-.todaylist_wrap {} 
 .todaylist_wrap .title {padding: 60px 0 36px; width: 1086px; margin: 0 auto; text-align: left; font-size: 30px; font-weight:bold;}
 .todaylist_wrap .today_list {position: relative; width: 1086px; padding: 0 0; margin:0 auto;}
 .todaylist_wrap .today_list ul:after {content:""; clear:both; display:block;}
@@ -868,8 +888,16 @@ td .progress_wrap {left:80px; width:620px;}
 .todaylist_wrap .today_list .item_s .hd .point.inc span:after {content:"\25B2"; display:inline-block; position:absolute; top:8px; right:11px; font-size:12px; color:#ff0000;}
 .todaylist_wrap .today_list .item_s .hd .point.dec span:after {content:"\25BC"; display:inline-block; position:absolute; top:8px; right:11px; font-size:12px; color:#ff0000;}
 
-.dim {position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000; opacity: 0.7; z-index:10}
-.layer_pop {position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:700px; height:393px; background:#ccc; opacity: 0.7; z-index:11}
+.dim {display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000; opacity: 0.7; z-index:10}
+.noscroll {overflow:hidden;}
+.layer_pop {display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:720px; height:405px; z-index:11}
+.layer_pop .layer_wrap {position:relative;}
+.layer_pop .layer_wrap .btn_popClose {position:absolute; top:-70px; right:0;}
+.layer_pop .video-js {width:720px; height:405px;}
+.layer_pop2 {display:none; position:absolute; top:90px; left:-200px; z-index:11}
+.layer_pop2 .layer_wrap .btn_popClose {position:absolute; top:-40px; right:0;}
+.layer_pop2 .layer_wrap .btn_popClose > img {width:40px;}
+.layer_pop2 .video-js {width:320px; height:180px;}
 
 /*play button style*/
 .video-js .vjs-big-play-button {width:2.5em; height:2.5em; line-height:2.3em; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background-color:transparent; border:3px #fff solid; border-radius:2em;}

@@ -29,13 +29,17 @@
 		<!-- s: body_contents-->
 		<div class="body_container" id="today_container">
 			<div class="body_inner">
-				<!-- s: main_contents-->	
+				<!-- s: main_contents-->	-
 				<div class="main">
 					<div class="container_wrap">
  
                         <!-- 20201014 추가 -->
                         <div class="header_wrap">
                             <span><img src="../../images/logo_main.png" alt="SKT Hightlight | wavve"></span>
+                            <a href="#none" class="link"><span>SKT Content Discoery Project의 다른 기술들을 만나보세요.</span></a>
+                            <div class="intro_wrap">
+                                <a href="#none" class="btn_intro" role="button"><img src="../../images/ico_introduce_btn.png" alt="나만의 하이라이트 만들기"></a>
+                            </div>
                         </div>
                         <!--// 20201014 추가 -->
 
@@ -43,7 +47,11 @@
                         <div class="datepicker_wrap">
                         
                             <div class="month_title">
-                                <a href="#none" class="btn_calendar2" role="button"><span class="month">october</span></a>
+                                <!-- <a href="#none" class="btn_calendar2" role="button"><span class="month">october</span></a> -->
+                                <a href="#none" class="btn_prev" role="button"><img src="../../images/ico_m_left_arrow_w.png" alt="이전"></a>
+                                <span class="month">2020.10</span></a>
+                                <a href="#none" class="btn_prev" role="button"><img src="../../images/ico_m_right_arrow_w.png" alt="다음"></a>
+                                <a href="#none" class="btn_today" role="button"><span>오늘</span></a>
                             </div>
                         
                             <div id="date7" class="date_slider1">
@@ -86,7 +94,7 @@
                                         </a>
                                     </li>
                                     <li class="date">
-                                        <a href="#" class="on">
+                                        <a href="#" class="start end">
                                             <span>sat</span><br>
                                             <strong>23</strong>
                                         </a>
@@ -322,11 +330,52 @@
                                         $(this).toggleClass("on");
                                     });
                                 </script>
+
+                                <div class="page_info">
+                                    <div class="clip_num">
+                                        <span><span class="tit">선택된 클립</span><span class="num">4</span></span>
+                                        <span><span class="list_num">8</span>/<span class="total">100</span></span>
+                                    </div>
+                                    <div class="more">
+                                        <a href="#none" class="btn_more" role="button"><img src="../../images/btn_more.png" alt="더보기"></a>
+                                    </div>
+                                </div>
                             </div>
                         
                             <!-- s: btn -->
                             <div class="btn_footer">
-                                <a href="#" class="btn_saveChanges">하이라이트 생성하기</a>
+                                <a href="#none" class="btn_saveChanges btn_create">하이라이트 생성하기</a>
+                                <a href="#none" class="btn_saveChanges btn_resi">영상 등록하러가기</a>
+
+                                <!-- 영상생성 미리보기 팝업 -->
+                                <div class="layer_pop2">
+                                    <div class="layer_wrap">
+                                        <a href="#none" class="btn_popClose"><img src="../../images/btn_close.png" alt="닫기"></a>
+                                        <div class="video_wrap">
+                                            <video id="ivid" class="video-js vjs-default-skin" controls preload="none" width="320" height="180" poster=""
+                                                data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    $(".btn_saveChanges").on("click", function (e) {
+                                        $(".layer_pop2").show();
+                                    });
+                                    $(".layer_pop2 .btn_popClose").on("click", function (e) {
+                                        $(".layer_pop2").hide();
+                                    });
+                                </script>
+                                <!--// 영상생성 미리보기 팝업 -->
+
+                                <div class="clipboard_wrap">
+                                    <input type="text" class="clip">
+                                    <a href="#none" class="btn_copy" role="button">복사</a>
+                                </div>
+
                             </div>
                             <!-- e: btn -->
                         
@@ -351,72 +400,11 @@
                         <!-- 날짜 슬라이드 -->
                         <div class="datepicker_wrap type1"><!-- 20201014 변경 -->
                             <div class="month_title">
-                                <a href="#none" class="btn_calendar1" role="button"><span class="month">october</span></a>
-                                <!-- calendar -->
-                                <div class="calendar_wrap main">
-                                    <!-- s: date picker -->
-                                    <div id="datepicker1_group" class="group">
-                                        <span class="todayDate" id="datepicker_select_1"></span>
-                                        <div id="datepicker1" class="datepicker">
-                                            <div class="head">
-                                                <div class="prev"><button>이전달</button></div>
-                                                <div class="title"></div>
-                                                <div class="next"><button>다음달</button></div>
-                                            </div>
-                                            <table class="body">
-                                                <tr>
-                                                    <th>sun</th>
-                                                    <th>mon</th>
-                                                    <th>tue</th>
-                                                    <th>wed</th>
-                                                    <th>thu</th>
-                                                    <th>fri</th>
-                                                    <th>sat</th>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <!-- e: date picker -->
-                                    <script>
-                                        jui.ready(["ui.datepicker"], function (datepicker) {
-                                            // 날짜 지정
-                                            datepicker1 = datepicker("#datepicker1", {
-                                                titleFormat: "M",
-                                                format: "yyyy/MM/dd",
-                                                event: {
-                                                    select: function (date, e) {
-                                                        var txt = this.getDate();
-                                                        var newData = new Date(txt);
-                                                        var a = moment(newData).format('MMMM');
-                                                        var b = moment(newData).format('dddd');
-                                                        var c = moment(newData).format('D');
-                                                        $("#datepicker_select_1").html("<strong>" + a + ", " + c + "</strong> " + b);
-                                                    }
-                                                }
-                                            });
-                                            function getCalendarToday(obj, todayTxt){  
-                                                var txt = obj.getDate();
-                                                var newData = new Date(txt);
-                                                var a = moment(newData).format('MMMM'); 
-                                                var b = moment(newData).format('dddd'); 
-                                                var c = moment(newData).format('D');  
-                                                $(todayTxt).html("<strong>"+a+", "+c+"</strong> "+b);
-                                            }
-                                            getCalendarToday(datepicker1, "#datepicker_select_1");
-                                        });
-                                        $(".btn_calendar1").on("click", function (e) {
-                                            $(".calendar_wrap.main").toggleClass("on");
-                                        });
-                                    </script>
-
-                                    <script data-jui="#datepicker1" data-tpl="dates" type="text/template">
-                                        <tr>
-                                            <! for(var i = 0; i < dates.length; i++) { !>
-                                            <td><span><!= dates[i] !></span></td>
-                                            <! } !>
-                                        </tr>
-                                    </script>
-                                </div>
+                                <!-- <a href="#none" class="btn_calendar1" role="button"><span class="month">october</span></a> -->
+                                <a href="#none" role="button" class="btn_prev"><img src="../../images/ico_m_left_arrow_b.png" alt="이전"></a>
+                                <span class="month">2020.10</span></a>
+                                <a href="#none" role="button" class="btn_prev"><img src="../../images/ico_m_right_arrow_b.png" alt="다음"></a>
+                                <a href="#none" class="btn_today" role="button"><span>오늘</span></a>
                             </div>
 
                             <div id="date5" class="date_slider1">
@@ -519,6 +507,7 @@
                         <div class="todayHight_wrap">
 
                             <div class="title">
+                                <span class="text"><img src="../../images/title_today_highlight.png" alt="자동생성된 경기 하이라이트 보기"></span><br>
                                 <span class="tit">Today's <strong>Highlight</strong></span><br>
                                 <span class="date">October, 20 wednesday<span class="time">18:17:24</span></span>
                             </div>
@@ -528,10 +517,10 @@
                                 <div class="item_wrap">
                                     <div class="item_s">
                                         <div class="video">
-                                            <video id="tvid1" class="video-js vjs-default-skin" controls preload="none" width="530" height="298" poster="" data-setup=''>
-                                                <!-- <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <video id="tvid1" class="video-js vjs-default-skin" controls preload="none" width="530" height="298" poster="https://img.wavve.com/cb6c67f458a6afffa17f54ecb7812838_w720_h406_q75.jpg" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
                                                 <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
-                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg"> -->
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
                                             </video>
                                         </div>
                                         <div class="hd">
@@ -541,10 +530,10 @@
                                     </div>
                                     <div class="item_s">
                                         <div class="video">
-                                            <video id="tvid2" class="video-js vjs-default-skin" controls preload="none" width="530" height="298" poster="" data-setup=''>
-                                                <!-- <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <video id="tvid2" class="video-js vjs-default-skin" controls preload="none" width="530" height="298" poster="https://img.wavve.com/7953e2b89cd740f5cc7029bb27a77b07_w720_h406_q75.jpg" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
                                                 <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
-                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg"> -->
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
                                             </video>
                                         </div>
                                         <div class="hd">
@@ -554,10 +543,10 @@
                                     </div>
                                     <div class="item_s">
                                         <div class="video">
-                                            <video id="tvid3" class="video-js vjs-default-skin" controls preload="none" width="530" height="298" poster="" data-setup=''>
-                                                <!-- <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <video id="tvid3" class="video-js vjs-default-skin" controls preload="none" width="530" height="298" poster="https://img.wavve.com/d47fc238e1574c7877a1853e6ddd7606_w720_h406_q75.jpg" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
                                                 <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
-                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg"> -->
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
                                             </video>
                                         </div>
                                         <div class="hd">
@@ -567,10 +556,10 @@
                                     </div>
                                     <div class="item_s">
                                         <div class="video">
-                                            <video id="tvid4" class="video-js vjs-default-skin" controls preload="none" width="530" height="298" poster="" data-setup=''>
-                                                <!-- <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                            <video id="tvid4" class="video-js vjs-default-skin" controls preload="none" width="530" height="298" poster="https://img.wavve.com/3d286a550d01a7ff5b9faab22132b974_w720_h406_q75.jpg" data-setup=''>
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
                                                 <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
-                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg"> -->
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
                                             </video>
                                         </div>
                                         <div class="hd">
@@ -682,12 +671,40 @@
         </div>
     </div>
 
-
     <!-- 영상제작 안내 팝업 -->
-    <!-- <div class="dim"></div>
+    <div class="dim"></div>
     <div class="layer_pop">
-    
-    </div> -->
+        <div class="layer_wrap">
+            <a href="#none" class="btn_popClose"><img src="../../images/btn_close.png" alt="닫기"></a>
+            <div class="video_wrap">
+                <video id="tvid4" class="video-js vjs-default-skin" controls preload="none" width="720" height="405" poster="" data-setup=''>
+                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                    <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                </video>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".btn_intro").on("click", function (e) {
+            $("html, body").addClass("noscroll");
+            $(".dim").show();
+            $(".layer_pop").show();
+        });
+        $(".layer_pop .btn_popClose").on("click", function (e) {
+            $(".layer_pop").hide();
+            $(".dim").hide();
+            $("html, body").removeClass("noscroll");
+        });
+        $(document).on("click", function (e) {
+            if($(".dim").is(e.target)) {
+                $(".layer_pop").hide();
+                $(".dim").hide();
+                $("html, body").removeClass("noscroll");
+            }
+        });
+    </script>
+    <!--// 영상제작 안내 팝업 -->
 
 	</body>
 </html>
