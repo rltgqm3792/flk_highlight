@@ -36,7 +36,7 @@
                         <!-- 20201014 추가 -->
                         <div class="header_wrap">
                             <h1><img src="../../images/logo_main.png" alt="SKT Hightlight | wavve"></h1>
-                            <a href="#none" class="link"><span>SKT Content Discoery Project의 다른 기술들을 만나보세요.</span></a>
+                            <a href="#none" class="link"><img src="../../images/ict_summit_banner_2.jpg" alt="나만의 하이라이트 만들기"></a>
                             <div class="intro_wrap">
                                 <a href="#none" class="btn_intro" role="button"><img src="../../images/ico_introduce_btn.png" alt="나만의 하이라이트 만들기"></a>
                             </div>
@@ -47,11 +47,148 @@
                         <div class="datepicker_wrap">
                         
                             <div class="month_title">
-                                <!-- <a href="#none" class="btn_calendar2" role="button"><span class="month">october</span></a> -->
+
                                 <a href="#none" class="btn_prev" role="button"><img src="../../images/ico_m_left_arrow_w.png" alt="이전"></a>
-                                <span class="month">2020.10</span></a>
+                                <!-- date start end btn -->
+                                <a href="#none" class="btn_datepicker range"><span class="month">2020.10</span></a>
+                                <script>
+                                    $(".btn_datepicker.range").click(function () {
+                                        $(this).siblings(".calendar_wrap.main.start").toggleClass("on");
+                                        $(this).siblings(".calendar_wrap.main.end").toggleClass("on");
+                                    });
+                                </script>
+                                <!--// date start end btn -->
                                 <a href="#none" class="btn_prev" role="button"><img src="../../images/ico_m_right_arrow_w.png" alt="다음"></a>
                                 <a href="#none" class="btn_today" role="button"><span>오늘</span></a>
+
+                                <!-- start datepicker -->
+                                <div class="calendar_wrap main start">
+                                    <!-- s: date picker -->
+                                    <div id="datepicker1_group" class="group">
+                                        <span class="todayDate" id="datepicker_select_1"></span>
+                                        <div id="datepicker1" class="datepicker">
+                                            <div class="head">
+                                                <div class="prev"><button>이전달</button></div>
+                                                <div class="title"></div>
+                                                <div class="next"><button>다음달</button></div>
+                                            </div>
+                                            <table class="body">
+                                                <tr>
+                                                    <th>sun</th>
+                                                    <th>mon</th>
+                                                    <th>tue</th>
+                                                    <th>wed</th>
+                                                    <th>thu</th>
+                                                    <th>fri</th>
+                                                    <th>sat</th>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- e: date picker -->
+                                    <script>
+                                        jui.ready(["ui.datepicker"], function (datepicker) {
+                                            // 날짜 지정
+                                            datepicker1 = datepicker("#datepicker1", {
+                                                titleFormat: "M",
+                                                format: "yyyy/MM/dd",
+                                                event: {
+                                                    select: function (date, e) {
+                                                        var txt = this.getDate();
+                                                        var newData = new Date(txt);
+                                                        var a = moment(newData).format('MMMM');
+                                                        var b = moment(newData).format('dddd');
+                                                        var c = moment(newData).format('D');
+                                                        $("#datepicker_select_1").html("<strong>" + a + ", " + c + "</strong> " + b);
+                                                    }
+                                                }
+                                            });
+                                            function getCalendarToday(obj, todayTxt) {
+                                                var txt = obj.getDate();
+                                                var newData = new Date(txt);
+                                                var a = moment(newData).format('MMMM');
+                                                var b = moment(newData).format('dddd');
+                                                var c = moment(newData).format('D');
+                                                $(todayTxt).html("<strong>" + a + ", " + c + "</strong> " + b);
+                                            }
+                                            getCalendarToday(datepicker1, "#datepicker_select_1");
+                                        });
+                                    </script>
+                                
+                                    <script data-jui="#datepicker1" data-tpl="dates" type="text/template">
+                                        <tr>
+                                            <! for(var i = 0; i < dates.length; i++) { !>
+                                            <td><span><!= dates[i] !></span></td>
+                                            <! } !>
+                                        </tr>
+                                    </script>
+                                </div>
+                                <!--// start datepicker -->
+                                <!-- end datepicker -->
+                                <div class="calendar_wrap main end">
+                                    <!-- s: date picker -->
+                                    <div id="datepicker2_group" class="group">
+                                        <span class="todayDate" id="datepicker_select_2"></span>
+                                        <div id="datepicker2" class="datepicker">
+                                            <div class="head">
+                                                <div class="prev"><button>이전달</button></div>
+                                                <div class="title"></div>
+                                                <div class="next"><button>다음달</button></div>
+                                            </div>
+                                            <table class="body">
+                                                <tr>
+                                                    <th>sun</th>
+                                                    <th>mon</th>
+                                                    <th>tue</th>
+                                                    <th>wed</th>
+                                                    <th>thu</th>
+                                                    <th>fri</th>
+                                                    <th>sat</th>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- e: date picker -->
+                                    <script>
+                                        jui.ready(["ui.datepicker"], function (datepicker) {
+                                            // 날짜 지정
+                                            datepicker2 = datepicker("#datepicker2", {
+                                                titleFormat: "M",
+                                                format: "yyyy/MM/dd",
+                                                event: {
+                                                    select: function (date, e) {
+                                                        var txt = this.getDate();
+                                                        var newData = new Date(txt);
+                                                        var a = moment(newData).format('MMMM');
+                                                        var b = moment(newData).format('dddd');
+                                                        var c = moment(newData).format('D');
+                                                        $("#datepicker_select_2").html("<strong>" + a + ", " + c + "</strong> " + b);
+                                                    }
+                                                }
+                                            });
+                                            function getCalendarToday(obj, todayTxt) {
+                                                var txt = obj.getDate();
+                                                var newData = new Date(txt);
+                                                var a = moment(newData).format('MMMM');
+                                                var b = moment(newData).format('dddd');
+                                                var c = moment(newData).format('D');
+                                                $(todayTxt).html("<strong>" + a + ", " + c + "</strong> " + b);
+                                            }
+                                            getCalendarToday(datepicker2, "#datepicker_select_2");
+                                        });
+                                    </script>
+                                
+                                    <script data-jui="#datepicker2" data-tpl="dates" type="text/template">
+                                        <tr>
+                                            <! for(var i = 0; i < dates.length; i++) { !>
+                                            <td><span><!= dates[i] !></span></td>
+                                            <! } !>
+                                        </tr>
+                                    </script>
+                                </div>
+                                <!--// end datepicker -->
+
+
                             </div>
                         
                             <div id="date7" class="date_slider1">
@@ -331,6 +468,12 @@
                                     });
                                 </script>
 
+                                <!-- no data -->
+                                <div class="no_data">
+                                    <span>데이터가 없습니다.</span>
+                                </div>
+                                <!--// no data -->
+
                                 <div class="page_info">
                                     <div class="clip_num">
                                         <span><span class="tit">선택된 클립</span><span class="num">4</span></span>
@@ -389,110 +532,7 @@
 		<!-- e: body_contents-->
     </div>
 
-    <div class="wrap type2">
-        <!-- s: body_contents-->
-        <div class="body_container">
-            <div class="body_inner">
-                <!-- s: main_contents-->
-                <div class="main">
-                    <div class="container_wrap">
 
-                        <!-- 날짜 슬라이드 -->
-                        <div class="datepicker_wrap type1"><!-- 20201014 변경 -->
-                            <div class="month_title">
-                                <!-- <a href="#none" class="btn_calendar1" role="button"><span class="month">october</span></a> -->
-                                <a href="#none" role="button" class="btn_prev"><img src="../../images/ico_m_left_arrow_b.png" alt="이전"></a>
-                                <span class="month">2020.10</span></a>
-                                <a href="#none" role="button" class="btn_prev"><img src="../../images/ico_m_right_arrow_b.png" alt="다음"></a>
-                                <a href="#none" class="btn_today" role="button"><span>오늘</span></a>
-                            </div>
-
-                            <div id="date5" class="date_slider1">
-                                <a href="#" class="btn_prev"><img src="../../images/ico_left_arrow.png" alt="이전"></a>
-                                <ul>
-                                    <li class="date">
-                                        <a href="#" class="on">
-                                            <span>sun</span><br>
-                                            <strong>17</strong>
-                                        </a>
-                                    </li>
-                                    <li class="date">
-                                        <a href="#" class="on">
-                                            <span>mon</span><br>
-                                            <strong>18</strong>
-                                        </a>
-                                    </li>
-                                    <li class="date">
-                                        <a href="#">
-                                            <span>tue</span><br>
-                                            <strong>19</strong>
-                                        </a>
-                                    </li>
-                                    <li class="date">
-                                        <a href="#">
-                                            <span>wed</span><br>
-                                            <strong>20</strong>
-                                        </a>
-                                    </li>
-                                    <li class="date">
-                                        <a href="#">
-                                            <span>thu</span><br>
-                                            <strong>21</strong>
-                                        </a>
-                                    </li>
-                                    <li class="date">
-                                        <a href="#">
-                                            <span>fri</span><br>
-                                            <strong>22</strong>
-                                        </a>
-                                    </li>
-                                    <li class="date">
-                                        <a href="#" class="on">
-                                            <span>sat</span><br>
-                                            <strong>23</strong>
-                                        </a>
-                                    </li>
-                                    <li class="date">
-                                        <a href="#">
-                                            <span>sun</span><br>
-                                            <strong>24</strong>
-                                        </a>
-                                    </li>
-                                    <li class="date">
-                                        <a href="#">
-                                            <span>mon</span><br>
-                                            <strong>25</strong>
-                                        </a>
-                                    </li>
-                                    <li class="date">
-                                        <a href="#">
-                                            <span>tue</span><br>
-                                            <strong>26</strong>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a href="#" class="btn_next"><img src="../../images/ico_right_arrow.png" alt="다음"></a>
-                            </div>
-                        </div>
-                        <script>
-                            $('#date5 ul').slick({
-                                slide: "li",
-                                infinite: true,
-                                slidesToShow: 5,
-                                slidesToScroll: 1,
-                                initialSlide: 4, // 첫번째 보여줄 슬라이드
-                                swipeToSlide: true,
-                                prevArrow: $("#date5 .btn_prev"),
-                                nextArrow: $("#date5 .btn_next")
-                            });
-                        </script>
-                        <!--// 날짜 슬라이드 -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- today 슬라이드 -->
     <div class="wrap type3">
@@ -511,6 +551,172 @@
                                 <span class="tit">Today's <strong>Highlight</strong></span><br>
                                 <span class="date">October, 20 wednesday<span class="time">18:17:24</span></span>
                             </div>
+
+                            <!-- 날짜 슬라이드 -->
+                            <div class="datepicker_wrap type1">
+                                <!-- 20201014 변경 -->
+                                <div class="month_title">
+                                    <a href="#none" class="btn_prev" role="button"><img src="../../images/ico_m_left_arrow_b.png" alt="이전"></a>
+                                    <!-- date btn -->
+                                    <a href="#none" class="btn_datepicker" role="button"><span class="month">2020.10</span></a>
+                                    <script>
+                                        $(".btn_datepicker").click(function () {
+                                            $(this).siblings(".calendar_wrap.main.day").toggleClass("on");
+                                        });
+                                    </script>
+                                    <!--// date btn -->
+                                    <a href="#none" class="btn_prev" role="button"><img src="../../images/ico_m_right_arrow_b.png" alt="다음"></a>
+                                    <a href="#none" class="btn_today" role="button"><span>오늘</span></a>
+                            
+                                    <!-- datepicker -->
+                                    <div class="calendar_wrap main day">
+                                        <!-- s: date picker -->
+                                        <div id="datepicker3_group" class="group">
+                                            <span class="todayDate" id="datepicker_select_3"></span>
+                                            <div id="datepicker3" class="datepicker">
+                                                <div class="head">
+                                                    <div class="prev"><button>이전달</button></div>
+                                                    <div class="title"></div>
+                                                    <div class="next"><button>다음달</button></div>
+                                                </div>
+                                                <table class="body">
+                                                    <tr>
+                                                        <th>sun</th>
+                                                        <th>mon</th>
+                                                        <th>tue</th>
+                                                        <th>wed</th>
+                                                        <th>thu</th>
+                                                        <th>fri</th>
+                                                        <th>sat</th>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!-- e: date picker -->
+                                        <script>
+                                            jui.ready(["ui.datepicker"], function (datepicker) {
+                                                // 날짜 지정
+                                                datepicker3 = datepicker("#datepicker3", {
+                                                    titleFormat: "M",
+                                                    format: "yyyy/MM/dd",
+                                                    event: {
+                                                        select: function (date, e) {
+                                                            var txt = this.getDate();
+                                                            var newData = new Date(txt);
+                                                            var a = moment(newData).format('MMMM');
+                                                            var b = moment(newData).format('dddd');
+                                                            var c = moment(newData).format('D');
+                                                            $("#datepicker_select_3").html("<strong>" + a + ", " + c + "</strong> " + b);
+                                                        }
+                                                    }
+                                                });
+                                                function getCalendarToday(obj, todayTxt) {
+                                                    var txt = obj.getDate();
+                                                    var newData = new Date(txt);
+                                                    var a = moment(newData).format('MMMM');
+                                                    var b = moment(newData).format('dddd');
+                                                    var c = moment(newData).format('D');
+                                                    $(todayTxt).html("<strong>" + a + ", " + c + "</strong> " + b);
+                                                }
+                                                getCalendarToday(datepicker3, "#datepicker_select_3");
+                                            });
+                                        </script>
+                            
+                                        <script data-jui="#datepicker3" data-tpl="dates" type="text/template">
+                                                                    <tr>
+                                                                        <! for(var i = 0; i < dates.length; i++) { !>
+                                                                        <td><span><!= dates[i] !></span></td>
+                                                                        <! } !>
+                                                                    </tr>
+                                                                </script>
+                                    </div>
+                                    <!--//datepicker -->
+                                </div>
+                            
+                                <div id="date5" class="date_slider1">
+                                    <a href="#" class="btn_prev"><img src="../../images/ico_left_arrow.png" alt="이전"></a>
+                                    <ul>
+                                        <li class="date">
+                                            <a href="#" class="on">
+                                                <span>sun</span><br>
+                                                <strong>17</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#" class="on">
+                                                <span>mon</span><br>
+                                                <strong>18</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#">
+                                                <span>tue</span><br>
+                                                <strong>19</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#">
+                                                <span>wed</span><br>
+                                                <strong>20</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#">
+                                                <span>thu</span><br>
+                                                <strong>21</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#">
+                                                <span>fri</span><br>
+                                                <strong>22</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#" class="on">
+                                                <span>sat</span><br>
+                                                <strong>23</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#">
+                                                <span>sun</span><br>
+                                                <strong>24</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#">
+                                                <span>mon</span><br>
+                                                <strong>25</strong>
+                                            </a>
+                                        </li>
+                                        <li class="date">
+                                            <a href="#">
+                                                <span>tue</span><br>
+                                                <strong>26</strong>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn_next"><img src="../../images/ico_right_arrow.png" alt="다음"></a>
+                                </div>
+                            </div>
+                            <script>
+                                $('#date5 ul').slick({
+                                    slide: "li",
+                                    infinite: true,
+                                    slidesToShow: 5,
+                                    slidesToScroll: 1,
+                                    initialSlide: 4, // 첫번째 보여줄 슬라이드
+                                    swipeToSlide: true,
+                                    prevArrow: $("#date5 .btn_prev"),
+                                    nextArrow: $("#date5 .btn_next")
+                                });
+                            </script>
+                            <!--// 날짜 슬라이드 -->
+
+
+
+
 
                             <div class="todayHight_slide">
                                 <a href="#" class="btn_prev"><img src="../../images/ico_left_arrow_b.png" alt="이전"></a>
@@ -541,32 +747,7 @@
                                             <span class="date"><sub>PM</sub>06:30</span>
                                         </div>
                                     </div>
-                                    <div class="item_s">
-                                        <div class="video">
-                                            <video id="tvid3" class="video-js vjs-default-skin" controls preload="none" width="530" height="298" poster="https://img.wavve.com/d47fc238e1574c7877a1853e6ddd7606_w720_h406_q75.jpg" data-setup=''>
-                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
-                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
-                                            </video>
-                                        </div>
-                                        <div class="hd">
-                                            <span class="score"><span class="team1">SK <strong class="win">6</strong></span> : <span class="team2">NC <strong class="lose">3</strong></span></span>
-                                            <span class="date"><sub>PM</sub>06:30</span>
-                                        </div>
-                                    </div>
-                                    <div class="item_s">
-                                        <div class="video">
-                                            <video id="tvid4" class="video-js vjs-default-skin" controls preload="none" width="530" height="298" poster="https://img.wavve.com/3d286a550d01a7ff5b9faab22132b974_w720_h406_q75.jpg" data-setup=''>
-                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
-                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
-                                            </video>
-                                        </div>
-                                        <div class="hd">
-                                            <span class="score"><span class="team1">SK <strong class="win">6</strong></span> : <span class="team2">NC <strong class="lose">3</strong></span></span>
-                                            <span class="date"><sub>PM</sub>06:30</span>
-                                        </div>
-                                    </div>
+
                                 </div>
                                 <a href="#" class="btn_next"><img src="../../images/ico_right_arrow_b.png" alt="다음"></a>
                             </div>

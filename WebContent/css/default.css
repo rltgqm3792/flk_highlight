@@ -757,8 +757,9 @@ td .progress_wrap {left:80px; width:620px;}
 .wrap.type3 {background:#f8f8f9;}
 .main .body_container {padding:0;}
 .main .header_wrap {width:1086px; margin:0 auto; padding:55px 0 50px; border-bottom:2px #222 solid; position: relative;}
-.main .header_wrap .link {position:absolute; top:60px; right:0; color:#777;}
+.main .header_wrap .link {position:absolute; top:17px; right:0; color:#777;}
 .main .header_wrap .link > span {font-size:18px;}
+.main .header_wrap .link > img {width:300px;} 
 .main .header_wrap .intro_wrap {padding:70px 0 10px; text-align:center; color:#fff; font-size:28px; font-weight:bold; font-family: "나눔고딕", Dotum,"돋움",Helvetica,AppleSDGothicNeo,Arial,sans-serif }
 
 .datepicker_wrap {width:1086px; margin:0 auto; background-color:#080c12; position:relative;}
@@ -768,8 +769,12 @@ td .progress_wrap {left:80px; width:620px;}
 /* .datepicker_wrap .month_title a span:before {content:""; position: absolute; top:10px; left:-55px; width:33px; height:33px; background:  url(../images/ico_cal_w.png) 0 0 no-repeat;}
 .datepicker_wrap .month_title a span:after {content:""; position: absolute; top:10px; right:-46px; width:30px; height:30px; background:  url(../images/ico_down_arrow_w.png) 0 0 no-repeat;} */
 .datepicker_wrap .month_title .btn_today {padding: 6px 18px; margin-top: -10px; display: inline-block; background: #3664ff; border-radius: 25px; font-size: 18px; font-weight: bold; vertical-align: middle;}
+.datepicker_wrap .month_title .btn_datepicker {width:auto; color:#222;}
+.datepicker_wrap .month_title .btn_datepicker.range {width:auto; color:#fff;}
 .datepicker_wrap .month_title .calendar_wrap.main {display:none; position:absolute; top:110px; left: calc(50% - 190px); padding:20px; background-color:#fff; border: 1px #ccc solid; border-radius:20px; z-index:2} 
 .datepicker_wrap .month_title .calendar_wrap.main.on{display:block;}
+.datepicker_wrap .month_title .calendar_wrap.main.start {left:158px; right:auto;}
+.datepicker_wrap .month_title .calendar_wrap.main.end {left:auto; right:158px;;}
 
 .datepicker_wrap .date_slider1 {width:1000px; margin:0 auto;}
 .datepicker_wrap .date_slider1 .btn_prev {position:absolute; top:57%; left:-13px; transform:translate(0, -50%);}
@@ -787,7 +792,7 @@ td .progress_wrap {left:80px; width:620px;}
 .datepicker_wrap #date7 .date .end strong {width:100%; margin-left:-64px; text-indent:64px;background-color:#fff; border-radius:0 35px 35px 0; color:#090c11;}
 .datepicker_wrap #date7 .date .start.end strong {width: 70px; margin-left: 0; text-indent: 0; background-color:#fff; border-radius: 35px; color:#090c11;}
 
-.datepicker_wrap.type1 {background-color:#fff;}
+.datepicker_wrap.type1 {background-color:#f8f8f8;}
 .datepicker_wrap.type1 .month_title  {color:#222}
 .datepicker_wrap.type1 .month_title a > img {margin-top:-7px;}
 /* .datepicker_wrap.type1 .month_title a span:before {content:""; position: absolute; top:10px; left:-55px; width:33px; height:33px; background:  url(../images/ico_cal_b.png) 0 0 no-repeat;}
@@ -839,6 +844,8 @@ td .progress_wrap {left:80px; width:620px;}
 .createHighlight_wrap .createHighlightMovie .page_info .clip_num .num {padding-left:10px; color:#f10200;}
 .createHighlight_wrap .createHighlightMovie .page_info .clip_num .list_num {padding-right: 5px; color:#fff; font-weight:bold; }
 .createHighlight_wrap .createHighlightMovie .page_info .more {display:inline-block; position:absolute; top:10px; right:0;}
+.createHighlight_wrap .createHighlightMovie .no_data {display:table; width:100%; height:261px; background-color: black;opacity: 0.5 }
+.createHighlight_wrap .createHighlightMovie .no_data > span {display:table-cell; vertical-align:middle; text-align:center; font-size:22px; color:#fff; font-weight:bold;}
 
 .createHighlight_wrap .btn_footer {width:1086px; padding:130px 0 94px; float:none; margin:0 auto; text-align:center; position:relative;}
 .createHighlight_wrap .btn_footer .btn_saveChanges {width:378px; height:96px; margin-right:16px; line-height:96px; border:3px #fff solid; border-radius:50px; background:transparent; font-size:28px; font-weight:bold;}
@@ -847,7 +854,7 @@ td .progress_wrap {left:80px; width:620px;}
 .createHighlight_wrap .btn_footer .clipboard_wrap .btn_copy {display: inline-block; position: absolute; top: 0px; left: auto; right: auto; color: #fff; width: 78px; height: 48px; line-height: 48px; font-size: 16px; font-weight: bold; background: #1e1e1d;}
 
 .todayHight_wrap {width:100%; padding-bottom:100px;}
-.todayHight_wrap .title {padding:90px 0 60px; text-align:center;}
+.todayHight_wrap .title {padding:90px 0 0px; text-align:center;}
 .todayHight_wrap .title .text {padding:30px 0; display:inline-block;}
 .todayHight_wrap .title .tit {display:inline-block; font-size:60px;}
 .todayHight_wrap .title .date {display:inline-block; padding-top:10px; font-size:30px;}
