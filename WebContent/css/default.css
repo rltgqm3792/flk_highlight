@@ -910,3 +910,6 @@ td .progress_wrap {left:80px; width:620px;}
 .video-js .vjs-big-play-button {width:2.5em; height:2.5em; line-height:2.3em; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background-color:transparent; border:3px #fff solid; border-radius:2em;}
 .video-js:hover .vjs-big-play-button, .video-js .vjs-big-play-button:focus {background-color:transparent;}
 .video-js .vjs-big-play-button .vjs-icon-placeholder:before {font-size:46px; color:#ee0501}
+
+/*20201029 1개일 경우 정렬*/
+.alignPad {padding-left:720px !important;}
