@@ -807,7 +807,7 @@ td .progress_wrap {left:80px; width:620px;}
 .datepicker_wrap.type1 .date_slider1 .date .end strong {width:100%; background-color:#090c11; color:#fff;}
 
 .createHighlight_wrap {background:#0f131e url(../images/bg_creative.jpg) 0 bottom no-repeat; background-size: 100% 100%;}
-.createHighlight_wrap .createHighlightList {display:table; width: 1086px; margin:0 auto;}
+.createHighlight_wrap .createHighlightList {display:table; width: 1086px; margin:0 auto; position:relative;}
 .createHighlight_wrap .createHighlightList .pill {height:100px; padding-top:30px; border-bottom:2px #32363f solid;}
 .createHighlight_wrap .createHighlightList .pill li {float:left; height:100px; line-height:100px; display:table-cell; font-size:24px;}
 .createHighlight_wrap .createHighlightList .pill li:first-child {padding-left:0; margin-right:48px;}
@@ -817,7 +817,15 @@ td .progress_wrap {left:80px; width:620px;}
 .createHighlight_wrap .createHighlightList .pill li.active > a:after {content:""; position: absolute; top:36px; right:24px; width:20px; height:16px; background: url(../images/ico_down_arrow_s.png) 0 0 no-repeat;}
 .createHighlight_wrap .createHighlightList .pill_content {width: 1086px; margin: 0 auto; height:90px; line-height:90px; color:#777; font-size:24px;}
 .createHighlight_wrap .createHighlightList .pill_content li {float:left; padding:0px 25px; text-align: center;}
-.createHighlight_wrap .createHighlightList .pill_content li a {color:#777; font-weight:bold;}
+.createHighlight_wrap .createHighlightList .pill_content li a {display: inline-block; height: 40px; line-height: 40px; color:#777; font-weight:bold;}
+.createHighlight_wrap .createHighlightList .pill_content li a.on {color:#fff;}
+.createHighlight_wrap .createHighlightList .pill_content li a img {display:inline-block; width:40px; margin-right:6px; vertical-align: top;}
+
+.createHighlight_wrap .createHighlightList .select_list {padding:10px; line-height:24px; min-height:24px; color: #fff; background-color:#000; opacity:0.9;}
+.createHighlight_wrap .createHighlightList .select_list ul:after {content:""; clear:both; display:block;}
+.createHighlight_wrap .createHighlightList .select_list ul li {float:left; margin-right:6px; height:24px;}
+.createHighlight_wrap .createHighlightList .select_list ul li .del > span {text-indent:-9999px; font-size:0;}
+.createHighlight_wrap .createHighlightList .select_list ul li .del:after {content:"\2716"; width:20px; height:20px; display:inline-block; margin-left:5px; color:red}
 
 .createHighlight_wrap .createHighlightMovie {position: relative; width: 1086px; padding-top: 14px; margin:0 auto;}
 .createHighlight_wrap .createHighlightMovie ul:after {content:""; clear:both; display:block;}
@@ -835,6 +843,8 @@ td .progress_wrap {left:80px; width:620px;}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .info:before {content:""; position: absolute; top:2px; left:0; width:14px; height:14px; background: url(../images/ico_triangle.png) 0 0 no-repeat; background-size:12px auto;}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .info > span:after {content:""; display:inline-block; width:1px; height:8px; background-color:#fff; margin:0 10px;}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .info > span:last-child:after {content:none}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .time_box {position:absolute; right:10px}
+.createHighlight_wrap .createHighlightMovie .item_s .hd .time_box input {width:16px; text-align: center}
 .createHighlight_wrap .createHighlightMovie .item_s .hd .play_time {padding: 3px 6px; position:absolute; top:-26px; right:6px; background-color:#000; border-radius:4px;}
 .createHighlight_wrap .createHighlightMovie .page_info {padding:14px 0; color:#777; position:relative;}
 .createHighlight_wrap .createHighlightMovie .page_info .clip_num {padding-left:10px; font-size:18px;}
@@ -852,6 +862,8 @@ td .progress_wrap {left:80px; width:620px;}
 .createHighlight_wrap .btn_footer .clipboard_wrap {position:absolute; top:16px; right:83px;}
 .createHighlight_wrap .btn_footer .clipboard_wrap input {width:400px; padding:10px 5px 10px 20px; font-size:20px; color:#bbb; border:2px #1e1e1d solid; background:#1e1e1d;}
 .createHighlight_wrap .btn_footer .clipboard_wrap .btn_copy {display: inline-block; position: absolute; top: 0px; left: auto; right: auto; color: #fff; width: 78px; height: 48px; line-height: 48px; font-size: 16px; font-weight: bold; background: #1e1e1d;}
+.createHighlight_wrap .btn_right {position:absolute; top:50px; right:0}
+.createHighlight_wrap .btn_right .btn_saveChanges {display:inline-block; width:180px; height:50px; margin-right:16px; line-height:50px;  border-radius:50px; background:#ccc; text-align:center; font-size:20px; font-weight:bold;}
 
 .todayHight_wrap {width:100%; padding-bottom:50px;}
 .todayHight_wrap .title {padding:90px 0 0px; text-align:center;}
