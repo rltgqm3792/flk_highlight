@@ -282,6 +282,7 @@
                                 </ul>
                                 <div id="tab_contents_1" class="pill_content">
                                     <div id="cid1" class="pill_slide">
+                                        <a href="#" class="btn_prev"><img src="../../images/ico_left_arrow.png" alt="이전"></a>
                                         <ul>
                                             <li><a href="#none" id="tab1_1" name="최지훈"><img src="../../images/team_nc.png" alt="logo">최지훈</a></li>
                                             <li><a href="#none" id="tab1_2" name="오태곤"><img src="../../images/team_sk.png" alt="logo">오태곤</a></li>
@@ -296,6 +297,7 @@
                                             <li><a href="#none" id="tab1_11" name="고종욱"><img src="../../images/team_nc.png" alt="logo">고종욱</a></li>
                                             <li><a href="#none" id="tab1_12" name="최항"><img src="../../images/team_nc.png" alt="logo">최항</a></li>
                                         </ul>
+                                        <a href="#" class="btn_next"><img src="../../images/ico_right_arrow.png" alt="다음"></a>
                                     </div>
                                     <div id="cid2" class="pill_slide">
                                         <ul>
@@ -341,18 +343,18 @@
                                     });
                                     //slide
                                     $('#cid1 ul').slick({
-                                        slide: "li",
+                                        slide: 'li',
                                         infinite: false,
                                         slidesToShow: 6,
                                         slidesToScroll: 6,
                                         variableWidth: true,
                                         initialSlide: 0, 
                                         swipeToSlide: false,
-                                        prevArrow: false,
-                                        nextArrow: false
+                                        prevArrow: $('.pill_slide .btn_prev'),
+                                        nextArrow: $('.pill_slide .btn_next')
                                     });
                                     $('#cid2 ul').slick({
-                                        slide: "li",
+                                        slide: 'li',
                                         infinite: false,
                                         slidesToShow: 5,
                                         slidesToScroll: 5,
@@ -364,7 +366,7 @@
                                     });
 
                                     //20201111 tab content wheel scroll 
-                                    $(".pill_slide ul").on('wheel', (function (e) {
+                                    $('.pill_slide ul').on('wheel', (function (e) {
                                         e.preventDefault();
                                         if (e.originalEvent.deltaY < 0) {
                                             $(this).slick('slickNext');
@@ -374,36 +376,37 @@
                                     }));
 
                                     //20201110 다중선택 및 선택삭제
-                                    $(".pill li a").click(function (e) {
+                                    $('.pill li a').click(function (e) {
                                         var initTimer = setTimeout(function () {
-                                            $(".slick-slider").slick('setPosition'); // tab - show,hide시 slick 초기화
+                                            $('.slick-slider').slick('setPosition'); // tab - show,hide시 slick 초기화
                                             clearTimeout(initTimer);
                                         }, 10); 
                                     });
-                                    $(".pill_content ul li a").click(function (e) {
-                                        var choiceId = $(this).attr("id"),
-                                            choiceIdVal = $(this).attr("name");
-                                        var choiceLi = "<li id='" + choiceId + "'>" + choiceIdVal + "<a href='#none' class='del'><span>삭제</span></a></li>";
-                                        if (!$(this).hasClass("on")) {
-                                            $(this).addClass("on");
-                                            $(".select_list ul").append(choiceLi);
+                                    $('.pill_content ul li a').click(function (e) {
+                                        var choiceId = $(this).attr('id'),
+                                            choiceIdVal = $(this).attr('name');
+                                        // var choiceLi = "<li id='" + choiceId + "'>" + choiceIdVal + "<a href='#none' class='del'><span>삭제</span></a></li>";
+                                        var choiceLi = '<li id='+choiceId+'>'+choiceIdVal+'<a href="#none" class="del"><span>삭제</span></a></li>';
+                                        if (!$(this).hasClass('on')) {
+                                            $(this).addClass('on');
+                                            $('.select_list ul').append(choiceLi);
                                         } else {
-                                            $(this).removeClass("on");
-                                            $(".select_list ul li#" + choiceId + "").remove();
+                                            $(this).removeClass('on');
+                                            $('.select_list ul li#'+choiceId).remove();
                                         }
                                         selectListToggle();
                                     });
                                     $(document).on('click', '.del', function (e) {
-                                        var delLiId = $(this).parent("li").attr("id");
-                                        $(".select_list ul li#" + delLiId + "").remove();
-                                        $(".pill_content ul li a#" + delLiId + "").removeClass("on");
+                                        var delLiId = $(this).parent('li').attr('id');
+                                        $('.select_list ul li#'+delLiId).remove();
+                                        $('.pill_content ul li a#'+delLiId).removeClass('on');
                                         selectListToggle();
                                     });
                                     function selectListToggle() {
-                                        if ($(".select_list ul li").length > 0) {
-                                            $(".select_list").show();
+                                        if ($('.select_list ul li').length > 0) {
+                                            $('.select_list').show();
                                         } else {
-                                            $(".select_list").hide();
+                                            $('.select_list').hide();
                                         }
                                     }
                                 </script>

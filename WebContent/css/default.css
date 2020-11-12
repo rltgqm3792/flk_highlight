@@ -935,3 +935,7 @@ td .progress_wrap {left:80px; width:620px;}
 .i_info{position:relative;}
 .i_info[aria-label]:after {content:attr(aria-label); position:absolute; top:10px; right:-250px; width:220px; padding:8px 8px; background-color:#fefefe; border:1px #e1e1e1 solid; border-radius:5px; font-size:1.2rem; word-wrap:break-word; text-align:left; color: #777; line-height:20px; opacity:0; -webkit-transition:bottom .3s ease-in-out, opacity .3s ease-in-out; -moz-transition:bottom .3s ease-in-out, opacity .3s ease-in-out; transition:bottom .3s ease-in-out, opacity .3s ease-in-out; }
 .i_info[aria-label]:hover:after {top:10px; right:-250px; opacity:0.75; z-index:1;}
+
+.pill_slide {position:relative;}
+.pill_slide .btn_prev {position: absolute; top:0; left:-12px; z-index: 2;}
+.pill_slide .btn_next {position: absolute; top:0; right:-12px; z-index: 2;}
