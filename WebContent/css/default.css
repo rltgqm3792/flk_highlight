@@ -383,7 +383,9 @@ a.link{color:#52657c; text-decoration:underline;}
 .table_wrap .items li a.active {border:2px #1bd3c9 solid;background-color: #1bd3c9;color:#fff}
 
 .btn_wrap {padding-top:60px; text-align: center;}
+.btn_wrap2 {padding:30px 0; text-align: center;}
 .jui .btn.large {padding:0 60px; border-radius: 5px;}
+.jui .btn.big {padding:0 0px; border-radius: 5px;}
 
 /* match slider */
 .slider_warp {display:inline-block;outline: none;}
@@ -482,6 +484,7 @@ a.link{color:#52657c; text-decoration:underline;}
 .jui .btn {border:0; text-align:center;}
 .jui .btn.large {width:308px; height:50px; line-height:50px;}
 .jui .btn.focus {background-color:#58BAE1; color:#fff;}
+.jui .btn.big {width:360px; height:70px; line-height:70px; font-size:20px; font-weight:bold;}
 
 /* [공통] 로그인, 가입  */
 .login_container {min-height:100%; padding:90px 0 0; background-color:#F0F1F5;}
@@ -885,6 +888,9 @@ td .progress_wrap {left:80px; width:620px;}
 .todayHight_slide .item_s .hd .score .lose {padding-left:14px; color: #666;}
 .todayHight_slide .item_s .hd .date {position: absolute; right:20px; top:35px; ;color: #999;font-size: 24px;}
 .todayHight_slide .item_s .hd .date sub {position: relative;top: -7px;margin-right: 8px;}
+.todayHight_slide .item_s .hd .date.upper {top:17px;}
+.todayHight_slide .item_s .hd .choice {position:absolute; top:46px; right:20px; width:150px; color:#999; font-size:24px;}
+
 .todayHight_slide > .btn_prev {position: absolute; top:100px; left:170px; z-index: 1;}
 .todayHight_slide > .btn_next {position: absolute; top:100px; right:170px; z-index: 1;}
 .todayHight_slide .slick-slide {opacity:0.3}
@@ -925,7 +931,8 @@ td .progress_wrap {left:80px; width:620px;}
 .video-js .vjs-big-play-button .vjs-icon-placeholder:before {font-size:46px; color:#ee0501}
 
 /*20201029 1개일 경우 정렬*/
-.alignPad {padding-left:730px !important;}
+.alignPad {padding-left:1000px !important;}
+.alignPad .slick-track {opacity: 1 !important; width: 550px !important; transform: translate3d(-550px, 0px, 0px) !important;}
 
 /*20201029 today hight line 추가*/
 .todayHight_slide:before {content: ""; position: absolute; bottom: -261px; left: 322px; width: 1px; height: 440px; background: transparent; transform: rotate(39deg); box-shadow: 3px 0px 7px 0px rgba(0,0,0,0.4);}
@@ -946,3 +953,4 @@ td .progress_wrap {left:80px; width:620px;}
 #hightlight_name .content_wrap .title {position: absolute; top: -40px; left: 0px; color:#fff; font-size: 20px; font-weight: bold;}
 #hightlight_name .content_wrap .con_warp input {width: 400px; padding: 10px 10px 10px 10px; color: #bbb; font-size: 20px; font-weight: bold; background: #1e1e1d; border: 2px #1e1e1d solid;}
 #hightlight_name .content_wrap .con_warp .btn_copy {display: inline-block; position: absolute; top: auto; left: auto; right: 20px; color: #fff; width: 78px; height: 48px; line-height: 48px; text-align:center; font-size: 16px; font-weight: bold; background: #ee0501; border-radius: 30px;}
+
