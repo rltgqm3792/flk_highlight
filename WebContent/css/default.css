@@ -981,19 +981,24 @@ td .progress_wrap {left:80px; width:620px;}
 .header_container.type2 .header_top .link {position: absolute; top: 10px; right: 0;}
 .header_container.type2 .header_top .link > img { width:190px;}
 
-
-
-
-
-
-
-
-
-
-
 .todayHight_slide.no_game {position:relative;}
 .todayHight_slide.no_game .btn_prev, .todayHight_slide.no_game .btn_next, .todayHight_slide.no_game .item_wrap .slick-dots {display:none !important;}
 .todayHight_slide.no_game .item_wrap .item_s {position: relative;}
 .todayHight_slide.no_game .item_wrap .item_s:after {content:""; position: absolute;top:0; left:50%; transform: translate(-50%, 0); width:534px; height:302px; background:#aaa; z-index: 10;}
 .todayHight_slide.no_game .item_wrap .item_s .hd {visibility: hidden;}
 .todayHight_slide.no_game .item_wrap .slick-active .video {border:0;}
+
+.tab_box {padding:70px 0 70px;}
+.tab_box li {float:left; width:25%; background: #ccc; box-sizing: border-box;}
+.tab_box li a {
+
+    padding: 20px 0px;
+    width: 100%;
+    line-height: 24px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+
+}
