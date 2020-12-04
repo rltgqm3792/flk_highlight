@@ -988,17 +988,8 @@ td .progress_wrap {left:80px; width:620px;}
 .todayHight_slide.no_game .item_wrap .item_s .hd {visibility: hidden;}
 .todayHight_slide.no_game .item_wrap .slick-active .video {border:0;}
 
+/*tab*/
 .tab_box {padding:70px 0 70px;}
-.tab_box li {float:left; width:25%; background: #ccc; box-sizing: border-box;}
-.tab_box li a {
-
-    padding: 20px 0px;
-    width: 100%;
-    line-height: 24px;
-    display: inline-block;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-
-}
+.tab_box li {float:left; width:25%; padding: 0px 2px; border-bottom: 2px #32363f solid; box-sizing: border-box;}
+.tab_box li a { padding: 20px 0px; width: 100%; line-height: 24px; display: inline-block; font-size: 26px; font-weight: bold; color: #777; text-align: center; background: #080c12; }
+.tab_box li a:hover, .tab_box li.active a {background: #fd6732; color:#fff; border-radius: 10px 10px 0 0;}
