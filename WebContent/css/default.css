@@ -1017,7 +1017,7 @@ td .progress_wrap {left:80px; width:620px;}
 #favorite_player {width:1400px; height:auto;}
 #favorite_player .content_wrap .list_wrap {padding: 40px 20px 20px 0; height: 522px; overflow: auto;}
 #favorite_player .content_wrap .list_wrap li {float:left; width:10%; padding:30px 0 30px; text-align:center; box-sizing:border-box;}
-#favorite_player .content_wrap .list_wrap li .item_wrap .item {    text-align: center; padding: 20px 0 0; display: inline-block;}
+#favorite_player .content_wrap .list_wrap li .item_wrap .item {text-align: center; padding: 20px 0 0; display: inline-block;}
 #favorite_player .content_wrap .list_wrap li .item_wrap .item img {width:110px; height:110px;}
 #favorite_player .content_wrap .list_wrap li .item_wrap .p_name {display:inline-block; height: 70px; line-height:22px;}
 #favorite_player .content_wrap .list_wrap li .item_wrap .p_name .back_num {font-size:14px; color:#ee0501;}
