@@ -79,6 +79,18 @@
                                         <input type="text" class="inp_text" id="enum" />
                                     </div>
                                 </div>
+                                <div class="row2">
+                                    <div class="col">
+                                        <div class="btn_wrap3">
+                                        <a href="#none" class="btn_favorite" role="button" onclick="openpop('favorite_team');">관심구단</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="btn_wrap3">
+                                        <a href="#none" class="btn_favorite" role="button" onclick="openpop('favorite_player');">관심선수</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="actions">
                                 <button type="button" class="btn large focus"><span>Submission</span></button>
@@ -93,6 +105,409 @@
             </div>
         </div>
 		<!-- e: login -->
+
+
+
+    <!-- 관심구단 팝업 -->
+    <div class="dim"></div>
+    <div class="layer_pop" id="favorite_team">
+        <div class="layer_wrap">
+            <a href="#none" class="btn_popClose"><img src="../../images/btn_close.png" alt="닫기"></a>
+            <div class="content_wrap">
+                <div class="title">관심구단</div>
+                <div class="con_warp">
+                    <div class="list_wrap">
+                        <ul>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/img_club_02.png"><br>
+                                            <span class="t_name">NC 다이노스</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite on"></span>
+                                        <span class="item">
+                                            <img src="../../images/img_club_01.png"><br>
+                                            <span class="t_name">SK 와이번즈</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/img_club_08.png"><br>
+                                            <span class="t_name">KT wiz</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/img_club_03.png"><br>
+                                            <span class="t_name">LG 트윈스</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/img_club_06.png"><br>
+                                            <span class="t_name">KIA 타이거즈</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/img_club_04.png"><br>
+                                            <span class="t_name">두산 베어스</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/img_club_09.png"><br>
+                                            <span class="t_name">삼성 라이온즈</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/img_club_07.png"><br>
+                                            <span class="t_name">롯데 자이언츠</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/img_club_10.png"><br>
+                                            <span class="t_name">한화 이글스</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/img_club_05.png"><br>
+                                            <span class="t_name">키움 히어로즈</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// 관심구단 팝업 -->
+
+    <!-- 관심선수 팝업 -->
+    <div class="layer_pop" id="favorite_player">
+        <div class="layer_wrap">
+            <a href="#none" class="btn_popClose"><img src="../../images/btn_close.png" alt="닫기"></a>
+            <div class="content_wrap">
+                <div class="title">관심선수</div>
+                <div class="con_warp">
+
+                    <div class="tab_box">
+                        <ul>
+                            <li class="active"><a href="#none">코칭스태프</a></li>
+                            <li><a href="#none">투수</a></li>
+                            <li><a href="#none">포수</a></li>
+                            <li><a href="#none">내야수</a></li>
+                            <li><a href="#none">외야수</a></li>
+                            <li><a href="#none">군입대선수</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list_wrap">
+                        <ul>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite on"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite on"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite on"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite on"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite on"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite on"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite on"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="item_wrap">
+                                        <span class="favorite on"></span>
+                                        <span class="item">
+                                            <img src="../../images/btn_login_1.png"><br>
+                                            <span class="p_name"><span class="back_num">NO.43</span><br><span class="name ellipsis2">김성현</span></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// 관심선수 팝업 -->
+
+    <script>
+        //20201116 팝업
+        function openpop(id) {
+            $("body").addClass("noscroll");
+            $(".dim").show();
+            $('#' + id).show();
+        }
+        $(".layer_pop .btn_popClose").on("click", function (e) {
+            $(".layer_pop").hide();
+            $(".dim").hide();
+            $("body").removeClass("noscroll");
+        });
+        $(document).on("click", function (e) {
+            if ($(".dim").is(e.target)) {
+                $(".layer_pop").hide();
+                $(".dim").hide();
+                $("body").removeClass("noscroll");
+            }
+        });
+    </script>
+
+
 
 	</body>
 </html>
