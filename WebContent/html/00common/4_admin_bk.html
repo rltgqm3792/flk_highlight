@@ -30,7 +30,7 @@
         <div class="header_inner">
             <div class="header_top cboth">
                 <!-- 신규 헤더 -->
-                <h1 class="logo"><a href="#"><img src="../../images/logo_main.png" alt="SKT Hightlight | wavve"></a></h1>
+                <h1 class="logo"><a href="#"><img src="../../images/logo_main2.png" alt="SKT auto Hightlight"></a></h1>
                 <a href="#none" class="link"><img src="../../images/ict_summit_banner_2.jpg" alt="나만의 하이라이트 만들기"></a>
                 <!-- 기존 헤더 -->
                 <!-- <div class="center">
@@ -38,7 +38,7 @@
                 </div> -->
             </div>
             <!--s: GNB -->
-            <div class="gnb_wrap">
+            <!-- <div class="gnb_wrap">
                 <div class="menu_wrap">
                     <ul class="level1">
                         <li><a href="/home"" id=" home">홈</a></li>
@@ -74,7 +74,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <!--e: GNB -->
         </div>
     </div>
@@ -98,8 +98,13 @@
                                     <li class="active"><a href="#none">introduction</a></li>
                                     <li><a href="#none">AI Highlight</a></li>
                                     <li><a href="#none">나만의 하이라이트</a></li>
-                                    <li><a href="#none">나의 관심 영상</a></li>
+                                    <!-- <li><a href="#none">나의 관심 영상</a></li> -->
                                 </ul>
+
+                                <div class="btn_gear">
+                                    <a href="#none"><img src="../../images/ico_gear.png"></a>
+                                </div>
+
                             </div>
                             <!-- 20201203 탭추가 -->
 
@@ -646,10 +651,10 @@
                             <div class="btn_footer">
                                 <!-- 20201116 변경 -->
                                 <a href="#none" class="btn_saveChanges btn_create" onclick="openpop('hightlight_name');return false;">하이라이트 생성하기</a>
-                                <a href="#none" class="btn_saveChanges btn_resi">영상 등록하러가기</a>
+                                <a href="#none" class="btn_saveChanges btn_resi" onclick="openpop('movie_view');return false;">영상 등록하러가기</a>
 
                                 <!-- 영상생성 미리보기 팝업 -->
-                                <div class="layer_pop2">
+                                <!-- <div class="layer_pop2">
                                     <div class="layer_wrap">
                                         <a href="#none" class="btn_popClose"><img src="../../images/btn_close.png" alt="닫기"></a>
                                         <div class="video_wrap">
@@ -669,7 +674,7 @@
                                     $(".layer_pop2 .btn_popClose").on("click", function (e) {
                                         $(".layer_pop2").hide();
                                     });
-                                </script>
+                                </script> -->
                                 <!--// 영상생성 미리보기 팝업 -->
 
                                 <div class="clipboard_wrap">
@@ -705,7 +710,8 @@
                         <div class="todayHight_wrap type2">
 
                             <div class="title">
-                                <span class="text">자동 생성된 경기 하이라이트 보기</span><br>
+                                <!-- <span class="text">자동 생성된 경기 하이라이트 보기</span><br> -->
+                                <span class="text"><img src="../../images/title_ai.png" alt="자동 생성된 경기 하이라이트"></span><br>
                                 <span class="tit">Today's <strong>Highlight</strong></span><br>
                                 <span class="date">October, 20 wednesday<span class="time">18:17:24</span></span>
                             </div>
@@ -873,7 +879,7 @@
                             <!--// 날짜 슬라이드 -->
 
                             <!-- 20201201 경기없을시에 <div class="todayHight_slide no_game"> -->
-                            <div class="todayHight_slide type2">
+                            <div class="todayHight_slide type2 no_game">
                                 <a href="#" class="btn_prev"><img src="../../images/ico_left_arrow_b.png" alt="이전"></a>
                                 <div class="item_wrap">
                                     <div class="item_s">
@@ -923,9 +929,15 @@
                                             <span class="date"><sub>PM</sub>06:30</span>
                                         </div>
                                     </div>
-
                                 </div>
                                 <a href="#" class="btn_next"><img src="../../images/ico_right_arrow_b.png" alt="다음"></a>
+
+                                <!-- 경기없슴 알림 -->
+                                <div class="nogame_text" style="display:none;">경기가 없는 날입니다. 다른날짜를 선택해 주세요
+                                </div>
+                                <!--// 경기없슴 알림 -->
+
+
                             </div>
                         </div>
 
@@ -960,7 +972,7 @@
 
     <!-- 20201120 하이라이트 편집 -->
     <!-- 버튼영역 -->
-    <div class="btn_wrap2 type2">
+    <div class="btn_wrap2 type2" style="display:none;">
         <a href="#none" class="btn big focus">하이라이트 편집하기</a>
     </div>
     <!-- 컨텐츠 영역 -->
@@ -1080,6 +1092,24 @@
         </div>
     </div>
     <!--// 20201116 하이라이트명 입력 팝업 -->
+
+    <!-- 20201207 영상등록 미리보기 팝업 -->
+    <div class="layer_pop" id="movie_view">
+        <div class="layer_wrap">
+            <a href="#none" class="btn_popClose"><img src="../../images/btn_close.png" alt="닫기"></a>
+            <div class="video_wrap">
+                <video id="tvid4" class="video-js vjs-default-skin" controls preload="none" width="720" height="405"
+                    poster="" data-setup=''>
+                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                    <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                </video>
+            </div>
+        </div>
+    </div>
+    <!-- // 20201207 영상등록 미리보기 팝업 -->
+
+
 
     <script>
         //20201116 팝업
