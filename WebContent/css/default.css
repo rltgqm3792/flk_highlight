@@ -826,11 +826,13 @@ td .progress_wrap {left:80px; width:620px;}
 .createHighlight_wrap .createHighlightList .pill_content li a.on {color:#fff;}
 .createHighlight_wrap .createHighlightList .pill_content li a img {display:inline-block; width:40px; margin-right:6px; vertical-align: top;}
 
-.createHighlight_wrap .createHighlightList .select_list {padding:10px; line-height:24px; min-height:24px; color: #fff; background-color:#000; opacity:0.9;margin-top:10px;}
+.createHighlight_wrap .createHighlightList .select_list {padding:10px 40px 10px 10px; margin-top:10px; line-height:24px; min-height:24px; color: #fff; background-color:#000; opacity:0.9; position: relative;} 
 .createHighlight_wrap .createHighlightList .select_list ul:after {content:""; clear:both; display:block;}
 .createHighlight_wrap .createHighlightList .select_list ul li {float:left; margin-right:6px; height:24px;}
 .createHighlight_wrap .createHighlightList .select_list ul li .del > span {text-indent:-9999px; font-size:0;}
 .createHighlight_wrap .createHighlightList .select_list ul li .del:after {content:"\2716"; width:20px; height:20px; display:inline-block; margin-left:5px; color:red}
+.createHighlight_wrap .createHighlightList .select_list .btn_reset {position: absolute; top:48%; right:14px; transform: translate(0, -50%);}
+.createHighlight_wrap .createHighlightList .select_list .btn_reset img {width:20px;}
 
 .createHighlight_wrap .createHighlightMovie {position: relative; width: 1086px; padding-top: 14px; margin:0 auto;}
 .createHighlight_wrap .createHighlightMovie ul:after {content:""; clear:both; display:block;}
