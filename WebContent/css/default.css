@@ -977,7 +977,7 @@ td .progress_wrap {left:80px; width:620px;}
 .todayHight_wrap.type2 .title .text { font-size: 52px; color: #fff; font-weight: 500; }
 .todayHight_wrap.type2 .title .text, .todayHight_wrap.type2 .title .tit, .todayHight_wrap.type2 .title .date {color:#fff;}
 
-.todayHight_slide.type2 .slick-active .video {border:2px #fff solid; box-sizing:border-box;}
+.todayHight_slide.type2 .slick-active .video {display:inline-block; border:2px #fff solid; box-sizing:border-box;}
 .todayHight_slide.type2 .slick-active .hd {color:#fff}
 /* .todayHight_slide.type2:before {content: ""; position: absolute; bottom: -312px; left: 295px; width: 0px; height: 513px; background: transparent; transform: rotate(40deg); box-shadow: 3px 0px 20px 3px rgba(255,255,255,0.7);} */
 /* .todayHight_slide.type2:after {content: ""; position: absolute; bottom: -312px; right: 295px; width: 0px; height: 513px; background: transparent; transform: rotate(-39deg); box-shadow: -3px 0px 20px 3px rgba(255,255,255,0.7);} */
