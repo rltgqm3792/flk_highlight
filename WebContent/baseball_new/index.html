@@ -1,0 +1,800 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko" >
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> 프로젝트 UI개발 작업리스트 </title>
+ 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700" rel="stylesheet" />
+	<style>
+		@charset "utf-8"; 
+		@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap');
+
+		* {margin:0; padding:0;}
+		html ,body { height:100%; margin:0; padding:0; border:0px; color:#666; font-size:14px; font-family:"Nanum Gothic",Dotum,"droid sans fallback","AppleGothic",sans-serif; letter-spacing:-1px;}
+
+		th,td,input,textarea,select {font-size:12px; color:#666; font-family:"Nanum Gothic",Dotum,"droid sans fallback","AppleGothic",sans-serif;}
+		th,td {word-break:break-all; word-wrap:break-word;}
+		table {border-spacing:0; border-collapse:collapse; width:100%;}
+		ol,ul,li {list-style:none;}
+		h1,h2,h3,h4,h5,h6 {font-size:100%; line-height:normal;}
+		img, fieldset {border:0 none;}
+		label {cursor:pointer;}
+		a, a:focus, a:hover, a:active {color:#27e; text-decoration:underline;}
+
+		.container {width:98%; margin:0 auto; padding-bottom:50px;}
+
+		.hd {margin-bottom:10px; border-bottom:4px solid #d7d7d7; position:relative;}
+		.hd .title {font-size:14px; color:#333; display:inline-block; border-bottom:4px solid #e9002d; padding:10px; margin-bottom:-4px;}
+		.hd .num {margin-left:5px;}
+		.hd .top {position:absolute; right:5px; bottom:5px; font-size:16px; font-weight:bold; letter-spacing:-1px; padding:0 4px;}
+		.hd .top:hover {background-color:#e9002d; color:#fff;}
+
+		.header {position:relative; height:220px; box-sizing:border-box; padding-top:20px;}
+		.header h1 {color:#333; font-size:28px;}
+		.header h1 strong {color:#e9002d;}
+		.header h1 + dl {padding-top:20px;}
+		.header dl {padding-top:10px; line-height:20px;}
+		.header dt {color:#333; font-weight:bold; display:inline-block; vertical-align:middle; width:100px;}
+		.header dd {display:inline-block; vertical-align:middle;}
+		.header dd a {padding:0 3px;}
+		.header dd a:hover {color:#fff; background-color:#e9002d;}
+
+		.header .guide {overflow:hidden; position:absolute; bottom:10px; right:10px;}
+		.header .guide li {float:left; border:1px solid #aeaeae; margin-left:2px; padding:0 6px; line-height:18px; height:18px; text-align:center; font-size:11px; letter-spacing:-1px; color:#666;}
+		.header .guide li.del {background:#eee;}
+		.header .guide li.mod {background:#fefcd2;}
+		.header .guide li.add {background:#fef3f4;}
+		.header .guide li.keycode {background:#666;}
+		.header .guide li.ja {background:#c81528;}
+		.header .guide li.en {background:#0070bf;}
+		.header .shortcut {padding-right:150px;}
+		.header .shortcut a::after {content:"↓";}
+		.header.fixed {padding-top:50px;}
+		.header.fixed .shortcut {position:fixed; left:0; right:0; top:0; padding:20px 1%; background-color:#444; border-bottom:1px solid #ddd; z-index:100; font-size:16px; box-shadow:2px 2px 5px #eee;}
+		.header.fixed .shortcut dt {display:none;}
+		.header.fixed .shortcut dd {color:#fff; margin-right:10px;}
+		.header.fixed .shortcut a {color:#fff;}
+
+		.section {border-top:2px solid #333; border-bottom:1px solid #ddd; margin-bottom:20px; position:relative;}
+		.section table {}
+		.section table caption {display:none;}
+		.section table thead th {color:#666; background-color:#eee; padding:8px; border:1px solid #ddd; border-top:0; font-size:11px;}
+		.section table thead tr:first-child th {}
+		.section table tbody th {padding:8px; color:#333; border-left:1px solid #ddd; border-top:1px solid #ddd;}
+		.section table tbody .gp {border-top:0;}
+		.section table tbody td {padding:8px; text-align:left; color:#333; border:1px solid #ddd; border-bottom:0;}
+		.section table tbody th.depth {text-align:center; font-size:14px; font-weight:700;}
+		.section table tbody td.depth {/*text-align:center;*/}
+		.section table tbody tr:hover th,
+		.section table tbody tr:hover td {background-color:#f9f9f9;}
+		.section table tbody tr.del th,
+		.section table tbody tr.del td {background-color:#eee; color:#aeaeae;}
+		.section table tbody tr.del td a {color:#aeaeae;}
+		.section table tbody tr.del td a:hover {font-style:normal;}
+		.section table tbody tr.mod th,
+		.section table tbody tr.mod td {background-color:#fefcd2 !important;}
+		.section table tbody tr.add th,
+		.section table tbody tr.add td {background-color:#fef3f4 !important;}
+		.section table tbody td .ct {padding-top:6px;}
+		.section table tbody td a + a {margin-top:5px;}
+		.section a {display:block; font-size:14px; /*padding:5px 0;*/}
+		.section a.keycode {color:#666;}
+		.section a.ja {color:#c81528;}
+		.section a.en {color:#0070bf;}
+		.section a:hover {font-style:italic;}
+		.section .dimmed {position:absolute; left:0; right:0; top:0; bottom:0; background-color:rgba(0,0,0,0.6); color:#fff; font-size:24px; font-weight:bold; text-align:center;}
+		.section .dimmed::after {content:""; display:inline-block; vertical-align:middle; height:100%;}
+
+		.notice {border:2px solid #ddd; margin-top:20px; padding:20px; font-size:16px; position:relative;}
+		.notice::before {content:""; position:absolute; left:-2px; top:-2px; width:0; height:0; border-right:20px solid transparent; border-bottom:20px solid #e9002d; transform:rotate(90deg);}
+		/*.notice::before,
+		.notice::after {content:""; position:absolute; left:-2px; top:-2px; background:#e9002d;}
+		.notice::before {width:30px; height:2px;}
+		.notice::after {width:2px; height:30px;}*/
+	</style>
+
+	<script type="text/javascript">
+		$(function(){
+
+			$(".header .numFile").text($(".container .section tbody tr:not(.del)").length);
+
+			$(".header .shortcut a").on("click", function(){
+				var nPos = $($(this).attr("href")).offset().top;
+				var nMove = nPos - $(".header .shortcut").outerHeight(true)
+				$("html, body").animate({
+					scrollTop : nMove
+				}, 300);
+				return false;
+			})
+
+			$(".hd .top").on("click", function(){
+				$("html, body").animate({
+					"scrollTop" : 0
+				}, 300);
+				return false;
+			})
+
+			$(".hd .title .num").each(function(){
+				var $this = $(this);
+				$this.text( "(" + $this.closest(".hd").next(".section").find("tbody tr:not('.del')").length + " page)" );
+			});
+
+		})
+
+		$(window).on("scroll", function(){
+			var nScrl = $("html, body").scrollTop();
+			var $header = $(".header");
+			if(nScrl > $header.height()){
+				$header.addClass("fixed");
+			} else {
+				$header.removeClass("fixed");
+			}
+		});
+	</script>
+</head>
+<body>
+
+
+
+<div class="container" id="container">
+
+	<!-- s: header -->
+	<div class="header">
+		<div class="inner">
+			<h1>🎮 [코딩리스트] <strong>2021 SKT Sports DeepMeta</strong> :: B.O</h1>
+			<dl>
+				<dt>UI개발 담당자</dt>
+				<dd>김문정</dd>
+			</dl>
+			<dl>
+				<dt>총 파일 수</dt>
+				<dd class="numFile">00</dd>
+			</dl>
+			<!-- <dl>
+				<dt>언어별</dt>
+				<dd><a target="_blank" href="index.html">KeyCode</a></dd>
+				<dd><a target="_blank" href="index_ja.html">JA</a></dd>
+				<dd><a target="_blank" href="index_en">EN</a></dd>
+			</dl> -->
+			<dl class="shortcut">
+				<dt>바로가기 메뉴</dt>
+				<dd><a target="_blank" href="#sectionGuide">Guide</a></dd>
+				<dd><a target="_blank" href="#sectionCommon">공통</a></dd>
+				<dd><a target="_blank" href="#section01">정보조회</a></dd>
+				<dd><a target="_blank" href="#section02">하이라이트 편집/검증</a></dd>
+				<dd><a target="_blank" href="#section03">모니터링</a></dd>
+				<dd><a target="_blank" href="#section04">서비스설정</a></dd>
+				<dd><a target="_blank" href="#section05">시스템관리</a></dd>
+			</dl>
+			<ul class="guide">
+				<li class="add">추가</li>
+				<li class="mod">수정</li>
+				<li class="del">삭제</li>
+			</ul>
+		</div>
+	</div>
+	<!-- e: header -->
+
+	<button type="button" id="windowSize">화면사이즈 체크</button>
+	<p class="windowSize"></p>
+	<script type="text/javascript">
+		$(function(){
+			$("#windowSize").click(function(){
+				$(".windowSize").html(
+					"body사이즈 : " + $("body").width() + "x" + $("body").height() + "<br />" +
+					"window사이즈 : " + $(window).width() + "x" + $(window).height()
+				);
+				return false;
+			});
+		})
+	</script>
+
+
+
+	<div class="hd">
+		<h2 class="title" id="sectionGuide">Guide<span class="num"></span></h2>
+		<a target="_blank" href="#container" class="top">TOP</a>
+	</div>
+	<!-- s: 코딩리스트 -->
+	<div class="section">
+		<table>
+			<colgroup>
+				<col width="18%" />
+				<col width="18%" />
+				<col width="18%" />
+				<col />
+				<col width="15%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth 이하</th>
+					<th scope="col">URL</th>
+					<th scope="col">참고주석</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="depth">레이아웃</th>
+					<td class="depth"></td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/_Guide_00Layout.html">_Guide_00Layout.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="depth">Common</th>
+					<td class="depth"></td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/_Guide_01Common.html">_Guide_01Common.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="depth" rowspan="5">팝업</th>
+					<td class="depth"></td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/_Guide_02팝업.html">_Guide_02팝업.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">Alert</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/_Guide_02팝업_01Alert.html">_Guide_02팝업_01Alert.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">Confirm</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/_Guide_02팝업_02Confirm.html">_Guide_02팝업_02Confirm.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">타이틀없음</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/_Guide_02팝업_03타이틀없음.html">_Guide_02팝업_03타이틀없음.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">팝업위에팝업</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/_Guide_02팝업_04팝업위에팝업.html">_Guide_02팝업_04팝업위에팝업.html</a>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- e: 코딩리스트 -->
+
+
+
+	<div class="hd">
+		<h2 class="title" id="section01">00. 공통<span class="num"></span></h2>
+		<a target="_blank" href="#container" class="top">TOP</a>
+	</div>
+	<!-- s: 코딩리스트 -->
+	<div class="section">
+		<table>
+			<colgroup>
+				<col width="18%" />
+				<col width="18%" />
+				<col width="18%" />
+				<col />
+				<col width="15%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth 이하</th>
+					<th scope="col">URL</th>
+					<th scope="col">참고주석</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="depth">로그인</th>
+					<td class="depth"></td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/00Common_01로그인.html">00Common_01로그인.html</a>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- e: 코딩리스트 -->
+
+
+
+	<div class="hd">
+		<h2 class="title" id="section01">01. 정보조회<span class="num"></span></h2>
+		<a target="_blank" href="#container" class="top">TOP</a>
+	</div>
+	<!-- s: 코딩리스트 -->
+	<div class="section">
+		<table>
+			<colgroup>
+				<col width="18%" />
+				<col width="18%" />
+				<col width="18%" />
+				<col />
+				<col width="15%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth 이하</th>
+					<th scope="col">URL</th>
+					<th scope="col">참고주석</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="depth" rowspan="3">경기일정관리</th>
+					<td class="depth">경기일정목록</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/01정보조회_01경기일정관리_01경기일정목록.html">01정보조회_01경기일정관리_01경기일정목록.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">경기일정등록</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/01정보조회_01경기일정관리_02경기일정등록.html">01정보조회_01경기일정관리_02경기일정등록.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">[POPUP] 하이라이트조건및인코딩설정보기</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/01정보조회_01경기일정관리_02경기일정등록_99POP_01하이라이트조건및인코딩설정보기.html">01정보조회_01경기일정관리_02경기일정등록_99POP_01하이라이트조건및인코딩설정보기.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="depth" rowspan="2">하이라이트관리</th>
+					<td class="depth" rowspan="2">하이라이트목록</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/01정보조회_02하이라이트관리_01하이라이트목록.html">01정보조회_02하이라이트관리_01하이라이트목록.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">[POPUP] 하이라이트영상보기</td>
+					<td>
+						<a target="_blank" href="html/01정보조회_02하이라이트관리_01하이라이트목록_99POP_01하이라이트영상보기.html">01정보조회_02하이라이트관리_01하이라이트목록_99POP_01하이라이트영상보기.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="depth" rowspan="9">DataSet관리</th>
+					<td class="depth" rowspan="3">경기별영상</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/01정보조회_03DataSet관리_01경기별영상.html">01정보조회_03DataSet관리_01경기별영상.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">[POPUP] 하이라이트조건생성</td>
+					<td>
+						<a target="_blank" href="html/01정보조회_03DataSet관리_01경기별영상_99POP_01하이라이트조건생성.html">01정보조회_03DataSet관리_01경기별영상_99POP_01하이라이트조건생성.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">[POPUP] 경기별영상보기</td>
+					<td>
+						<a target="_blank" href="html/01정보조회_03DataSet관리_01경기별영상_99POP_02경기별영상보기.html">01정보조회_03DataSet관리_01경기별영상_99POP_02경기별영상보기.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth" rowspan="3">선수별이미지</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/01정보조회_03DataSet관리_02선수별이미지.html">01정보조회_03DataSet관리_02선수별이미지.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">등록</td>
+					<td>
+						<a target="_blank" href="html/01정보조회_03DataSet관리_02선수별이미지_01등록.html">01정보조회_03DataSet관리_02선수별이미지_01등록.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">상세</td>
+					<td>
+						<a target="_blank" href="html/01정보조회_03DataSet관리_02선수별이미지_02상세.html">01정보조회_03DataSet관리_02선수별이미지_02상세.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth" rowspan="3">하이라이트기본영상</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/01정보조회_03DataSet관리_03하이라이트기본영상.html">01정보조회_03DataSet관리_03하이라이트기본영상.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">등록</td>
+					<td>
+						<a target="_blank" href="html/01정보조회_03DataSet관리_03하이라이트기본영상_01등록.html">01정보조회_03DataSet관리_03하이라이트기본영상_01등록.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">상세</td>
+					<td>
+						<a target="_blank" href="html/01정보조회_03DataSet관리_03하이라이트기본영상_02상세.html">01정보조회_03DataSet관리_03하이라이트기본영상_02상세.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr class="del">
+					<th class="depth">통계관리</th>
+					<td class="depth">경기별통계</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/01정보조회_04통계관리_01경기별통계.html">01정보조회_04통계관리_01경기별통계.html</a>
+					</td>
+					<td>(2차개발)</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- e: 코딩리스트 -->
+
+
+
+	<div class="hd">
+		<h2 class="title" id="section03">02. 하이라이트 편집/검증<span class="num"></span></h2>
+		<a target="_blank" href="#container" class="top">TOP</a>
+	</div>
+	<!-- s: 코딩리스트 -->
+	<div class="section">
+		<table>
+			<colgroup>
+				<col width="18%" />
+				<col width="18%" />
+				<col width="18%" />
+				<col />
+				<col width="15%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth 이하</th>
+					<th scope="col">URL</th>
+					<th scope="col">참고주석</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="depth" rowspan="5">하이라이트편집</th>
+					<td class="depth" rowspan="5">하이라이트편집</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/02하이라이트편집검증_01하이라이트편집_01하이라이트편집.html">02하이라이트편집검증_01하이라이트편집_01하이라이트편집.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">영상없는경우</td>
+					<td>
+						<a target="_blank" href="html/02하이라이트편집검증_01하이라이트편집_01하이라이트편집_00영상없는경우.html">02하이라이트편집검증_01하이라이트편집_01하이라이트편집_00영상없는경우.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">[POPUP] 영상불러오기</td>
+					<td>
+						<a target="_blank" href="html/02하이라이트편집검증_01하이라이트편집_01하이라이트편집_99POP_01영상불러오기.html">02하이라이트편집검증_01하이라이트편집_01하이라이트편집_99POP_01영상불러오기.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">[POPUP] 영상생성</td>
+					<td>
+						<a target="_blank" href="html/02하이라이트편집검증_01하이라이트편집_01하이라이트편집_99POP_02영상생성.html">02하이라이트편집검증_01하이라이트편집_01하이라이트편집_99POP_02영상생성.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">[POPUP] 하이라이트영상보기</td>
+					<td>
+						<a target="_blank" href="html/02하이라이트편집검증_01하이라이트편집_01하이라이트편집_99POP_03하이라이트영상보기.html">02하이라이트편집검증_01하이라이트편집_01하이라이트편집_99POP_03하이라이트영상보기.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="depth" rowspan="3">하이라이트검증</th>
+					<td class="depth" rowspan="3">하이라이트영상검증</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/02하이라이트편집검증_02하이라이트검증_01하이라이트영상검증.html">02하이라이트편집검증_02하이라이트검증_01하이라이트영상검증.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">[POPUP] 하이라이트영상검증</td>
+					<td>
+						<a target="_blank" href="html/02하이라이트편집검증_02하이라이트검증_01하이라이트영상검증_99POP_01하이라이트영상검증.html">02하이라이트편집검증_02하이라이트검증_01하이라이트영상검증_99POP_01하이라이트영상검증.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">[POPUP] 검증메모</td>
+					<td>
+						<a target="_blank" href="html/02하이라이트편집검증_02하이라이트검증_01하이라이트영상검증_99POP_02검증메모.html">02하이라이트편집검증_02하이라이트검증_01하이라이트영상검증_99POP_02검증메모.html</a>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- e: 코딩리스트 -->
+
+
+
+	<div class="hd">
+		<h2 class="title" id="section03">03. 모니터링<span class="num"></span></h2>
+		<a target="_blank" href="#container" class="top">TOP</a>
+	</div>
+	<!-- s: 코딩리스트 -->
+	<div class="section">
+		<table>
+			<colgroup>
+				<col width="18%" />
+				<col width="18%" />
+				<col width="18%" />
+				<col />
+				<col width="15%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth 이하</th>
+					<th scope="col">URL</th>
+					<th scope="col">참고주석</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="depth">성능</th>
+					<td class="depth">성능모니터링</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/03모니터링_01성능_01성능모니터링.html">03모니터링_01성능_01성능모니터링.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="depth">ProcessStatus</th>
+					<td class="depth">ProcessStatus모니터링</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/03모니터링_02ProcessStatus_01ProcessStatus모니터링.html">03모니터링_02ProcessStatus_01ProcessStatus모니터링.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="depth" rowspan="2">실시간 중계</th>
+					<td class="depth" rowspan="2">실시간 중계 모니터링</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/03모니터링_03실시간중계_01실시간중계모니터링.html">03모니터링_03실시간중계_01실시간중계모니터링.html</a>
+					</td>
+					<td>[220420] 완료</td>
+				</tr>
+				<tr>
+					<td class="depth">[POPUP] 정보보기</td>
+					<td>
+						<a target="_blank" href="html/03모니터링_03실시간중계_01실시간중계모니터링_99POP_01정보보기.html">03모니터링_03실시간중계_01실시간중계모니터링_99POP_01정보보기.html</a>
+					</td>
+					<td>[220420] 완료</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- e: 코딩리스트 -->
+
+
+
+	<div class="hd">
+		<h2 class="title" id="section04">04. 서비스설정<span class="num"></span></h2>
+		<a target="_blank" href="#container" class="top">TOP</a>
+	</div>
+	<!-- s: 코딩리스트 -->
+	<div class="section">
+		<table>
+			<colgroup>
+				<col width="18%" />
+				<col width="18%" />
+				<col width="18%" />
+				<col />
+				<col width="15%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth 이하</th>
+					<th scope="col">URL</th>
+					<th scope="col">참고주석</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="depth" rowspan="2">하이라이트설정</th>
+					<td class="depth">하이라이트설정</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/04서비스설정_01하이라이트설정_01하이라이트설정.html">04서비스설정_01하이라이트설정_01하이라이트설정.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">데이터보존설정</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/04서비스설정_01하이라이트설정_02데이터보존설정.html">04서비스설정_01하이라이트설정_02데이터보존설정.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="depth" rowspan="2">Config설정</th>
+					<td class="depth" rowspan="2">Config설정</td>
+					<td class="depth">Config</td>
+					<td>
+						<a target="_blank" href="html/04서비스설정_02Config설정_01Config설정_01Config.html">04서비스설정_02Config설정_01Config설정_01Config.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="depth">WorkFlow</td>
+					<td>
+						<a target="_blank" href="html/04서비스설정_02Config설정_01Config설정_02WorkFlow.html">04서비스설정_02Config설정_01Config설정_02WorkFlow.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr class="del">
+					<th class="depth">배치관리</th>
+					<td class="depth">배치관리</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/04서비스설정_03배치관리_01배치관리.html">04서비스설정_03배치관리_01배치관리.html</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="depth">영상인코딩설정</th>
+					<td class="depth">영상인코딩설정</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/04서비스설정_04영상인코딩설정_01영상인코딩설정.html">04서비스설정_04영상인코딩설정_01영상인코딩설정.html</a>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- e: 코딩리스트 -->
+
+
+
+	<div class="hd">
+		<h2 class="title" id="section05">05. 시스템관리<span class="num"></span></h2>
+		<a target="_blank" href="#container" class="top">TOP</a>
+	</div>
+	<!-- s: 코딩리스트 -->
+	<div class="section">
+		<table>
+			<colgroup>
+				<col width="18%" />
+				<col width="18%" />
+				<col width="18%" />
+				<col />
+				<col width="15%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth 이하</th>
+					<th scope="col">URL</th>
+					<th scope="col">참고주석</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="depth" rowspan="3">사용자관리</th>
+					<td class="depth" rowspan="2">사용자목록</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/05시스템관리_01사용자관리_01사용자목록.html">05시스템관리_01사용자관리_01사용자목록.html</a>
+					</td>
+					<td>(2차개발)</td>
+				</tr>
+				<tr class="del">
+					<td class="depth">사용자상세</td>
+					<td>
+						<a target="_blank" href="html/05시스템관리_01사용자관리_01사용자목록_01사용자상세.html">05시스템관리_01사용자관리_01사용자목록_01사용자상세.html</a>
+					</td>
+					<td>(2차개발)</td>
+				</tr>
+				<tr>
+					<td class="depth">사용자등록</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/05시스템관리_01사용자관리_02사용자등록.html">05시스템관리_01사용자관리_02사용자등록.html</a>
+					</td>
+					<td>(2차개발)</td>
+				</tr>
+				<tr>
+					<th class="depth" rowspan="2">권한관리</th>
+					<td class="depth">권한목록</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/05시스템관리_02권한관리_01권한목록.html">05시스템관리_02권한관리_01권한목록.html</a>
+					</td>
+					<td>(2차개발)</td>
+				</tr>
+				<tr>
+					<td class="depth">권한등록</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/05시스템관리_02권한관리_02권한등록.html">05시스템관리_02권한관리_02권한등록.html</a>
+					</td>
+					<td>(2차개발)</td>
+				</tr>
+				<tr class="del">
+					<th class="depth">권한설정</th>
+					<td class="depth">권한별메뉴매핑</td>
+					<td class="depth"></td>
+					<td>
+						<a target="_blank" href="html/05시스템관리_03권한설정_01권한별메뉴매핑.html">05시스템관리_03권한설정_01권한별메뉴매핑.html</a>
+					</td>
+					<td>(2차개발)</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- e: 코딩리스트 -->
+
+
+	<!-- <div class="notice">
+		- noimage는 부모 요소에 class="noimage" / img src="../images/bg_noimage01.png"
+		- 
+	</div> -->
+
+</div>
+
+
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title> SKT Sport-Deepmeta </title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover" />
+
+	<link rel="stylesheet" href="../css/default.css" />
+
+	<script src="../js/jquery.js"></script>
+	<script src="../js/ui.js"></script>
+
+</head>
+<body id="">
+
+
+
+	<div class="container">
+
+		<!-- s: header -->
+		<header class="header_container">
+			<div class="header_inner">
+				header
+			</div>
+		</header>
+		<!-- e: header -->
+
+		<!-- s: body -->
+		<div class="body_container">
+
+			<!-- s: LEFT -->
+			<aside class="left_container">
+				<!-- s: LNB -->
+				<div class="left_inner">
+					left
+				</div>
+				<!-- e: LNB -->
+			</aside>
+			<!-- e: LEFT -->
+
+			<!-- s: mainContent -->
+			<main class="body_inner" id="mainContent">
+
+
+
+				<!-- s: contentHeader -->
+				<div class="content_header">
+					<h3 class="mainTitle">선수 별 이미지 등록</h3>
+					<ol class="breadcrumb">
+						<li><a href="#" class="path">홈</a></li>
+						<li><a href="#" class="path">정보조회</a></li>
+						<li><a href="#" class="path">Data Set 관리</a></li>
+						<li><a href="#" class="path">선수 별 이미지</a></li>
+						<li><em class="path">선수 별 이미지 등록</em></li>
+					</ol>
+				</div>
+				<!-- e: contentHeader -->
+
+				<!-- s: contentBody -->
+				<div class="content_body detail">
+
+
+					
+					<!-- s: table -->
+					<div class="table_type02">
+						<table>
+							<colgroup>
+								<col style="width:10%;" />
+								<col style="width:35%;" />
+								<!-- <col /> -->
+								<col style="width:20%;" />
+								<col style="width:35%;" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>선수명 <em class="require">*</em></th>
+									<td><div class="txtEntry01"><input type="text" placeholder="20자 이내로 입력하세요." /></div></td>
+									<th class="pd10">선수 ID <em class="require">*</em></th>
+									<td><div class="txtEntry01"><input type="text" placeholder="20자 이내로 입력하세요." /></div></td>
+								</tr>
+								<tr>
+									<th>성별 선택 <em class="require">*</em></th>
+									<td>
+										<!-- s: checkList -->
+										<ul class="chkList_type01">
+											<li><label class="radioBox01" for="_genderMale"><input type="radio" name="_gender" id="_genderMale" /><span class="c_name">남자</span></label></li>
+											<li><label class="radioBox01" for="_genderFemale"><input type="radio" name="_gender" id="_genderFemale" /><span class="c_name">여자</span></label></li>
+										</ul>	
+										<!-- e: checkList -->									
+									</td>
+									<th class="pd10">소속팀 <em class="require">*</em></th>
+									<td><div class="txtEntry01"><input type="text" placeholder="20자 이내로 입력하세요." /></div></td>
+								</tr>
+								<tr>
+									<th>선수 이미지 <em class="require">*</em></th>
+									<td colspan="3">
+										<!-- s: 파일찾기 -->
+										<span class="fileFind_type02">
+											<span class="fileFind"><input type="file" /></span>
+											<a href="#" class="btn_type03 c02 btnFind">찾아보기</a>
+										</span>
+										<!-- e: 파일찾기 -->
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- e: table -->
+
+					<!-- s: table -->
+					<div class="table_type01">
+						<table>
+							<colgroup>
+								<col style="width:8%;" />
+								<col style="width:8%;" />
+								<col style="width:15%;" />
+								<col /> <!-- 파일명 -->
+								<col style="width:10%;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="tal">No.</th>
+									<th>대표 이미지</th>
+									<th>선수 이미지</th>
+									<th class="tal">파일명</th>
+									<th>이미지 삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tal">14579</td>
+									<td><label class="radioBox01 single" for="_represent1"><input type="radio" name="_represent" id="_represent1" /><span class="c_name">선택</span></label></td>
+									<td><span class="thumb_type01"><img src="../temp/img_thumb01.jpg" /></span></td>
+									<td class="tal">kimjuhyung_hallinone.jpg</td>
+									<td><a href="#" class="btn_type01"><span class="ico cancel">삭제</span></a></td>
+								</tr>
+								<tr>
+									<td class="tal">14579</td>
+									<td><label class="radioBox01 single" for="_represent2"><input type="radio" name="_represent" id="_represent2" /><span class="c_name">선택</span></label></td>
+									<td><span class="thumb_type01"><img src="../temp/img_thumb01.jpg" /></span></td>
+									<td class="tal">kimjuhyung_hallinone.jpg</td>
+									<td><a href="#" class="btn_type01"><span class="ico cancel">삭제</span></a></td>
+								</tr>
+								<tr>
+									<td class="tal">14579</td>
+									<td><label class="radioBox01 single" for="_represent3"><input type="radio" name="_represent" id="_represent3" /><span class="c_name">선택</span></label></td>
+									<td><span class="thumb_type01"><img src="../temp/img_thumb01.jpg" /></span></td>
+									<td class="tal">kimjuhyung_hallinone.jpg</td>
+									<td><a href="#" class="btn_type01"><span class="ico cancel">삭제</span></a></td>
+								</tr>
+								<tr>
+									<td class="tal">14579</td>
+									<td><label class="radioBox01 single" for="_represent4"><input type="radio" name="_represent" id="_represent4" /><span class="c_name">선택</span></label></td>
+									<td><span class="thumb_type01"><img src="../temp/img_thumb01.jpg" /></span></td>
+									<td class="tal">kimjuhyung_hallinone.jpg</td>
+									<td><a href="#" class="btn_type01"><span class="ico cancel">삭제</span></a></td>
+								</tr>
+								<!-- s: nodata -->
+								<tr class="nodata">
+									<td colspan="5">등록된 이미지가 없습니다.</td>
+								</tr>
+								<!-- e: nodata -->
+							</tbody>
+						</table>
+					</div>
+					<!-- e: table -->
+
+					<!-- s: btnAlign -->
+					<div class="btnAlign_type01">
+						<a href="#" class="btn_type02 c01">등록</a>
+						<a href="#" class="btn_type02">취소</a>
+					</div>
+					<!-- e: btnAlign -->
+
+
+
+				</div>
+				<!-- e: contentBody -->
+
+
+
+			</main>
+			<!-- e: mainContent -->
+
+		</div>
+		<!-- e: body -->
+
+	</div>
+
+
+</body>
+</html>

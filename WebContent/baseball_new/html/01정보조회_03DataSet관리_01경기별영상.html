@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title> SKT Sport-Deepmeta </title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover" />
+
+	<link rel="stylesheet" href="../css/default.css" />
+
+	<script src="../js/jquery.js"></script>
+	<script src="../js/ui.js"></script>
+
+</head>
+<body id="">
+
+
+
+	<div class="container">
+
+		<!-- s: header -->
+		<header class="header_container">
+			<div class="header_inner">
+				header
+			</div>
+		</header>
+		<!-- e: header -->
+
+		<!-- s: body -->
+		<div class="body_container">
+
+			<!-- s: LEFT -->
+			<aside class="left_container">
+				<!-- s: LNB -->
+				<div class="left_inner">
+					left
+				</div>
+				<!-- e: LNB -->
+			</aside>
+			<!-- e: LEFT -->
+
+			<!-- s: mainContent -->
+			<main class="body_inner" id="mainContent">
+
+
+
+				<!-- s: contentHeader -->
+				<div class="content_header">
+					<h3 class="mainTitle">경기 별 영상</h3>
+					<ol class="breadcrumb">
+						<li><a href="#" class="path">홈</a></li>
+						<li><a href="#" class="path">정보조회</a></li>
+						<li><a href="#" class="path">Data Set 관리</a></li>
+						<li><em class="path">경기 별 영상</em></li>
+					</ol>
+				</div>
+				<!-- e: contentHeader -->
+
+				<!-- s: contentBody -->
+				<div class="content_body">
+
+
+					
+					<!-- s: search -->
+					<div class="search_type01">
+						<div class="srh_inner">
+							<!-- s: item -->
+							<div class="item" style="width:21%;">
+								<div class="s_header"><em class="tit">대회기간</em></div>
+								<div class="s_body">
+									<div class="txtEntry02 date">
+										<input type="text" />
+										<span class="btnC"><input type="image" src="../images/ico_calendar01.png" alt="달력" /></span>
+									</div>
+								</div>
+							</div>
+							<!-- e: item -->
+							<!-- s: item -->
+							<div class="item" style="width:12%;">
+								<div class="s_header"><em class="tit">대회 구분</em></div>
+								<div class="s_body">
+									<!-- s: select -->
+									<div class="selectBox02">
+										<em class="s_value">전체</em>
+										<div class="s_list">
+											<ul>
+												<li><button type="button">선택1</button></li>
+												<li><button type="button">선택2</button></li>
+												<li><button type="button">선택3</button></li>
+											</ul>
+										</div>
+									</div>
+									<!-- e: select -->
+								</div>
+							</div>
+							<!-- e: item -->
+							<!-- s: item -->
+							<div class="item" style="width:12%;">
+								<div class="s_header"><em class="tit">라운드</em></div>
+								<div class="s_body">
+									<!-- s: select -->
+									<div class="selectBox02">
+										<em class="s_value">전체</em>
+										<div class="s_list">
+											<ul>
+												<li><button type="button">선택1</button></li>
+												<li><button type="button">선택2</button></li>
+												<li><button type="button">선택3</button></li>
+											</ul>
+										</div>
+									</div>
+									<!-- e: select -->
+								</div>
+							</div>
+							<!-- e: item -->
+							<!-- s: item -->
+							<div class="item" style="width:12%;">
+								<div class="s_header"><em class="tit">홀</em></div>
+								<div class="s_body">
+									<!-- s: select -->
+									<div class="selectBox02">
+										<em class="s_value">전체</em>
+										<div class="s_list">
+											<ul>
+												<li><button type="button">선택1</button></li>
+												<li><button type="button">선택2</button></li>
+												<li><button type="button">선택3</button></li>
+											</ul>
+										</div>
+									</div>
+									<!-- e: select -->
+								</div>
+							</div>
+							<!-- e: item -->
+							<!-- s: item -->
+							<div class="item" style="width:43%;">
+								<div class="s_header"><em class="tit">검색 구분</em></div>
+								<div class="s_body ratio37">
+									<div class="col">
+										<!-- s: select -->
+										<div class="selectBox02">
+											<em class="s_value">대회명</em>
+											<div class="s_list">
+												<ul>
+													<li><button type="button">선택1</button></li>
+													<li><button type="button">선택2</button></li>
+													<li><button type="button">선택3</button></li>
+												</ul>
+											</div>
+										</div>
+										<!-- e: select -->
+									</div>
+									<div class="col"><div class="txtEntry02"><input type="text" placeholder="검색어를 입력하세요." /></div></div>
+								</div>
+							</div>
+							<!-- e: item -->
+						</div>
+						<div class="btn_wrap"><button type="button" class="btnSrh">검색</button></div>
+					</div>
+					<!-- e: search -->
+
+					<!-- s: tableTop -->
+					<div class="tTop_type01">
+						<ul class="btnList_type01">
+							<li><button type="button" class="btnEtc_type01 list on"><span>리스트</span></button></li>
+							<li><button type="button" class="btnEtc_type01 thumb"><span>썸네일</span></button></li>
+						</ul>
+					</div>
+					<!-- e: tableTop -->
+
+					<!-- s: table -->
+					<div class="table_type01">
+						<table style="min-width:1800px;">
+							<colgroup>
+								<col style="width:4%;" />
+								<col style="width:6%;" />
+								<col style="width:6%;" />
+								<col style="width:7%;" />
+								<col /> <!-- 영상 제목 -->
+								<col style="width:6%;" />
+								<col style="width:11%;" />
+								<col style="width:9%;" />
+								<col style="width:6%;" />
+								<col style="width:4%;" />
+								<col style="width:4%;" />
+								<col style="width:6%;" />
+								<col style="width:6%;" />
+								<col style="width:6%;" />
+								<col style="width:6%;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="tal">No.</th>
+									<th>경기 시작일</th>
+									<th>경기 종료일</th>
+									<th>경기 영상</th>
+									<th class="tal">영상 제목</th>
+									<th>대회구분</th>
+									<th>대회 ID</th>
+									<th>대회명</th>
+									<th>선수명</th>
+									<th>라운드</th>
+									<th>홀</th>
+									<th>스코어</th>
+									<th>샷 구분</th>
+									<th>샷 추가정보</th>
+									<th>생성일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tal">14579</td>
+									<td>2021.08.26</td>
+									<td>2021.08.31</td>
+									<td><a href="#" class="thumb_type01 play"><img src="../images/img_ratio01.png" /></a></td>
+									<td class="tal"><div class="ellipsis02">연속 버디성공 감각적인 세컨샷 감각적인 세컨샷 감각적인 세컨샷 감각적인 세컨샷 세컨샷 감각적인 세컨샷</div></td>
+									<td>KPGA</td>
+									<td>2021_SKTOPEN_Retry</td>
+									<td>한화클래식 2021</td>
+									<td>임성재</td>
+									<td>3</td>
+									<td>18</td>
+									<td>더블보기</td>
+									<td>드라이버</td>
+									<td>챔피언펏</td>
+									<td>2021.08.31</td>
+								</tr>
+								<!-- s: nodata -->
+								<tr class="nodata">
+									<td colspan="15">검색결과가 없습니다.</td>
+								</tr>
+								<!-- e: nodata -->
+							</tbody>
+						</table>
+					</div>
+					<!-- e: table -->
+
+					<!-- s: product -->
+					<div class="prdList_type01">
+						<!-- To.개발:
+							반드시 6의 배수로 뿌려주셔야 레이아웃이 정상적으로 나옵니다.
+							마지막 "p_item"과 같이 항목이 없을 경우에도 빈 값으로 뿌려주세요.
+						-->
+						<ul>
+							<!-- s: item -->
+							<li class="p_item">
+								<div class="p_in">
+									<a class="thumb" style="background-image:url('../temp/img_thumb01.jpg');"><img src="../images/img_ratio01.png" /></a>
+									<div class="cont">값진 파세이브 성공시키며 공동 선두로 경기 마치는 공동 선두로 경기 마치는 공동 선두로 경기 마치는</div>
+								</div>
+							</li>
+							<!-- e: item -->
+							<!-- s: item -->
+							<li class="p_item">
+								<div class="p_in">
+									<a class="thumb" style="background-image:url('../temp/img_thumb01.jpg');"><img src="../images/img_ratio01.png" /></a>
+									<div class="cont">값진 파세이브</div>
+								</div>
+							</li>
+							<!-- e: item -->
+							<!-- s: item -->
+							<li class="p_item">
+								<div class="p_in">
+									<a class="thumb" style="background-image:url('../temp/img_thumb01.jpg');"><img src="../images/img_ratio01.png" /></a>
+									<div class="cont">값진 파세이브 성공시키며 공동 선두로 경기</div>
+								</div>
+							</li>
+							<!-- e: item -->
+							<!-- s: item -->
+							<li class="p_item">
+								<div class="p_in">
+									<a class="thumb" style="background-image:url('../temp/img_thumb01.jpg');"><img src="../images/img_ratio01.png" /></a>
+									<div class="cont">값진 파세이브 성공시키며 공동 선두로 경기</div>
+								</div>
+							</li>
+							<!-- e: item -->
+							<!-- s: item -->
+							<li class="p_item">
+								<div class="p_in">
+									<a class="thumb" style="background-image:url('../temp/img_thumb01.jpg');"><img src="../images/img_ratio01.png" /></a>
+									<div class="cont">값진 파세이브 성공시키며 공동 선두로 경기</div>
+								</div>
+							</li>
+							<!-- e: item -->
+							<!-- s: item -->
+							<li class="p_item">
+								<div class="p_in">
+									<a class="thumb" style="background-image:url('../temp/img_thumb01.jpg');"><img src="../images/img_ratio01.png" /></a>
+									<div class="cont">값진 파세이브 성공시키며 공동 선두로 경기</div>
+								</div>
+							</li>
+							<!-- e: item -->
+							<!-- s: item -->
+							<li class="p_item">
+								<div class="p_in">
+									<a class="thumb" style="background-image:url('../temp/img_thumb01.jpg');"><img src="../images/img_ratio01.png" /></a>
+									<div class="cont">값진 파세이브 성공시키며 공동 선두로 경기</div>
+								</div>
+							</li>
+							<!-- e: item -->
+							<!-- s: item -->
+							<li class="p_item">
+								<div class="p_in">
+									<a class="thumb" style="background-image:url('../temp/img_thumb01.jpg');"><img src="../images/img_ratio01.png" /></a>
+									<div class="cont">값진 파세이브 성공시키며 공동 선두로 경기</div>
+								</div>
+							</li>
+							<!-- e: item -->
+							<!-- s: item -->
+							<li class="p_item">
+								<div class="p_in">
+									<a class="thumb" style="background-image:url('../temp/img_thumb01.jpg');"><img src="../images/img_ratio01.png" /></a>
+									<div class="cont">값진 파세이브 성공시키며 공동 선두로 경기</div>
+								</div>
+							</li>
+							<!-- e: item -->
+							<!-- s: item -->
+							<li class="p_item">
+								<div class="p_in">
+									<a class="thumb" style="background-image:url('../temp/img_thumb01.jpg');"><img src="../images/img_ratio01.png" /></a>
+									<div class="cont">값진 파세이브 성공시키며 공동 선두로 경기</div>
+								</div>
+							</li>
+							<!-- e: item -->
+							<!-- s: item -->
+							<li class="p_item">
+								<div class="p_in">
+									<a class="thumb" style="background-image:url('../temp/img_thumb01.jpg');"><img src="../images/img_ratio01.png" /></a>
+									<div class="cont">값진 파세이브 성공시키며 공동 선두로 경기</div>
+								</div>
+							</li>
+							<!-- e: item -->
+							<!-- s: item -->
+							<li class="p_item"></li>
+							<!-- e: item -->
+						</ul>
+					</div>
+					<!-- e: product -->
+
+					<!-- s: tableBottom -->
+					<div class="tBottom_type01">
+						<div class="ltrBox">
+							<a href="#" class="btn_type02 c01">하이라이트 조건 생성</a>
+							&nbsp;
+							<!-- s: 페이지바로가기 -->
+							<div class="pageGo_wrap">
+								<span class="selectBox03">
+									<select>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+									</select>
+								</span>
+								<span class="total">/ Total 1,020</span>
+							</div>
+							<!-- e: 페이지바로가기 -->
+						</div>
+						<div class="rtlBox">
+							<!-- s: paging -->
+							<div class="pageNavi_type01">
+								<a href="#" class="btn prev">이전 페이지</a>
+								<a href="#" class="n">1</a>
+								<a href="#" class="n">2</a>
+								<em class="n">3</em>
+								<a href="#" class="n">4</a>
+								<a href="#" class="n">5</a>
+								<a href="#" class="n">6</a>
+								<a href="#" class="n">7</a>
+								<a href="#" class="n">9</a>
+								<a href="#" class="n">10</a>
+								<a href="#" class="btn next">다음 페이지</a>
+							</div>
+							<!-- e: paging -->
+						</div>
+					</div>
+					<!-- e: tableBottom -->
+
+
+
+				</div>
+				<!-- e: contentBody -->
+
+
+
+			</main>
+			<!-- e: mainContent -->
+
+		</div>
+		<!-- e: body -->
+
+	</div>
+
+
+</body>
+</html>

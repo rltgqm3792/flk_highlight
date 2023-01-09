@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title> SKT Sport-Deepmeta </title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover" />
+
+	<link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" href="../css/default.css" />
+
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/ui.js"></script>
+
+</head>
+<body id="">
+
+
+
+	<div class="container">
+
+		<!-- s: header -->
+		<header class="header_container">
+			<div class="header_inner">
+				header
+			</div>
+		</header>
+		<!-- e: header -->
+
+		<!-- s: body -->
+		<div class="body_container">
+
+			<!-- s: LEFT -->
+			<aside class="left_container">
+				<!-- s: LNB -->
+				<div class="left_inner">
+					left
+				</div>
+				<!-- e: LNB -->
+			</aside>
+			<!-- e: LEFT -->
+
+			<!-- s: mainContent -->
+			<main class="body_inner" id="mainContent">
+
+
+
+				<!-- s: contentHeader -->
+				<div class="content_header">
+					<h3 class="mainTitle">하이라이트 편집</h3>
+					<ol class="breadcrumb">
+						<li><a href="#" class="path">홈</a></li>
+						<li><a href="#" class="path">하이라이트 편집/검증</a></li>
+						<li><em class="path">하이라이트 편집</em></li>
+					</ol>
+				</div>
+				<!-- e: contentHeader -->
+
+				<!-- s: contentBody -->
+				<div class="content_body nopad">
+
+					<!-- s: 영상편집 -->
+					<article class="videoModify_type01">
+
+						<!-- s: 상단영역 -->
+						<div class="top_inner">
+							<!-- s: 좌측리스트 -->
+							<section class="list_content">
+								<div class="content_inner">
+									<!-- s: tab -->
+									<div class="tab_type01">
+										<ul>
+											<li class="on"><a href="#">하이라이트 영상</a></li>
+											<li><a href="#">경기 별 영상</a></li>
+											<li><a href="#">기본 영상</a></li>
+										</ul>
+									</div>
+									<!-- e: tab -->
+									<!-- s: nodata -->
+									<p class="nodata">
+										[영상 불러오기] 버튼을 이용해서<br />
+										편집에 필요한 영상을 불러올 수 있습니다.
+									</p>
+									<!-- e: nodata -->
+									<div class="btnBox">
+										<a href="#" class="btn_type04 h01 btnOpen"><span class="ico open">영상 불러오기</span></a>
+									</div>
+								</div>
+							</section>
+							<!-- e: 좌측리스트 -->
+							<!-- s: 우측편집 -->
+							<section class="modify_content">
+								<div class="content_inner">
+									<div class="preview_wrap"><div class="nodata"><img src="../images/img_nodata01.png" alt="영상없음" /></div></div>
+									<div class="modify_wrap">
+										<div class="modBox dis">
+											<!-- To.개발:
+												활성화	: class="dis" 삭제
+												비활성화	: class="dis" 추가
+											-->
+											<button type="button" class="mod start dis">
+												<span class="tit">START</span>
+												<span class="time">00:05:16</span>
+											</button>
+											<button type="button" class="mod end dis">
+												<span class="tit">END</span>
+												<span class="time">02:48:00</span>
+											</button>
+											<button type="button" class="refresh dis"><span>재설정</span></button>
+										</div>
+										<div class="rtlBox">
+											<div class="playTime">
+												<em class="pt">00:18:75</em> / 03:25:00
+											</div>
+											<span class="btn_type04 c02 btnApply"><span class="ico down">적용</span></span>
+										</div>
+									</div>
+								</div>
+							</section>
+							<!-- e: 우측편집 -->
+						</div>
+						<!-- e: 상단영역 -->
+
+						<!-- s: 하단타임라인 -->
+						<section class="timeline_content ">
+							<!-- To.개발:
+								편집전(기본)	: class="timeline_content"
+								편집모드		: class="timeline_content modify"
+							-->
+							<div class="header_wrap">
+								<div class="header_in">
+									<h5 class="title">Timeline</h5>
+									<a href="#" class="btn_type05 c01 btnEdit"><span class="ico edit">편집</span></a>
+									<span class="btn_type05 c01 btnEdit"><span class="ico edit">편집</span></span>
+									<a href="#" class="btn_type05 c02 btnFin"><span class="ico check">편집 완료</span></a>
+									<div class="rtlBox">
+										<em class="playTime">03:25:00</em>
+										<a href="#" class="btn_type05 btnPreview"><span class="ico play">미리 보기</span></a>
+										<span class="btn_type05 btnPreview"><span class="ico play">미리 보기</span></span>
+										<a href="#" class="btn_type05 c02 btnAdd"><span class="ico video">영상 생성</span></a>
+										<span class="btn_type05 c02 btnAdd"><span class="ico video">영상 생성</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="timeline_inner">
+								<!-- s: videoList -->
+								<!-- <script type="text/javascript">
+									$(function(){
+										$('#_timelineList > ul').mCustomScrollbar(_ScrlOption_x);
+									});
+								</script> -->
+								<div class="videoList_type01" id="_timelineList">
+									<!-- s: nodata -->
+									<p class="nodata"><span>선택한 영상이 없습니다.</span></p>
+									<!-- e: nodata -->
+								</div>
+								<!-- e: videoList -->
+							</div>
+						</section>
+						<!-- e: 하단타임라인 -->
+
+					</article>
+					<!-- e: 영상편집 -->
+
+				</div>
+				<!-- e: contentBody -->
+
+
+
+			</main>
+			<!-- e: mainContent -->
+
+		</div>
+		<!-- e: body -->
+
+	</div>
+
+
+</body>
+</html>
