@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title> SKT Sport-Deepmeta </title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover" />
+
+	<link rel="stylesheet" href="../css/default.css" />
+
+	<script src="../js/jquery.js"></script>
+	<script src="../js/ui.js"></script>
+
+</head>
+<body id="">
+
+
+
+	<div class="container">
+
+		<!-- s: header -->
+		<header class="header_container">
+			<div class="header_inner">
+				header
+			</div>
+		</header>
+		<!-- e: header -->
+
+		<!-- s: body -->
+		<div class="body_container">
+
+			<!-- s: LEFT -->
+			<aside class="left_container">
+				<!-- s: LNB -->
+				<div class="left_inner">
+					left
+				</div>
+				<!-- e: LNB -->
+			</aside>
+			<!-- e: LEFT -->
+
+			<!-- s: mainContent -->
+			<main class="body_inner" id="mainContent">
+
+
+
+				컨텐츠
+
+
+
+			</main>
+			<!-- e: mainContent -->
+
+		</div>
+		<!-- e: body -->
+
+	</div>
+
+
+
+	<!-- s: popup -->
+	<section class="popup_container p_importVideo_page">
+		<div class="pop_inner w02">
+			<!-- s: popHeader -->
+			<header class="pop_header">
+				<h1 class="title">영상 불러오기</h1>
+			</header>
+			<!-- e: popHeader -->
+			<!-- s: popBody -->
+			<div class="pop_body">
+
+				<div class="chk_header">
+					<ul class="chkList_type01">
+						<li><label class="radioBox01" for="_autoHighlight"><input type="radio" name="_Highlight" id="_autoHighlight" checked /><span class="c_name">자동 하이라이트</span></label></li>
+						<li><label class="radioBox01" for="_caseHighlight"><input type="radio" name="_Highlight" id="_caseHighlight" /><span class="c_name">조건 하이라이트</span></label></li>
+						<li><label class="radioBox01" for="_movieClip"><input type="radio" name="_Highlight" id="_movieClip" /><span class="c_name">클립 영상</span></label></li>
+					</ul>
+				</div>
+
+				<!-- s: write -->
+				<div class="write_type01">
+					<!-- s: inner -->
+					<div class="w_inner">
+						<div class="header_in">
+							<em class="title">경기일</em>
+						</div>
+						<div class="content_in hasThing">
+							<div class="txtEntry01 date">
+								<input type="text" />
+								<span class="btnC"><input type="image" src="../images/ico_calendar01.png" alt="달력" /></span>
+							</div>
+							<div class="thing"><a href="#" class="btn_type04 h01">경기 조회</a></div>
+						</div>
+					</div>
+					<!-- e: inner -->
+					<!-- s: inner -->
+					<div class="w_inner">
+						<div class="header_in">
+							<em class="title require">경기명<span class="em">*</span></em>
+						</div>
+						<div class="content_in">
+							<div class="selectBox01">
+								<label for="" class="valTxt">전체</label>
+								<select id="">
+									<option>선택값A</option>
+									<option>선택값B</option>
+									<option>선택값C</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<!-- e: inner -->
+				</div>
+				<!-- e: write -->
+				
+			</div>
+			<!-- e: popBody -->
+			<!-- s: popbutton -->
+			<div class="pop_btn">
+				<!-- s: btnAlign -->
+				<div class="btnAlign_type01">
+					<a href="#" class="btn_type03 c01">확인</a>
+					<a href="#" class="btn_type03">취소</a>
+				</div>
+				<!-- e: btnAlign -->
+			</div>
+			<!-- e: popbutton -->
+			<a href="#" class="pop_close">팝업창 닫기</a>
+		</div>
+	</section>
+	<!-- e: popup -->
+
+	<script type="text/javascript">
+		// To.개발: 테스트용 스크립트
+		sports.popup('.popup_container');
+	</script>
+
+
+</body>
+</html>

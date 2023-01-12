@@ -23,11 +23,19 @@
 				<h1 class="logo"><a href="#"><img src="../images/logo_sktelecom01.png" alt="SK Telecom 로고" /></a></h1>
 				<nav class="gnb_wrap">
 					<ul>
-						<li class="on"><a href="#">정보조회</a></li>
-						<li><a href="#">하이라이트 편집/검증</a></li>
+						<li class="on"><a href="#">정보조회</a>
+							<ul class="sub_wrap">
+								<li><a href="#">일정</a></li>
+								<li class="on"><a href="#">하이라이트</a></li>
+								<li><a href="#">클립 영상</a></li>
+								<li><a href="#">구간별 영상</a></li>
+								<li><a href="#">범퍼 영상</a></li>
+							</ul>
+
+						</li>
+						<li><a href="#">영상편집</a></li>
 						<li><a href="#">모니터링</a></li>
-						<li><a href="#">서비스 설정</a></li>
-						<li><a href="#">시스템 관리</a></li>
+						<li><a href="#">하이라이트 설정</a></li>
 					</ul>
 				</nav>
 				<div class="r_inner">
@@ -42,59 +50,6 @@
 
 		<!-- s: body -->
 		<div class="body_container">
-
-			<!-- s: LEFT -->
-			<aside class="left_container">
-				<div class="left_inner">
-					<!-- s: LNB -->
-					<div class="lnb_container">
-						<h2 class="menuTitle">정보조회</h2>
-						<!-- To.개발:
-							정보조회				경기일정 관리		ico01_01
-												하이라이트 관리	ico01_02
-												Data Set		ico01_03
-							하이라이트편집기능	하이라이트 편집	ico02_01
-												하이라이트 검증	ico02_02
-							모니터링				성능				ico03_01
-												Process Status	ico03_02
-							서비스 설정			(추가예정)
-							시스템 관리			(추가예정)
-						-->
-						<nav class="menu_wrap">
-							<ul>
-								<li class="m1">
-									<a href="#" class="ico01_01">경기일정 관리</a>
-									<ul class="depth">
-										<li class="m2"><a href="#">경기일정 목록</a></li>
-									</ul>
-								</li>
-								<li class="m1">
-									<a href="#" class="ico01_02">하이라이트 관리</a>
-									<ul class="depth">
-										<li class="m2"><a href="#">하이라이트 목록</a></li>
-									</ul>
-								</li>
-								<li class="m1 on">
-									<a href="#" class="ico01_03">Data Set 관리</a>
-									<ul class="depth">
-										<li class="m2 on"><a href="#">경기 별 영상</a></li>
-										<li class="m2"><a href="#">선수 별 이미지</a></li>
-										<li class="m2"><a href="#">하이라이트 기본 영상</a></li>
-										<li class="m2"><a href="#">하이라이트 기본 영상 기본 영상</a></li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
-					</div>
-					<!-- e: LNB -->
-					<!-- s: footer -->
-					<footer class="footer_wrap">
-						<p class="copyright">COPYRIGHT SK TELECOM CO.,<br />LTD. ALL RIGHTS RESERVED.</p>
-					</footer>
-					<!-- e: footer -->
-				</div>
-			</aside>
-			<!-- e: LEFT -->
 
 			<!-- s: mainContent -->
 			<main class="body_inner" id="mainContent">
