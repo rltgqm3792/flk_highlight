@@ -67,11 +67,7 @@
 	::-webkit-scrollbar-thumb { background-color: #999; border-radius: 14px; }
 	::-webkit-scrollbar-track { background-color:#181a1e; } */
 
-#mCSB_1_scrollbar_horizontal .mCSB_dragger{ height: 14px; }
-.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {margin:0 auto; height: 14px; background: #999;}
-body .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
-body .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
-body .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar { background: #999;}
+
 
 
 /******************************
@@ -321,10 +317,9 @@ body .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar { background: #999
 ***
 ******************************/
 	body .mCSB_outside+.mCSB_scrollTools {right:0;}
-	body .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background:#3a3e46; width:5px;}
 	body .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
 	body .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
-	body .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {background:#3a3e46;}
+	body .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {background:#999;}
 	body .mCSB_scrollTools .mCSB_draggerRail {display:none;}
 
 	body .daterangepicker,
@@ -334,10 +329,8 @@ body .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar { background: #999
 	body .daterangepicker th.available:hover {color:#666;}
 
 
-
-
-
-
+	body .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {margin:0; width:14px; background: #999 !important ;}
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {height:14px !important; margin:0 auto !important}
 
 
 /******************************
@@ -941,7 +934,7 @@ body .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar { background: #999
 	.p_viewHighlight_page .highlight_section .content_wrap .videoBox {float:left; width:480px; height:270px;}
 	.p_viewHighlight_page .highlight_section .content_wrap .contBox {float:right; width:270px;}
 	.p_viewHighlight_page .highlight_section .content_wrap .contBox.scroll { position: absolute; top: 89px; right: 0; margin: 1px 0 1px; padding: 16px; height: 432px; background: #1c2028; border-left: 1px #414651 solid; overflow-y: auto; }
-	.p_viewHighlight_page .highlight_section .content_wrap .contBox.scroll .prdList_type01 .p_item {width: 100%;}
+	.p_viewHighlight_page .highlight_section .content_wrap .contBox.scroll .prdList_type01 .p_item {width: 100%; margin: 10px;}
 
 	/* 경기별영상보기 */
 	.p_viewVideo_page {}
@@ -965,14 +958,14 @@ body .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar { background: #999
 	.m_list_wrap .m_list ul:after {content:""; clear:both; display:block;}
 	.m_list_wrap .m_list .item_s {float:left; width:344px; padding:10px; margin:10px; position:relative;}
 	.m_list_wrap .m_list .item_s .video-js {width:344px; height:193px;}
-	.m_list_wrap .m_list .item_s.on {border:1px #f61841 solid; display:inline-block;}
+	.m_list_wrap .m_list .item_s.on {border:2px #f61841 solid; display:inline-block; border-radius: 6px;;}
 	.m_list_wrap .m_list .item_s .hd {width:344px; height:100px; display:table-cell; vertical-align:middle; padding:6px 78px 6px 0; color:#fff; font-size:20px; position:relative;}
 	.m_list_wrap .m_list .item_s .hd .text {padding:6px 0 6px 40px; width: 212px; line-height:26px; display: inline-block; font-weight:normal; font-family: "나눔고딕",Dotum,"돋움",Helvetica,AppleSDGothicNeo,Arial,sans-serif}
 	.m_list_wrap .m_list .item_s .hd .point {padding:3px 25px 5px 10px; position:absolute; top:50%; right:0; transform:translate(0, -50%);  border:2px #bebebe solid; border-radius:20px;}
 	.m_list_wrap .m_list .item_s .hd .point.inc span:after {content:"\25B2"; display:inline-block; position:absolute; top:8px; right:11px; font-size:12px; color:#ff0000;}
 	.m_list_wrap .m_list .item_s .hd .point.dec span:after {content:"\25BC"; display:inline-block; position:absolute; top:8px; right:11px; font-size:12px; color:#ff0000;}
 	.m_list_wrap .m_list .item_s .hd .team {position: absolute; top: 46%; left: 0; transform: translate(0, -50%); text-align: center; color:#fff;  font-size: 13px; }
-	.m_list_wrap .m_list .item_s .hd .team .name {padding: 3px 4px; background: #3664ff; border-radius: 4px; margin-top: 3px; display: inline-block; vertical-align: middle; line-height: 15px;}
+	.m_list_wrap .m_list .item_s .hd .team .name {padding: 3px 4px; background: #3664ff; border-radius: 4px; margin-top: 3px; display: inline-block; vertical-align: middle; line-height: 16px;}
 	.m_list_wrap .m_list .item_s .hd .team img {width:30px;}
 
 	.m_list_wrap.type2 .m_list .item_s .hd {height: 80px; color:#fff; font-size:16px; background:none;}

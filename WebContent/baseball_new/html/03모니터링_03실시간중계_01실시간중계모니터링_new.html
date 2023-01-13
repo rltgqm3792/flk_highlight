@@ -5,10 +5,19 @@
 	<title> SKT Sport-Deepmeta </title>
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover" />
 
+	<link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css" />
 	<link rel="stylesheet" href="../css/default.css" />
-
+	
 	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="../js/ui.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+			$(".mCustomScrollbarX").mCustomScrollbar(_ScrlOption_x); // x축 스크롤
+			$(".mCustomScrollbarY").mCustomScrollbar(_ScrlOption_y); // y축 스크롤
+		});
+	</script>
 
 </head>
 <body id="">
@@ -168,7 +177,8 @@
 					<!-- e: search -->
 
 					<!-- s: table -->
-					<div class="table_type06 mCustomScrollbar1" style="max-height: 503px;"><!-- to 개발: 보여지는 높이 조정 -->
+					<!-- to 개발 : 가로축 스크롤 사용시 mCustomScrollbarX 추가 -->
+					<div class="table_type06 mCustomScrollbarX" style="max-height: 503px;"><!-- to 개발: 보여지는 높이 조정 -->
 						<table style="width:max-content;">
 							<!-- 경기 구분 -->
 							<!-- to 개발 : 1세트 마다 구분선을 위해 적용해 주세요. 예: <colgroup><col span="4" /></colgroup> -->
@@ -578,62 +588,29 @@
 					</div>
 					<!-- e: table -->
 
-<link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css" />
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script>
-	$(function () {
-		var ___ScrlOption_x = {
-			axis: 'x',
-			horizontalScroll: true,
-			autoHideScrollbar: false,
-			advanced: {
-				autoExpandHorizontalScroll: true,
-				updateOnContentResize: true,
-				updateOnImageLoad: true,
-				updateOnSelectorChange: "ul",
-				updateOnSelectorChange: "ul li",
-			},
-		};
-		var ___ScrlOption_y = {
-			axis: 'y',
-			autoHideScrollbar: false,
-			advanced: {
-				autoExpandHorizontalScroll: true,
-				updateOnContentResize: true,
-				updateOnImageLoad: true,
-				updateOnSelectorChange: "ul",
-				updateOnSelectorChange: "ul li",
-			},
-		};
-
-		$(".mCustomScrollbar1").mCustomScrollbar(___ScrlOption_x);
-		// $("#mCustomScrollbar2").mCustomScrollbar(___ScrlOption_y);
-		// $("#mCustomScrollbar1").mCustomScrollbar();
-		
-
-	});
-</script>
 
 					<!-- s: 하이라이트 영상 -->
 					<div class="m_list_wrap type2">
 
 						<div class="m_list highlight">
 							<p class="tit">하이라이트</p>
-								<div class="item_s">
-									<div class="video">
-										<video id="" class="video-js" controls></video>
-									</div>
-									<div class="hd">
-										<span class="team"><img src="../images/team_sk.png" alt="logo"><br><span class="name">삼성</span></span>
-										<span class="text ellipsis">오재일:우중간 1루타, 3루, 아웃, 홈런<br>주자 허경민:홈인 홈인 홈인 홈인 </span>
-										<span class="point inc"><span class="">12회말</span></span>
-									</div>
+							<div class="item_s">
+								<div class="video">
+									<video id="" class="video-js" controls></video>
 								</div>
+								<div class="hd">
+									<span class="team"><img src="../images/team_sk.png" alt="logo"><br><span class="name">삼성</span></span>
+									<span class="text ellipsis">오재일:우중간 1루타, 3루, 아웃, 홈런<br>주자 허경민:홈인 홈인 홈인 홈인 </span>
+									<span class="point inc"><span class="">12회말</span></span>
+								</div>
+							</div>
 						</div>
 						
 						<div class="m_list thums">
 							<p class="tit">어떤 장면이 하이라이트로 만들어졌는지 확인해 보세요.</p>
-							<ul class="box1 mCustomScrollbar1">
+
+							<!-- to 개발 : 가로축 스크롤 사용시 mCustomScrollbarX 추가 -->
+							<ul class="box1 mCustomScrollbarX">
 								<li class="item_s">
 									<div class="video">
 										<video id="" class="video-js" controls></video>

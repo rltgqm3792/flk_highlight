@@ -7,8 +7,19 @@
 
 	<link rel="stylesheet" href="../css/default.css" />
 
+	<link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" href="../css/default.css" />
+	
 	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="../js/ui.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+			$(".mCustomScrollbarX").mCustomScrollbar(_ScrlOption_x); // x축 스크롤
+			$(".mCustomScrollbarY").mCustomScrollbar(_ScrlOption_y); // y축 스크롤
+		});
+	</script>
 
 </head>
 <body id="">
@@ -72,7 +83,7 @@
 					<h2 class="title_type01">챔피언십 1라운드 이정민 하이라이트</h2>
 					<div class="content_wrap">
 						<div class="videoBox">영상영역 (480px * 270px)</div>
-						<div class="contBox scroll">
+						<div class="contBox scroll mCustomScrollbarY">
 							<!-- s: write -->
 							<div class="prdList_type01">
 								<ul>
