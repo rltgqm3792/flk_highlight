@@ -934,6 +934,7 @@
 	.p_viewHighlight_page .highlight_section .content_wrap .videoBox {float:left; width:480px; height:270px;}
 	.p_viewHighlight_page .highlight_section .content_wrap .contBox {float:right; width:270px;}
 	.p_viewHighlight_page .highlight_section .content_wrap .contBox.scroll { position: absolute; top: 89px; right: 0; margin: 1px 0 1px; padding: 16px; height: 432px; background: #1c2028; border-left: 1px #414651 solid; overflow-y: auto; }
+	.p_viewHighlight_page .highlight_section .content_wrap .contBox.scroll .prdList_type01 {padding-top: 20px;}
 	.p_viewHighlight_page .highlight_section .content_wrap .contBox.scroll .prdList_type01 .p_item {width: 100%; margin: 10px;}
 
 	/* 경기별영상보기 */
